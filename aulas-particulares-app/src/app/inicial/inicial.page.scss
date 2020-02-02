@@ -79,8 +79,8 @@ ion-content img {
 	position: fixed;
 	width: 100%;
 	height: auto;
-	left: 0px;
-	bottom: 0px;
+	left: 0vw;
+	bottom: 0vh;
 }
 
 @media screen and (min-width: 400px) {
@@ -88,7 +88,7 @@ ion-content img {
 	position: fixed;
 	width: 100%;
 	height: 62%;
-	left: 0px;
-	bottom: 0px;
+	left: 0vw;
+	bottom: 0vh;
 	}
 }
