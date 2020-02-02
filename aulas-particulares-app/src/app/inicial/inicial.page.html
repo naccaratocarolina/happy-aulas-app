@@ -1,0 +1,24 @@
+<ion-content>
+	<ion-grid>
+		<ion-row [ngClass]="useLogo_Style ? 'logo_style' : ''">
+			NOSSA LOGO
+		</ion-row>
+
+		<ion-row [ngClass]="useBotoes ? 'botoes' : ''">
+			<ion-col>
+				
+	        	<ion-button fill="solid" expand="full" [ngClass]="useBotoes_Entrar ? 'botoes_entrar' : ''" >ENTRAR</ion-button>
+	      
+	    	</ion-col>
+
+	    	<ion-col>
+
+	        	<ion-button fill="solid" expand="full" [ngClass]="useBotoes_Cadastrar ? 'botoes_cadastrar' : ''" >CADASTRAR</ion-button>
+
+	    	</ion-col>
+		</ion-row>
+
+	</ion-grid>
+
+<img src="../assets/inicial_mesa.png">
+</ion-content>
