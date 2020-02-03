@@ -14,6 +14,8 @@ export class InicialPage implements OnInit {
 
 	public useLogo_Style:boolean = true;
 
+  public useBotoes_Tab1: boolean = true;
+
   constructor(private router: Router) { }
 
   redirecionaLogin() {

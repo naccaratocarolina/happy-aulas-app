@@ -22,3 +22,156 @@ ion-content {
 	width: 61%;
 	height: 22%;
 }
+
+.titulo {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 46%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: Roboto Condensed;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 9vw;
+	line-height: 11vw;
+
+	color: #393393;
+}
+
+.subtitulo {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 52%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 4vw;
+	line-height: 6vw;
+
+	color: #393393;
+}
+
+.container_form_user {
+	position: absolute;
+	top: 60%;
+	left: 12%;
+
+	display: flex;
+	align-items: center;
+}
+
+.form_user {
+	width: 61vw;
+	height: 5vh;
+
+	background: #8EAAFE;
+	border-radius: 0.3em;
+	padding-left: 0.5em;
+
+	font-size: 1em; /** problema aqui! fazer a fonte do form ficar responsiva **/
+}
+
+.form_user form {
+	display: flex;
+	align-items: center;
+	box-sizing: 0;
+}
+
+ion-icon {
+	color: #393393;
+	margin-right: 0.3em;
+	height: 1em;
+	width: 1em;
+}
+
+.container_form_senha {
+	position: absolute;
+	left: 12%;
+	top: 69%;
+
+	display: flex;
+	align-items: center;
+}
+
+.form_senha {
+	width: 61vw;
+	height: 5vh;
+
+	background: #8EAAFE;
+	border-radius: 0.3em;
+	padding-left: 0.5em;
+
+	font-size: 1em;
+}
+
+.form_senha form {
+	display: flex;
+	align-items: center;
+	box-sizing: 0;
+}
+
+@media screen and (min-width: 600px) {
+	.form_user {
+	width: 70vw;
+	height: 5vh;
+
+	background: #8EAAFE;
+	border-radius: 0.3em;
+	padding-left: 0.5em;
+
+	font-size: 1em;
+	}
+
+	.form_senha {
+	width: 70vw;
+	height: 5vh;
+
+	background: #8EAAFE;
+	border-radius: 0.3em;
+	padding-left: 0.5em;
+
+	font-size: 1em;
+	}
+
+	ion-icon {
+	color: #393393;
+	margin-right: 0.3em;
+	height: 2em;
+	width: 2em;
+	}
+
+}
+
+.container_botoes_tab1 {
+	position: absolute;
+	top: 79%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.botoes_tab1 {
+	width: 25vw;
+	height: 7vh;
+
+	font-family: Roboto Condensed;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 5vw;
+	line-height: 6vw;
+
+	color: #393393;
+
+}

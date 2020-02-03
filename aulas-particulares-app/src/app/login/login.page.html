@@ -3,5 +3,48 @@
 		<ion-row [ngClass]="useLogin_Img ? 'login_img' : ''">
 			<img src="../assets/login_img.png">
 		</ion-row>
+
+		<ion-row [ngClass]="useTitulo ? 'titulo' : ''">
+			LOGIN DO USUÁRIO
+		</ion-row>
+
+		<ion-row [ngClass]="useSubtitulo ? 'subtitulo' : ''">
+			Bem-vindo de volta
+		</ion-row>
+
+		<ion-row>
+			<div [ngClass]="useContainerFormUser ? 'container_form_user' : ''">
+				<ion-icon name="contact"></ion-icon>
+				<input 
+					type="" 
+					name="" 
+					placeholder="E-mail"
+					[ngClass]="useFormUser ? 'form_user' : ''"
+				>	
+			</div>
+		</ion-row>
+
+		<ion-row>
+			<div [ngClass]="useContainerFormSenha ? 'container_form_senha' : ''">
+				<ion-icon name="lock"></ion-icon>	
+				<input 
+					type="" 
+					name=""
+					placeholder="Senha" 
+					[ngClass]="useFormSenha ? 'form_senha' : ''"
+				>			
+			</div>
+		</ion-row>
+
+		<div [ngClass]="useContainerBotoes_Tab1 ? 'container_botoes_tab1' : ''">
+			<ion-button 
+			fill="solid"
+			[ngClass]="useBotoes_Tab1 ? 'botoes_tab1' : ''"
+			(click)="redirecionaTab1()"
+			>
+				ENTRAR
+			</ion-button>
+		</div>
+
 	</ion-grid>
 </ion-content>
