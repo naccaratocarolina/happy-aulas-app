@@ -20,6 +20,10 @@ export class InicialPage implements OnInit {
     this.router.navigateByUrl('/login');
   }
 
+  redirecionaCadastro() {
+    this.router.navigateByUrl('/cadastro');
+  }
+
   ngOnInit() {
   }
 
