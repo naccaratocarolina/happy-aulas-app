@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicial',
@@ -13,7 +14,11 @@ export class InicialPage implements OnInit {
 
 	public useLogo_Style:boolean = true;
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  redirecionaLogin() {
+    this.router.navigateByUrl('/login');
+  }
 
   ngOnInit() {
   }

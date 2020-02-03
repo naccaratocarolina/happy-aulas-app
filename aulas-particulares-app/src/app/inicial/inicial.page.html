@@ -7,13 +7,26 @@
 		<ion-row [ngClass]="useBotoes ? 'botoes' : ''">
 			<ion-col>
 				
-	        	<ion-button fill="solid" expand="full" [ngClass]="useBotoes_Entrar ? 'botoes_entrar' : ''" >ENTRAR</ion-button>
+	        	<ion-button 
+		        	fill="solid" 
+		        	expand="full" 
+		        	[ngClass]="useBotoes_Entrar ? 'botoes_entrar' : ''" 
+		        	(click)="redirecionaLogin()"
+	        	>
+	        		ENTRAR
+	        	</ion-button>
 	      
 	    	</ion-col>
 
 	    	<ion-col>
 
-	        	<ion-button fill="solid" expand="full" [ngClass]="useBotoes_Cadastrar ? 'botoes_cadastrar' : ''" >CADASTRAR</ion-button>
+	        	<ion-button 
+		        	fill="solid" 
+		        	expand="full" 
+		        	[ngClass]="useBotoes_Cadastrar ? 'botoes_cadastrar' : ''" 
+	        	>
+	        		CADASTRAR
+	    		</ion-button>
 
 	    	</ion-col>
 		</ion-row>
