@@ -2,11 +2,6 @@ ion-content {
 	--background: #FCFAFB;
 }
 
-.container_div {
-	background: #FCFAFB;
-	z-index: 10000000;
-}
-
 .card_info {
 	--background: #8EAAFE;
 	position: fixed;
@@ -81,7 +76,8 @@ input, select, textarea{
 }
 
 .container_materias {
-	position: absolute;
+	position: relative;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
