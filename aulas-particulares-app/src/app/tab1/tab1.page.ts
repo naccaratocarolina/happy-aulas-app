@@ -44,11 +44,6 @@ export class Tab1Page {
       url: '/termodinamica'
     },
     {
-      nome: 'MATERIAIS',
-      imagem: '../assets/tab1/img_cie_mat.png',
-      url: '/materiais'
-    },
-    {
       nome: 'ELETROMAGNETISMO',
       imagem: '../assets/tab1/img_eletromag.png',
       url: '/eletromag'
@@ -69,38 +64,15 @@ export class Tab1Page {
       url: '/biologia'
     },
     {
-      nome: 'MICROBIOLOGIA',
-      imagem: '../assets/tab1/img_microbio.png',
-      url: '/biologia'
-    },
-    {
       nome: 'GENÉTICA',
       imagem: '../assets/tab1/img_genetica.png',
       url: '/genetica'
     },
-    {
-      nome: 'HISTÓRIA',
-      imagem: '../assets/tab1/img_historia.png',
-      url: '/historia'
-    },
-    {
-      nome: 'GEOGRAFIA',
-      imagem: '../assets/tab1/img_geo.png',
-      url: '/geografia'
-    },
-    {
-      nome: 'ARTES',
-      imagem: '../assets/tab1/img_artes.png',
-      url: '/geografia'
-    },
-    {
-      nome: 'FOTOGRAFIA',
-      imagem: '../assets/tab1/img_fotografia.png',
-      url: '/geografia'
-    },
   ]
 
   /** Classes **/
+  public useContainerDiv: boolean = true;
+
   public useCardInfo: boolean = true;
   public useCardMensagem: boolean = true;
   public useContainerImgCard: boolean = true;

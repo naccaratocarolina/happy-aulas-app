@@ -2,11 +2,17 @@ ion-content {
 	--background: #FCFAFB;
 }
 
+.container_div {
+	background: #FCFAFB;
+	z-index: 10000000;
+}
+
 .card_info {
 	--background: #8EAAFE;
 	position: fixed;
 	margin: 2vh;
 	height: 15%;
+	z-index: 100000;
 }
 
 .card_mensagem {
@@ -47,6 +53,8 @@ ion-content {
 
 	display: flex;
 	align-items: center;
+
+	z-index: 100000;
 }
 
 .card_pesquisa ion-icon {
@@ -78,11 +86,10 @@ input, select, textarea{
 	justify-content: center;
 	align-items: center;
 
-	width: 93vw;
+	width: 100%;
 	height: auto;
 	top: 24vh;
 }
-
 
 .materias_config img {
 	height: auto;

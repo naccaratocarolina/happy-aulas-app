@@ -1,23 +1,25 @@
 <ion-content>
-    <ion-card [ngClass]="useCardInfo ? 'card_info' : ''">
-    	<ion-row>
-    		<ion-col [ngClass]="useCardMensagem ? 'card_mensagem' : ''">
-    			Seja bem-vindo, Fulano. Começe a navegar! O app é uma forma prática e eficiente de encontrar professores qualificados próximos à você.  
-    		</ion-col>
-    		<ion-col [ngClass]="useContainerImgCard ? 'container_img_card' : ''">
-    			<ion-img src="../assets/home_man_with_laptop.png"></ion-img>
-    		</ion-col>
-    	</ion-row>
-    </ion-card>
+    <div [ngClass]="useContainerDiv ? 'container_div' : ''">
+        <ion-card [ngClass]="useCardInfo ? 'card_info' : ''">
+        	<ion-row>
+        		<ion-col [ngClass]="useCardMensagem ? 'card_mensagem' : ''">
+        			<p>Seja bem-vindo, Fulano. Começe a navegar! O app é uma forma prática e eficiente de encontrar professores qualificados próximos à você.</p>
+        		</ion-col>
+        		<ion-col [ngClass]="useContainerImgCard ? 'container_img_card' : ''">
+        			<ion-img src="../assets/home_man_with_laptop.png"></ion-img>
+        		</ion-col>
+        	</ion-row>
+        </ion-card>
 
-    <ion-card [ngClass]="useCardPesquisa ? 'card_pesquisa' : ''">
-        <ion-icon name="search"></ion-icon>
-        <input 
-            type="" 
-            name="pesquisa" 
-            placeholder="Pesquisar..."
-        >
-    </ion-card>
+        <ion-card [ngClass]="useCardPesquisa ? 'card_pesquisa' : ''">
+            <ion-icon name="search"></ion-icon>
+            <input 
+                type="" 
+                name="pesquisa" 
+                placeholder="Pesquisar..."
+            >
+        </ion-card>
+    </div>
 
     <div [ngClass]="useContainerMaterias ? 'container_materias' : ''">
         <ion-grid>
@@ -34,7 +36,7 @@
                                 </ion-row>
 
                                 <ion-row>
-                                    {{ Materia.nome }}  
+                                    <p>{{ Materia.nome }}</p>
                                 </ion-row>
                             </ion-grid>
                     
