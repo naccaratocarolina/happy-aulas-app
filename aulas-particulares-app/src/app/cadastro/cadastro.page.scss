@@ -1,8 +1,3 @@
-/**
-Converter font-size e line-height: pixel -> em
-**/
-
-
 ion-content {
   --background: #8EAAFE;
 
@@ -15,7 +10,7 @@ ion-content {
   width: 100%;
   height: auto;
 
-  margin-top: 2vh;
+  margin-top: 5vh;
   margin-bottom: 2vh;
 	
 	padding-left: 20%;
@@ -25,12 +20,14 @@ ion-content {
   font-size: 32px;
   line-height: 37px;
   background-color: #8EAAFE;
+
+  color: white;
 }
 
 .input_config{
   position:absolute;
   left: 12%;
-  top: 20%;
+  top: 15%;
   background: transparent;
 
 }
@@ -91,4 +88,14 @@ ion-list{
    line-height: 6vw;
 
    color:#393393;
+}
+
+img {
+  position: fixed;
+  bottom: 0vh;
+  left: 8vw;
+}
+
+ion-item {
+  --background: rgba(0, 0, 0, 0);
 }
