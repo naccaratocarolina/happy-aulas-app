@@ -70,21 +70,16 @@ ion-content {
 	align-items: center;
 }
 
-.form_user {
+.container_form_user input {
 	width: 61vw;
 	height: 5vh;
+	border: none;
 
 	background: #8EAAFE;
 	border-radius: 0.3em;
 	padding-left: 0.5em;
 
-	font-size: 1em; /** problema aqui! fazer a fonte do form ficar responsiva **/
-}
-
-.form_user form {
-	display: flex;
-	align-items: center;
-	box-sizing: 0;
+	font-size: 1em;
 }
 
 ion-icon {
@@ -103,9 +98,10 @@ ion-icon {
 	align-items: center;
 }
 
-.form_senha {
+.container_form_senha input {
 	width: 61vw;
 	height: 5vh;
+	border: none;
 
 	background: #8EAAFE;
 	border-radius: 0.3em;
@@ -114,10 +110,12 @@ ion-icon {
 	font-size: 1em;
 }
 
-.form_senha form {
-	display: flex;
-	align-items: center;
-	box-sizing: 0;
+::placeholder {
+	color: white;
+}
+
+input, select, textarea{
+    color: white;
 }
 
 @media screen and (min-width: 600px) {
