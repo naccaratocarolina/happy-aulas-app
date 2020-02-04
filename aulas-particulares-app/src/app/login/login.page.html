@@ -18,32 +18,45 @@
 			(ngSubmit)="submitForm(registerForm)"
 		>
 			<ion-list>
-				<ion-item class="invalid">
+				<ion-item>
 					<ion-icon name="mail"></ion-icon>
 					<ion-input type="text" formControlName="email" placeholder="E-mail"></ion-input>
 				</ion-item>
-				<ion-item class="invalid">
+				<ion-item>
 					<ion-icon name="lock"></ion-icon>
 					<ion-input type="password" formControlName="password" placeholder="Senha"></ion-input>
 				</ion-item>
 
-				<ion-radio-group formControlName="funcao">
-					<ion-radio value="professor"></ion-radio>
-					<ion-label>Professor</ion-label>
-				</ion-radio-group>
-
-				<ion-item>
+				<ion-list>
 					<ion-radio-group formControlName="funcao">
-						<ion-radio value="aluno"></ion-radio>
-						<ion-label>Aluno</ion-label>
-					</ion-radio-group>
-				</ion-item>
+						<ion-row>
+							<ion-col>
+								<ion-item>
+									<ion-radio value="professor"></ion-radio>
+									<ion-label><p>Professor</p></ion-label>
+								</ion-item>
+							</ion-col>
 
-				<ion-item>
-					<ion-button type="submit" fill="solid" (click)="redirecionaTab1()">SUBMIT</ion-button>
+							<ion-col>
+								<ion-item>
+									<ion-radio value="aluno"></ion-radio>
+									<ion-label><p>Aluno</p></ion-label>
+								</ion-item>
+							</ion-col>
+						</ion-row>
+					</ion-radio-group>
+				</ion-list>
+
+				<ion-item [ngClass]="useContainerBotoes_Tab1 ? 'botoes_tab1' : ''">
+					<ion-button 
+						type="submit" 
+						fill="solid"
+						[disabled]="registerForm.invalid"
+					>
+						SUBMIT
+					</ion-button>
 				</ion-item>
 			</ion-list>
-
 		</form>
 		</ion-row>
 	</ion-grid>

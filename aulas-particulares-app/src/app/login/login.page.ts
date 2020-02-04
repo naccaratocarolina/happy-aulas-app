@@ -34,14 +34,17 @@ export class LoginPage implements OnInit {
 			funcao: [null, [Validators.required]]
 		});
 	}
-
+/**
   	redirecionaTab1() {
     	this.router.navigateByUrl('/tabs/tab1');
  	}
+**/
 
  	submitForm(form) {
  		console.log(form);
  		console.log(form.value);
+
+ 		this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
  	}
 
 	ngOnInit() { }

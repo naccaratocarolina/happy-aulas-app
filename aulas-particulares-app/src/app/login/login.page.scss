@@ -19,8 +19,8 @@ ion-content {
 
 .login_img img {
 	position: fixed;
-	width: 61%;
-	height: 22%;
+	width: auto;
+	height: auto;
 }
 
 .titulo {
@@ -138,10 +138,11 @@ ion-input, select, textarea{
 }
 
 ion-radio {
-	margin-right: 2%;
+	margin-right: 2vw;
 }
 
-.botoes_tab1 {
+.botoes_tab1 ion-button {
+	margin-left: 20vw;
 	width: 25vw;
 	height: 7vh;
 
@@ -155,10 +156,12 @@ ion-radio {
 
 }
 
-.invalid ion-label{
-	--color: red;
-}
+p {
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 4vw;
+	line-height: 6vw;
 
-.invalid ion-input {
-	border-bottom: 1px solid red;
+	color: #393393;
 }
