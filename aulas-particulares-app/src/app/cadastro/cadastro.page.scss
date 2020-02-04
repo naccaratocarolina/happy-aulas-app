@@ -1,7 +1,22 @@
-ion-content.fundo{
---background: #8EAAFE;
-  }
-ion-header.titulo{
+/**
+Converter font-size e line-height: pixel -> em
+**/
+
+
+ion-content {
+  --background: #8EAAFE;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  width: 100%;
+  height: auto;
+
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 	
 	padding-left: 20%;
   font-family: Roboto Condensed;
@@ -10,10 +25,38 @@ ion-header.titulo{
   font-size: 32px;
   line-height: 37px;
   background-color: #8EAAFE;
+}
 
-
+.input_config {
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 
+  width: 100%;
+  height: auto;
+  margin: 0.9em;
+}
+
+.input_config ion-icon {
+  color: #FCFAFB;
+  height: 1.7em;
+  width: 1.7em;
+  margin-right: 0.9em;
+}
+
+/** nossas configurações padrão de formulario (input) **/
+
+.input_config input {
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+::placeholder {
+  color: white;
+}
+
+input, select, textarea{
+    color: white;
 }

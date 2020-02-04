@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro.page.scss'],
 })
 export class CadastroPage implements OnInit {
+  /** Classes **/
+
+  public useFundo: boolean = true;
+  public useTitulo: boolean = true;
+
+  public useInputConfig: boolean = true;
 
   constructor() { }
 

@@ -1,22 +1,45 @@
-<ion-header class="titulo">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-	<h1>CRIE SUA CONTA</h1>
-</ion-header>
+<ion-content [ngClass]="useFundo ? 'fundo' : ''">
 
-<ion-content class="fundo">
-<ion-item>
-  <ion-input placeholder="Nome Completo"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-input placeholder="E-mail"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-input placeholder="Senha"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-input placeholder="Confirmar senha"></ion-input>
-</ion-item>
-<button>CRIAR CONTA</button>
+	<div [ngClass]="useTitulo ? 'titulo' : ''">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 
-<img src="../assets/images/cadastro.png">
+		CRIE SUA CONTA
+	</div>
+
+	<ion-row>
+		<div [ngClass]="useInputConfig ? 'input_config' : ''">
+			<ion-icon name="contact"></ion-icon>
+			<input 
+				type="" 
+				name="" 
+				placeholder="Nome Completo"
+			>	
+		</div>
+	</ion-row>
+
+	<ion-row>
+		<div [ngClass]="useInputConfig ? 'input_config' : ''">
+			<ion-icon name="mail"></ion-icon>
+			<input 
+				type="" 
+				name="" 
+				placeholder="E-mail"
+			>	
+		</div>
+	</ion-row>
+
+	<ion-row>
+		<div [ngClass]="useInputConfig ? 'input_config' : ''">
+			<ion-icon name="lock"></ion-icon>
+			<input 
+				type="" 
+				name="" 
+				placeholder="Senha"
+			>	
+		</div>
+	</ion-row>
+
+	<ion-button>CRIAR CONTA</ion-button>
+
+	<img src="../assets/images/cadastro.png">
 </ion-content>
