@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  public useCardInfo: boolean = true;
+  public useCardMensagem: boolean = true;
+  public useContainerImgCard: boolean = true;
+
+  public useCardPesquisa: boolean = true;
+
+  public useContainerMaterias: boolean = true;
 
   constructor() {}
 

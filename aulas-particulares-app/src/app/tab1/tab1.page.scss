@@ -1,3 +1,82 @@
 ion-content {
 	--background: #FCFAFB;
 }
+
+.card_info {
+	--background: #8EAAFE;
+	position: fixed;
+	margin: 2vh;
+	width: 88%;
+	height: 15%;
+	top: 0;
+}
+
+.card_mensagem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.4em;
+
+	/**font-family: Roboto;
+	font-style: normal;
+	line-height: 15px;**/
+	font-size: 0.8em;
+	font-weight: bold;
+
+	color: #FFFFFF;
+}
+
+.container_img_card ion-img {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 60vw;
+	height: auto;
+}
+
+.container_img_card {
+	width: 100%;
+	height: 100%;
+}
+
+.card_pesquisa {
+	--background: #8EAAFE;
+	position: fixed;
+
+	display: flex;
+	align-items: center;
+
+	margin: 2vh;
+	width: 88%;
+	height: 5%;
+	top: 17vh;
+}
+
+ion-thumbnail {
+	display: flex;
+	align-items: center;
+	margin: 1em;
+}
+
+.card_pesquisa ion-icon {
+	color: #FCFAFB;
+	height: 1.7em;
+	width: 1.7em;
+}
+
+.container_materias {
+	position: absolute;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 2vh;
+	width: 88%;
+	/**height: 72%;**/
+	top: 24vh;
+}
+
+ion-button {
+	width: 50%;
+}
