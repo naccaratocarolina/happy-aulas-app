@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Resources\Users as UserResource;
 use App\User;
 
 class UserController extends Controller
@@ -22,13 +23,15 @@ class UserController extends Controller
     }
 
     public function listUsers(Request $request){
-      $user = User::all();
-      return response()->json($user);
+     $paginator = User::paginate(10);
+     $user = UserResource::collection($paginator);
+     $last = $paginator -> lastPage();
+     return response()->json([$user,$last]);
     }
 
     public function findUser(Request $request, $id){
       $user = User::findOrFail($id);
-      return response()->json([$user]);
+      return response()->json(new UserResource($user));
     }
     public function updateUser(Request $request, $id){
       $user = User::find($id);

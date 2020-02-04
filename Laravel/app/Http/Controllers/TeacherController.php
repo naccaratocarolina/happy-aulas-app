@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Resources\Teacher as TeacherResource; 
 use App\Teacher;
 use App\User;
 
@@ -21,7 +22,7 @@ class TeacherController extends Controller
 
   public function listTeacher(Request $request){
     $teacher = Teacher::all();
-    return response()->json($teacher);
+    return response()->json(TeacherResource::collection($teacher));  
   }
 
   public function findTeacher(Request $request, $id){
