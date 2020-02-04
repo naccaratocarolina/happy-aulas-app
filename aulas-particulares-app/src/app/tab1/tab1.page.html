@@ -20,12 +20,28 @@
     </ion-card>
 
     <div [ngClass]="useContainerMaterias ? 'container_materias' : ''">
-        <ion-button>
-            teste
-        </ion-button>
+        <ion-grid>
+            <ion-row>
+                <ion-col *ngFor="let Materia of arrayMaterias" size=6>
+                    <a href={{Materia.url}}>
+                        <ion-card
+                            [ngClass]="useMateriasConfig ? 'materias_config' : ''" 
+                            color="primary"
+                        >
+                            <ion-grid>
+                                <ion-row>
+                                    <img src={{Materia.imagem}}>
+                                </ion-row>
 
-        <ion-button>
-            teste
-        </ion-button>
+                                <ion-row>
+                                    {{ Materia.nome }}  
+                                </ion-row>
+                            </ion-grid>
+                    
+                        </ion-card>
+                    </a>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
 	</div>
 </ion-content>

@@ -74,17 +74,23 @@ input, select, textarea{
 
 .container_materias {
 	position: absolute;
-
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 
-	margin: 2vh;
 	width: 93vw;
-	/**height: 72%;**/
+	height: auto;
 	top: 24vh;
 }
 
-ion-button {
-	width: 50%;
+
+.materias_config img {
+	height: auto;
+	width: auto;
+}
+
+ion-row {
+	display: flex;
+	justify-content: center;
+	margin-top: 0.6em;
 }
