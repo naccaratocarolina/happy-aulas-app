@@ -14,6 +14,8 @@ export class Tab1Page {
 
   public useContainerMaterias: boolean = true;
 
+  useInputConfig
+
   constructor() {}
 
 }

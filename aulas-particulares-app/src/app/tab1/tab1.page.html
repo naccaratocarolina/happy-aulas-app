@@ -11,18 +11,21 @@
     </ion-card>
 
     <ion-card [ngClass]="useCardPesquisa ? 'card_pesquisa' : ''">
-    	<ion-thumbnail slot="start">
-    		<ion-icon name="search"></ion-icon>
-    	</ion-thumbnail>
+        <ion-icon name="search"></ion-icon>
+        <input 
+            type="" 
+            name="pesquisa" 
+            placeholder="Pesquisar..."
+        >
     </ion-card>
 
     <div [ngClass]="useContainerMaterias ? 'container_materias' : ''">
-    	<ion-button>
-    		teste
-    	</ion-button>
+        <ion-button>
+            teste
+        </ion-button>
 
-    	<ion-button>
-    		teste
-    	</ion-button>
+        <ion-button>
+            teste
+        </ion-button>
 	</div>
 </ion-content>
