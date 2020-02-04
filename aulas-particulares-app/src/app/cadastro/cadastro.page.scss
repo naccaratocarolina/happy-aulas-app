@@ -27,36 +27,68 @@ ion-content {
   background-color: #8EAAFE;
 }
 
-.input_config {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: auto;
-  margin: 0.9em;
-}
-
-.input_config ion-icon {
-  color: #FCFAFB;
-  height: 1.7em;
-  width: 1.7em;
-  margin-right: 0.9em;
-}
-
-/** nossas configurações padrão de formulario (input) **/
-
-.input_config input {
+.input_config{
+  position:absolute;
+  left: 12%;
+  top: 20%;
   background: transparent;
+
+}
+
+.input_config input{
+  width: 61vw;
+  height: 5vh;
   border: none;
-  width: 100%;
-  height: 100%;
+
+  background: #8EAAFE;
+  border-radius: 0.3em;
+  padding-left: 0.5em;
+
+  font-size: 1em;
+
 }
 
-::placeholder {
-  color: white;
+ion-icon{
+  color:#393393;
+  margin-right: 0.3em;
+  height: 1em;
+  width: 1em;
 }
 
-input, select, textarea{
-    color: white;
+ion-input{
+  width: 61vw;
+  height: 5vh;
+  border: none;
+
+  background: #fcfafb;
+  border-radius: 0.3em;
+  padding-left: 0.5em;
+
+  font-size: 1em;
+}
+
+::placeholder{
+  color:#393393;
+}
+
+ion-input, select, textarea{
+  color:#393393;
+}
+
+ion-list{
+  background: #8EAAFE;
+}
+
+.style_button ion-button {
+   margin-left: 15vw;
+   width: auto;
+   height: 7vh;
+
+   font-family: Roboto Condensed;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 5vw;
+   line-height: 6vw;
+
+   color:#393393;
 }

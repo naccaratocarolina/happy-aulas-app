@@ -6,40 +6,53 @@
 		CRIE SUA CONTA
 	</div>
 
-	<ion-row>
-		<div [ngClass]="useInputConfig ? 'input_config' : ''">
-			<ion-icon name="contact"></ion-icon>
-			<input 
-				type="" 
-				name="" 
-				placeholder="Nome Completo"
-			>	
-		</div>
+	<ion-row [ngClass]="useInputConfig ? 'input_config' : ''">
+		<form 
+			[formGroup]="registerForm"
+			(ngSubmit)="submitForm(registerForm)" 
+		>
+		<ion-list>
+			<ion-item>
+				<ion-icon name="contact"></ion-icon>
+				<ion-input type="text" formControlName="nome" placeholder="Nome Completo"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name="mail"></ion-icon>
+				<ion-input type="text" formControlName="email" placeholder="E-mail"></ion-input>
+			
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name="lock"></ion-icon>
+				<ion-input type="password" formControlName="password" placeholder="Senha"></ion-input>
+			
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name="lock"></ion-icon>
+				<ion-input type="password" formControlName="password_check" placeholder="Confirme sua Senha"></ion-input>
+			
+			</ion-item>
+
+			<ion-item [ngClass]="useStyleButton ? 'style_button' : '' ">
+				<ion-button
+					type="submit"
+					fill="solid"
+					[disabled]="registerForm.invalid" 
+				>
+					CRIAR CONTA
+				</ion-button>
+			</ion-item>
+		</ion-list>
+
+
+		</form>
 	</ion-row>
 
-	<ion-row>
-		<div [ngClass]="useInputConfig ? 'input_config' : ''">
-			<ion-icon name="mail"></ion-icon>
-			<input 
-				type="" 
-				name="" 
-				placeholder="E-mail"
-			>	
-		</div>
-	</ion-row>
+	
 
-	<ion-row>
-		<div [ngClass]="useInputConfig ? 'input_config' : ''">
-			<ion-icon name="lock"></ion-icon>
-			<input 
-				type="" 
-				name="" 
-				placeholder="Senha"
-			>	
-		</div>
-	</ion-row>
-
-	<ion-button>CRIAR CONTA</ion-button>
+	
 
 	<img src="../assets/images/cadastro.png">
 </ion-content>
