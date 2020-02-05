@@ -1,5 +1,7 @@
 {
   "name": "aulas-particulares-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

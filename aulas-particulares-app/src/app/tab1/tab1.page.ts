@@ -82,6 +82,8 @@ export class Tab1Page {
   public useContainerMaterias: boolean = true;
   public useMateriasConfig: boolean = true;
 
+  public useContainerDiv: boolean = true;
+
   constructor() {}
 
 }
