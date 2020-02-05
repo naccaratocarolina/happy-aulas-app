@@ -71,8 +71,6 @@ export class Tab1Page {
   ]
 
   /** Classes **/
-  public useContainerDiv: boolean = true;
-
   public useCardInfo: boolean = true;
   public useCardMensagem: boolean = true;
   public useContainerImgCard: boolean = true;
@@ -81,8 +79,6 @@ export class Tab1Page {
 
   public useContainerMaterias: boolean = true;
   public useMateriasConfig: boolean = true;
-
-  public useContainerDiv: boolean = true;
 
   constructor() {}
 

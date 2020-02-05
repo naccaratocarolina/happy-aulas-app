@@ -2,10 +2,6 @@ ion-content {
 	--background: #FCFAFB;
 }
 
-.container_div {
-	background: white no-repeat 100% 100%;;
-}
-
 .card_info {
 	--background: #8EAAFE;
 	position: fixed;
@@ -82,18 +78,14 @@ input, select, textarea{
 .container_materias {
 	position: relative;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
 	width: 100%;
 	height: auto;
 	top: 24vh;
 }
 
 .materias_config img {
-	height: auto;
-	width: auto;
+	height: 10vh;
+	width: 20vw;
 }
 
 ion-row {
