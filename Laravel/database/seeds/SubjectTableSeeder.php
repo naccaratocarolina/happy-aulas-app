@@ -33,9 +33,6 @@ class SubjectTableSeeder extends Seeder
         'subject_name'=>'Termodinamica'
       ]);
       DB::table('subjects')->insert([
-        'subject_name'=>'Ciencia Dos Materiais'
-      ]);
-      DB::table('subjects')->insert([
         'subject_name'=>'Eletromagnetismo'
       ]);
       DB::table('subjects')->insert([
@@ -48,22 +45,7 @@ class SubjectTableSeeder extends Seeder
         'subject_name'=>'Biologia'
       ]);
       DB::table('subjects')->insert([
-        'subject_name'=>'Microbiologia'
-      ]);
-      DB::table('subjects')->insert([
         'subject_name'=>'Genetica'
-      ]);
-      DB::table('subjects')->insert([
-        'subject_name'=>'Historia'
-      ]);
-      DB::table('subjects')->insert([
-        'subject_name'=>'Geografia'
-      ]);
-      DB::table('subjects')->insert([
-        'subject_name'=>'Artes'
-      ]);
-      DB::table('subjects')->insert([
-        'subject_name'=>'Fotografia'
       ]);
     }
 }

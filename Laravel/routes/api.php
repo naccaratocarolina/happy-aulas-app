@@ -13,6 +13,7 @@ Route::get('finduser/{id}','UserController@findUser');
 Route::post('createuser','UserController@createUser');
 Route::put('updateuser/{id}','UserController@updateUser');
 Route::delete('deleteuser/{id}','UserController@deleteUser');
+Route::get('showpicture/{id}','UserController@showPicture');
 
 //teacher
 Route::get('listteacher','TeacherController@listTeacher');

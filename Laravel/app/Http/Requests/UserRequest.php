@@ -27,12 +27,13 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome' => 'required|alpha';
-            'password' =>'required|string';
-            'email' => 'required|email|unique';
-            'phone_number' => 'required|celular';
-            'cpf' => 'required|cpf';
-            'adress' => 'required|string';
+            'nome' => 'required|alpha',
+            'password' =>'required|string',
+            'email' => 'required|email|unique',
+            'phone_number' => 'required|celular',
+            'cpf' => 'required|cpf',
+            'adress' => 'required|string',
+            'profile_picture'=>'file|image|mimes:jpeg,png,gif,webp|max:2048',
           ];
     }
     public function messages(){
@@ -40,10 +41,11 @@ class UserRequest extends FormRequest
           'nome.alpha' => 'O nome deve consistir apenas em caracteres alfabéticos',
           'email.email' =>'Insira um email válido',
           'email.unique' =>'Este email já existe',
-        ]
+        ];
     }
     protected function failedValidation(Validator $validator)
     {
       throw new HttpResponseException(response()->json($validator->errors(),422));
     }
+}
 }
