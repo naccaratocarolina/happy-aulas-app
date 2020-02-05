@@ -30,8 +30,7 @@ export class LoginPage implements OnInit {
 
 		this.registerForm = this.formbuilder.group({
 			email: [null, [Validators.required, Validators.email]],
-			password: [null, [Validators.required, Validators.minLength(6)]],
-			funcao: [null, [Validators.required]]
+			password: [null, [Validators.required, Validators.minLength(6)]]
 		});
 	}
 /**

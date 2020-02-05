@@ -28,26 +28,6 @@
 					<ion-input type="password" formControlName="password" placeholder="Senha"></ion-input>
 				</ion-item>
 
-				<ion-list>
-					<ion-radio-group formControlName="funcao">
-						<ion-row>
-							<ion-col>
-								<ion-item>
-									<ion-radio value="professor"></ion-radio>
-									<ion-label><p>Professor</p></ion-label>
-								</ion-item>
-							</ion-col>
-
-							<ion-col>
-								<ion-item>
-									<ion-radio value="aluno"></ion-radio>
-									<ion-label><p>Aluno</p></ion-label>
-								</ion-item>
-							</ion-col>
-						</ion-row>
-					</ion-radio-group>
-				</ion-list>
-
 				<ion-item [ngClass]="useContainerBotoes_Tab1 ? 'botoes_tab1' : ''">
 					<ion-button 
 						type="submit" 
