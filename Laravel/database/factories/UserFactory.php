@@ -22,6 +22,7 @@ $factory->define(User::class, function (Faker $faker) {
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
+        'is_admin' => false,
         'phone_number' => $faker->cellphoneNumber(true),
         'cpf' => $faker->cpf(true),
         'address' => $faker->streetAddress,

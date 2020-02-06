@@ -11,13 +11,8 @@ use App\User;
 
 class UserController extends Controller
 {
-    public function createUser(Request $request)
+    public function createUser(UserRequest $request)
     {
-      $validator = Validator::make($request->all(), [
-        'profile_picture,required|file|image|mimes:jpeg,png,gif,webp|max:2048'
-        ]);
-
-
         $user = new User;
 
         $user->name = $request->name;
@@ -42,50 +37,50 @@ class UserController extends Controller
         return response()->json([$user]);
     }
 
-    public function listUsers(Request $request){
-     $paginator = User::paginate(10);
-     $user = UserResource::collection($paginator);
-     $last = $paginator -> lastPage();
-     return response()->json([$user,$last]);
+    public function listUsersUser(Request $request){
+        $paginator = User::paginate(10);
+        $user = UserResource::collection($paginator);
+        $last = $paginator -> lastPage();
+        return response()->json([$user,$last]);
     }
 
     public function findUser(Request $request, $id){
-      $user = User::findOrFail($id);
-      return response()->json(new UserResource($user));
+        $user = User::findOrFail($id);
+        return response()->json(new UserResource($user));
     }
-    public function updateUser(Request $request, $id){
-      $user = User::find($id);
-      if($user){
-        if($request->name){
-          $user->name = $request->name;
-        }
-        if($request->name){
-          $user->profile_picture = $request->profile_picture;
-        }
-        if($request->password){
-          $user->password = $request->password;
-        }
-        if($request->email){
-          $user->email = $request->email;
-        }
-        if($request->phone_number){
-          $user->phone_number = $request->phone_number;
-        }
-        if($request->cpf){
-          $user->cpf = $request->cpf;
-        }
-        if($request->address){
-          $user->address = $request->address;
-        }
-        if($request->profile_picture){
-          If (!Storage::exists('localPhotos/')){
-             Storage::makeDirectory('localPhotos/');
-           }
-           $file = $request->file('profile_picture');
-           $filename = $user->id.'.'.$file->getClientOriginalExtension();
-           $path = $file->storeAs('localPhotos', $filename);
-           $user->profile_picture = $path;
-        }
+    public function updateUser(UserRequest $request, $id){
+        $user = User::find($id);
+        if($user){
+          if($request->name){
+            $user->name = $request->name;
+          }
+          if($request->name){
+            $user->profile_picture = $request->profile_picture;
+          }
+          if($request->password){
+            $user->password = $request->password;
+          }
+          if($request->email){
+            $user->email = $request->email;
+          }
+          if($request->phone_number){
+            $user->phone_number = $request->phone_number;
+          }
+          if($request->cpf){
+            $user->cpf = $request->cpf;
+          }
+          if($request->address){
+            $user->address = $request->address;
+          }
+          if($request->profile_picture){
+            If (!Storage::exists('localPhotos/')){
+               Storage::makeDirectory('localPhotos/');
+             }
+             $file = $request->file('profile_picture');
+             $filename = $user->id.'.'.$file->getClientOriginalExtension();
+             $path = $file->storeAs('localPhotos', $filename);
+             $user->profile_picture = $path;
+          }
         $user->save();
         return response()->json([$user]);
       }
