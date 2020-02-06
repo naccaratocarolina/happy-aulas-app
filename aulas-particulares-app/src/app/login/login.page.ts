@@ -33,11 +33,12 @@ export class LoginPage implements OnInit {
 			password: [null, [Validators.required, Validators.minLength(6)]]
 		});
 	}
-/**
+
+	/**
   	redirecionaTab1() {
     	this.router.navigateByUrl('/tabs/tab1');
  	}
-**/
+	**/
 
  	submitForm(form) {
  		console.log(form);
@@ -45,6 +46,12 @@ export class LoginPage implements OnInit {
 
  		this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
  	}
+
+ 	/** Storage
+ 	storageForm() {
+ 		this.storage.set('name', 'Max');
+ 	}
+ 	**/
 
 	ngOnInit() { }
 

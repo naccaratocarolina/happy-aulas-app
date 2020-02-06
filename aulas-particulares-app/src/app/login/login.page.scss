@@ -95,7 +95,7 @@ ion-input, select, textarea{
 }
 
 @media screen and (min-width: 600px) {
-	.form_user {
+	.container_form_user {
 	width: 70vw;
 	height: 5vh;
 
@@ -153,4 +153,12 @@ p {
 	line-height: 6vw;
 
 	color: #393393;
+}
+
+ion-item {
+  --background: rgba(0, 0, 0, 0);
+}
+
+ion-list {
+  --background: rgba(0, 0, 0, 0);
 }
