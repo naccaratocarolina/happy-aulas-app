@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-    /** Objeto materias **/
+  /** Objeto materias **/
   arrayMaterias = [
     {
       nome: 'CALCULO',
@@ -69,16 +69,6 @@ export class Tab1Page {
       url: '/genetica'
     },
   ]
-
-  /** Classes **/
-  public useCardInfo: boolean = true;
-  public useCardMensagem: boolean = true;
-  public useContainerImgCard: boolean = true;
-
-  public useCardPesquisa: boolean = true;
-
-  public useContainerMaterias: boolean = true;
-  public useMateriasConfig: boolean = true;
 
   constructor() {}
 

@@ -1,17 +1,17 @@
 <ion-content>
     <div>
-        <ion-card [ngClass]="useCardInfo ? 'card_info' : ''">
+        <ion-card class="card_info">
         	<ion-row>
-        		<ion-col [ngClass]="useCardMensagem ? 'card_mensagem' : ''">
+        		<ion-col class="card_mensagem">
         			<p>Seja bem-vindo, Fulano. Começe a navegar! O app é uma forma prática e eficiente de encontrar professores qualificados próximos à você.</p>
         		</ion-col>
-        		<ion-col [ngClass]="useContainerImgCard ? 'container_img_card' : ''">
+        		<ion-col class="container_img_card">
         			<ion-img src="../assets/home_man_with_laptop.png"></ion-img>
         		</ion-col>
         	</ion-row>
         </ion-card>
 
-        <ion-card [ngClass]="useCardPesquisa ? 'card_pesquisa' : ''">
+        <ion-card class="card_pesquisa">
             <ion-icon name="search"></ion-icon>
             <input 
                 type="" 
@@ -21,13 +21,13 @@
         </ion-card>
     </div>
 
-    <div [ngClass]="useContainerMaterias ? 'container_materias' : ''">
+    <div class="container_materias">
         <ion-grid>
             <ion-row>
                 <ion-col *ngFor="let Materia of arrayMaterias" size=6>
                     <a href={{Materia.url}}>
                         <ion-card
-                            [ngClass]="useMateriasConfig ? 'materias_config' : ''" 
+                            class="materias_config" 
                             color="primary"
                         >
                             <ion-grid>
