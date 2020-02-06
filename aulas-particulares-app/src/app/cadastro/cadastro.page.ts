@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ToastController } from "@ionic/angular";
 
 @Component({
   selector: 'app-cadastro',
@@ -12,7 +13,7 @@ export class CadastroPage implements OnInit {
   /** Formulario */
   registerForm: FormGroup;
 
-  constructor(public formbuilder: FormBuilder) {
+  constructor(public formbuilder: FormBuilder, private toastController: ToastController) {
     this.registerForm = this.formbuilder.group({
       nome: [null, [Validators.required]],
       email: [null, [Validators.required, Validators.email]],
@@ -31,10 +32,18 @@ export class CadastroPage implements OnInit {
 
   checkPassword(form) {
     if(form.value.password != form.value.password_check) {
-      this.passwordError = true;
+      return this.passwordError = true;
     } else {
-      this.passwordError = false;
+      return this.passwordError = false;
     }
   }
+
+  async alertaSenha(passwordError) {
+        const toast = await this.toastController.create({
+          message: "Senhas não compatíveis!",
+          duration: 5000
+        });
+        toast.present();
+      }
 
 }
