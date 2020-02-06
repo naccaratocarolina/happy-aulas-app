@@ -1,20 +1,26 @@
-<ion-content [ngClass]="useFundo ? 'fundo' : ''">
+<ion-content class="fundo">
 
-	<div [ngClass]="useTitulo ? 'titulo' : ''">
+	<div class="titulo">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 
 		CRIE SUA CONTA
 	</div>
 
-	<ion-row [ngClass]="useInputConfig ? 'input_config' : ''">
+	<ion-row class="input_config">
 		<form 
 			[formGroup]="registerForm"
 			(ngSubmit)="submitForm(registerForm)" 
 		>
+
 		<ion-list>
 			<ion-item lines="none">
 				<ion-icon name="contact"></ion-icon>
-				<ion-input type="text" formControlName="nome" placeholder="Nome Completo"></ion-input>
+				<ion-input 
+					type="text" 
+					formControlName="nome" 
+					placeholder="Nome Completo"
+				>
+					</ion-input>
 			</ion-item>
 
 			<ion-item lines="none">
@@ -31,11 +37,17 @@
 
 			<ion-item lines="none">
 				<ion-icon name="lock"></ion-icon>
-				<ion-input type="password" formControlName="password_check" placeholder="Confirme sua Senha"></ion-input>
+				<ion-input 
+					type="password" 
+					formControlName="password_check" 
+					placeholder="Confirme sua Senha"
+					(keyup)="checkPassword(registerForm)"
+				>
+				</ion-input>
 			
 			</ion-item>
 
-			<ion-item [ngClass]="useStyleButton ? 'style_button' : '' " lines="none">
+			<ion-item class="style_button" lines="none">
 				<ion-button
 					type="submit"
 					fill="solid"

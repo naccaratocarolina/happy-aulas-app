@@ -7,15 +7,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./cadastro.page.scss'],
 })
 export class CadastroPage implements OnInit {
-  /** Classes **/
+  private passwordError:boolean;
 
-  public useFundo: boolean = true;
-  public useTitulo: boolean = true;
-
-  public useInputConfig: boolean = true;
-  public useStyleButton: boolean = true;
-
-  /** formulario */
+  /** Formulario */
   registerForm: FormGroup;
 
   constructor(public formbuilder: FormBuilder) {
@@ -33,6 +27,14 @@ export class CadastroPage implements OnInit {
       }
 
   ngOnInit() {
+  }
+
+  checkPassword(form) {
+    if(form.value.password != form.value.password_check) {
+      this.passwordError = true;
+    } else {
+      this.passwordError = false;
+    }
   }
 
 }

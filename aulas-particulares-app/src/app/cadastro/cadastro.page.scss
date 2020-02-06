@@ -68,8 +68,28 @@ ion-input{
   color:#393393;
 }
 
-ion-input, select, textarea{
+.cor_normal ion-input {
   color:#393393;
+}
+
+.cor_normal select {
+  color:#393393;
+}
+
+.cor_normal textarea {
+  color:#393393;
+}
+
+.cor_danger ion-input {
+  color: red;
+}
+
+.cor_danger select {
+  color: red;
+}
+
+.cor_danger textarea {
+  color: red;
 }
 
 ion-list{
@@ -91,7 +111,7 @@ ion-list{
 }
 
 img {
-  position: fixed;
+  position: absolute;
   bottom: 0vh;
   left: 8vw;
 }
