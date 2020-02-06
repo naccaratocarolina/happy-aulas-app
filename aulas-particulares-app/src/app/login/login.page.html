@@ -1,18 +1,18 @@
 <ion-content>
 	<ion-grid>
-		<ion-row [ngClass]="useLogin_Img ? 'login_img' : ''">
+		<ion-row class="login_img">
 			<img src="../assets/login_img.png">
 		</ion-row>
 
-		<ion-row [ngClass]="useTitulo ? 'titulo' : ''">
+		<ion-row class="titulo">
 			LOGIN DO USUÁRIO
 		</ion-row>
 
-		<ion-row [ngClass]="useSubtitulo ? 'subtitulo' : ''">
+		<ion-row class="subtitulo">
 			Bem-vindo de volta
 		</ion-row>
 
-		<ion-row [ngClass]="useContainerFormUser ? 'container_form_user' : ''">
+		<ion-row class="container_form_user">
 		<form 
 			[formGroup]="registerForm" 
 			(ngSubmit)="submitForm(registerForm)"
@@ -28,13 +28,13 @@
 					<ion-input type="password" formControlName="password" placeholder="Senha"></ion-input>
 				</ion-item>
 
-				<ion-item [ngClass]="useContainerBotoes_Tab1 ? 'botoes_tab1' : ''" lines="none">
+				<ion-item class="botoes_tab1" lines="none">
 					<ion-button 
 						type="submit" 
 						fill="solid"
 						[disabled]="registerForm.invalid"
 					>
-						SUBMIT
+						ENTRAR
 					</ion-button>
 				</ion-item>
 			</ion-list>
