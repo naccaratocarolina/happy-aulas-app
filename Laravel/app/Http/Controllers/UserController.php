@@ -37,7 +37,7 @@ class UserController extends Controller
         return response()->json([$user]);
     }
 
-    public function listUsersUser(Request $request){
+    public function listUsers(Request $request){
         $paginator = User::paginate(10);
         $user = UserResource::collection($paginator);
         $last = $paginator -> lastPage();

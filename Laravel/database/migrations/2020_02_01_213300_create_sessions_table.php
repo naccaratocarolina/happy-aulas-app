@@ -18,6 +18,7 @@ class CreateSessionsTable extends Migration
             $table->bigIncrements('id');
             $table->string('session_date_time');
             $table->float('price');
+            $table->string('address');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('teacher_id');
             $table->timestamps();

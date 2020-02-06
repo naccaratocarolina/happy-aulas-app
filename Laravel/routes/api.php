@@ -22,12 +22,12 @@ Route::post('createteacher','TeacherController@createTeacher');
 Route::put('updateteacher/{id}','TeacherController@updateTeacher');
 Route::delete('deleteteacher/{id}','TeacherController@deleteTeacher');
 
-//student
-Route::get('liststudents','StudentController@listStudents');
-Route::get('findstudent/{id}','StudentController@findStudent');
-Route::post('createstudent','StudentController@createStudent');
-Route::put('updatestudent/{id}','StudentController@updateStudent');
-Route::delete('deletestudent/{id}','StudentController@deleteStudent');
+// //student
+// Route::get('liststudents','StudentController@listStudents');
+// Route::get('findstudent/{id}','StudentController@findStudent');
+// Route::post('createstudent','StudentController@createStudent');
+// Route::put('updatestudent/{id}','StudentController@updateStudent');
+// Route::delete('deletestudent/{id}','StudentController@deleteStudent');
 
 //subject_teacher
 Route::get('listsubject_teacher','Subject_TeacherController@listSubject_Teacher');
