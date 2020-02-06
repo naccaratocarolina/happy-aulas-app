@@ -2,13 +2,49 @@ ion-content {
 	--background: #FCFAFB;
 }
 
+ion-toolbar {
+	height: auto;
+	margin-bottom: 0;
+	--background: #FCFAFB;
+}
+
 .card_info {
 	--background: #8EAAFE;
-	position: fixed;
-	margin: 2vh;
-	height: 15%;
-	z-index: 100000;
+	height: auto;
+	margin-bottom: 0;
 }
+
+.card_pesquisa {
+	position: relative;
+	--background: #8EAAFE;
+	height: 5vh;
+	width: 93vw;
+	margin: 0;
+	padding: 0;
+
+
+	display: flex;
+	align-items: center;
+}
+
+.container_materias {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.materias_config {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.materias_config p {
+
+}
+
+.card-pesquisa ion-row {
+	margin: 0;
+}
+
 
 .card_mensagem {
 	display: flex;
@@ -38,20 +74,6 @@ ion-content {
 	height: 100%;
 }
 
-.card_pesquisa {
-	--background: #8EAAFE;
-	position: fixed;
-	margin: 2vh;
-	height: 5%;
-	width: 93vw;
-	top: 17vh;
-
-	display: flex;
-	align-items: center;
-
-	z-index: 100000;
-}
-
 .card_pesquisa ion-icon {
 	color: #FCFAFB;
 	height: 1.7em;
@@ -73,14 +95,6 @@ ion-content {
 
 input, select, textarea{
     color: white;
-}
-
-.container_materias {
-	position: relative;
-
-	width: 100%;
-	height: auto;
-	top: 24vh;
 }
 
 .materias_config img {
