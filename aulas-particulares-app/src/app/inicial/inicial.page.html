@@ -1,29 +1,29 @@
 <ion-content>
 	<ion-grid>
-		<ion-row [ngClass]="useLogo_Style ? 'logo_style' : ''">
-			NOSSA LOGO
+		<ion-row class="logo_style">
+			<img src="../assets/happy-aulas-logo.png">
 		</ion-row>
 
-		<ion-row [ngClass]="useBotoes ? 'botoes' : ''">
+		<ion-row class="botoes">
 			<ion-col>
-				
-	        	<ion-button 
-		        	fill="solid" 
-		        	expand="full" 
-		        	[ngClass]="useBotoes_Entrar ? 'botoes_entrar' : ''" 
+
+	        	<ion-button
+		        	fill="solid"
+		        	expand="full"
+		        	class="botoes_entrar"
 		        	(click)="redirecionaLogin()"
 	        	>
 	        		ENTRAR
 	        	</ion-button>
-	      
+
 	    	</ion-col>
 
 	    	<ion-col>
 
-	        	<ion-button 
+	        	<ion-button
 		        	fill="solid" 
-		        	expand="full" 
-		        	[ngClass]="useBotoes_Cadastrar ? 'botoes_cadastrar' : ''" 
+		        	expand="full"
+		        	class="botoes_cadastrar"
 		        	(click)="redirecionaCadastro()"
 	        	>
 	        		CADASTRAR
@@ -33,6 +33,7 @@
 		</ion-row>
 
 	</ion-grid>
-
-<img src="../assets/inicial_mesa.png">
+	<div class="imagem_background">
+		<img src="../assets/inicial_mesa.png">
+	</div>
 </ion-content>
