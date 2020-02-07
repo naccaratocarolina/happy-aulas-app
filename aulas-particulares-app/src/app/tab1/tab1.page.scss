@@ -1,4 +1,109 @@
-.welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
+ion-content {
+	--background: #FCFAFB;
+}
+
+ion-toolbar {
+	height: auto;
+	margin-bottom: 0;
+	--background: #FCFAFB;
+}
+
+.card_info {
+	--background: #8EAAFE;
+	height: auto;
+	margin-bottom: 0;
+}
+
+.card_pesquisa {
+	position: relative;
+	--background: #8EAAFE;
+	height: 5vh;
+	width: 93vw;
+	margin: 0;
+	padding: 0;
+
+
+	display: flex;
+	align-items: center;
+}
+
+.container_materias {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.materias_config {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.materias_config p {
+
+}
+
+.card-pesquisa ion-row {
+	margin: 0;
+}
+
+
+.card_mensagem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.4em;
+
+	/**font-family: Roboto;
+	font-style: normal;
+	line-height: 15px;**/
+	font-size: 0.8em;
+	font-weight: bold;
+
+	color: #FFFFFF;
+}
+
+.container_img_card ion-img {
+	position: fixed;
+	right: 0;
+	top: 13%;
+	width: 60vw;
+	height: auto;
+}
+
+.container_img_card {
+	width: 80%;
+	height: 70%;
+}
+
+.card_pesquisa ion-icon {
+	color: #FCFAFB;
+	height: 1.7em;
+	width: 1.7em;
+	margin: 0.9em;
+}
+
+.card_pesquisa input {
+	margin-right: 0.9em;
+	background: transparent;
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
+::placeholder {
+	color: white;
+}
+
+input, select, textarea{
+    color: white;
+}
+
+.materias_config img {
+	height: 10vh;
+	width: 20vw;
+}
+
+ion-row {
+	display: flex;
+	justify-content: center;
+	margin-top: 0.6em;
 }
