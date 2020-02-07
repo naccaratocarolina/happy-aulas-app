@@ -1,0 +1,88 @@
+ion-content {
+	--background: #FCFAFB;
+}
+
+.logo img {
+	position: fixed;
+	top: 1vh;
+	left: 1vh;
+	z-index: 1000000;
+}
+
+ion-icon {
+	color: #393393;
+	margin-right: 0.3em;
+	height: 1em;
+	width: 1em;
+}
+
+ion-input {
+	width: 61vw;
+	height: 5vh;
+	border: none;
+
+	background: #8EAAFE;
+	border-radius: 0.3em;
+	padding: 0.5em;
+
+	font-size: 1em;
+}
+
+::placeholder {
+	color: #393393;
+}
+
+ion-input, select, textarea{
+    color: #393393;
+}
+
+ion-select {
+	min-width: 61vw;
+	height: 5vh;
+	border: none;
+
+	background: #8EAAFE;
+	border-radius: 0.3em;
+	padding: 0.5em;
+
+	font-size: 1em;
+}
+
+ion-select, select, textarea{
+    color: #393393;
+}
+
+ion-textarea {
+	background: #8EAAFE;
+	border-radius: 0.3em;
+	padding: 0.5em;
+
+	font-size: 1em;
+}
+
+.container_form_cadastro_prof {
+	position: absolute;
+	top: 40%;
+	left: 12%;
+}
+
+.botao_concluir_cadastro ion-button {
+	position: relative;
+	width: 44vw;
+	height: 5vh;
+	left: 18%;
+	margin-top: 20px;
+
+	border-radius: 0.3em;
+}
+
+.botao_concluir_cadastro p {
+	font-family: Roboto Condensed;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+
+	color: #FCFAFB;
+}
