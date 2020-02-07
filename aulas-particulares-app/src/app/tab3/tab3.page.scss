@@ -8,7 +8,7 @@
 
 .foto2{
 	position: absolute;
-	margin: 5%;
+	margin: 3%;
 }
 
 .perfil{
@@ -16,7 +16,8 @@
 	display:flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 4%;
+	margin: 2%;
+	height:9em;
 }
 
 .editar{
@@ -26,6 +27,7 @@
 }
 .foto{
     --background: rgba(0,0,0,0);
+
     
 }
 
@@ -42,8 +44,8 @@
 .button2{
     border-radius: 100%;
 	background-color: white;
-	width: auto;
-	height:2;
+	height: 5em;
+    width: 5em;
 	--border-radius: 100%;
 }
 
@@ -52,7 +54,7 @@
 	margin-right: 13%;
 	background: white;
 	text-align: center;
-	padding:2%;
+	padding:1%;
 	margin-top: 0;
 	margin-bottom: 0;
 	
@@ -69,8 +71,8 @@
 }
 
 .button1{
-	width: 100%;
-    height: 29%;
+	width: 93%;
+    height: 44%;
     font-size: 65%;
 	
 }
@@ -79,7 +81,7 @@
     margin: 13%;
     height: 9%;
     position: absolute;
-    margin-left: 25%;
+    margin-left: 22%;
     width: 44%;
 	font-size:76%;
     
