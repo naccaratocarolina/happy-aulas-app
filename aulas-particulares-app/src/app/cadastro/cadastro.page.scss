@@ -1,0 +1,121 @@
+ion-content {
+  --background: #8EAAFE;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  width: 100%;
+  height: auto;
+
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+	
+	padding-left: 20%;
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+  background-color: #8EAAFE;
+
+  color: white;
+}
+
+.input_config{
+  position:absolute;
+  left: 12%;
+  top: 15%;
+  background: transparent;
+
+}
+
+.input_config input{
+  width: 61vw;
+  height: 5vh;
+  border: none;
+
+  background: #8EAAFE;
+  border-radius: 0.3em;
+  padding-left: 0.5em;
+
+  font-size: 1em;
+
+}
+
+ion-icon{
+  color:#393393;
+  margin-right: 0.3em;
+  height: 1em;
+  width: 1em;
+}
+
+ion-input{
+  width: 61vw;
+  height: 5vh;
+  border: none;
+
+  background: #fcfafb;
+  border-radius: 0.3em;
+  padding-left: 0.5em;
+
+  font-size: 1em;
+}
+
+::placeholder{
+  color:#393393;
+}
+
+.cor_normal ion-input {
+  color:#393393;
+}
+
+.cor_normal select {
+  color:#393393;
+}
+
+.cor_normal textarea {
+  color:#393393;
+}
+
+.cor_danger ion-input {
+  color: red;
+}
+
+.cor_danger select {
+  color: red;
+}
+
+.cor_danger textarea {
+  color: red;
+}
+
+ion-list{
+  background: #8EAAFE;
+}
+
+.style_button ion-button {
+   margin-left: 15vw;
+   width: auto;
+   height: 7vh;
+
+   font-family: Roboto Condensed;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 5vw;
+   line-height: 6vw;
+
+   color:#393393;
+}
+
+img {
+  position: absolute;
+  bottom: 0vh;
+  left: 8vw;
+}
+
+ion-item {
+  --background: rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,69 @@
+<ion-content class="fundo">
+
+	<div class="titulo">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+		CRIE SUA CONTA
+	</div>
+
+	<ion-row class="input_config">
+		<form 
+			[formGroup]="registerForm"
+			(ngSubmit)="submitForm(registerForm)" 
+		>
+
+		<ion-list>
+			<ion-item>
+				<ion-icon name="contact"></ion-icon>
+				<ion-input 
+					type="text" 
+					formControlName="nome" 
+					placeholder="Nome Completo"
+				>
+					</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name="mail"></ion-icon>
+				<ion-input type="text" formControlName="email" placeholder="E-mail"></ion-input>
+			
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name="lock"></ion-icon>
+				<ion-input type="password" formControlName="password" placeholder="Senha"></ion-input>
+			
+			</ion-item>
+
+			<ion-item>
+				<ion-icon name="lock"></ion-icon>
+				<ion-input 
+					type="password" 
+					formControlName="password_check" 
+					placeholder="Confirme sua Senha"
+					(keyup)="checkPassword(registerForm)"
+					(click)="alertaSenha()"
+				>
+				</ion-input>
+			
+			</ion-item>
+
+			<ion-item class="style_button" lines="none">
+				<ion-button
+					type="submit"
+					fill="solid"
+					[disabled]="registerForm.invalid" 
+				>
+					CRIAR CONTA
+				</ion-button>
+			</ion-item>
+		</ion-list>
+
+
+		</form>
+	</ion-row>
+
+	<ion-row>
+		<img src="../assets/images/cadastro.png">
+	</ion-row>
+</ion-content>
