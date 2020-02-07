@@ -92,6 +92,35 @@ ion-select, select, textarea{
 }
 
 .imagem_fundo img {
-	position: absolute;
-	bottom: 0;
+	position: fixed;
+	top: 65vh;
+}
+
+.botao_agendar {
+		z-index: -1000000;
+}
+
+.botao_agendar ion-button {
+	position: relative;
+	width: 96px;
+	height: 30px;
+	left: 35%;
+	margin-bottom: 4px;
+
+	border-radius: 0.3em;
+}
+
+.botao_agendar p {
+	font-family: Roboto Condensed;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+
+	color: #FCFAFB;
+}
+
+ion-item {
+  --background: rgba(0, 0, 0, 0);
 }

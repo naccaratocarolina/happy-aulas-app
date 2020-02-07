@@ -13,7 +13,6 @@ export class Tab2Page {
 
   constructor(private router: Router, public formbuilder: FormBuilder) {
   	this.registerForm = this.formbuilder.group({
-			email: [null, [Validators.required, Validators.email]],
 			materia: [null, [Validators.required]],
 			professor: [null, [Validators.required]],
 			local: [null, [Validators.required]],

@@ -4,21 +4,16 @@
 		<ion-row class="titulo"><p>AGENDAMENTOS</p></ion-row>
 
 		<ion-row class="container_form_agendamento">
-		<form 
-			[formGroup]="registerForm" 
+		<form
+			[formGroup]="registerForm"
 			(ngSubmit)="submitForm(registerForm)"
 		>
 			<ion-list>
 				<ion-item>
-					<ion-icon name="md-person"></ion-icon>
-					<ion-input type="text" formControlName="email" placeholder="E-mail"></ion-input>
-				</ion-item>
-
-				<ion-item>
 					<ion-icon name="ios-book"></ion-icon>
-					<ion-select 
-						type="text" 
-						formControlName="materia" 
+					<ion-select
+						type="text"
+						formControlName="materia"
 						placeholder="Selecione a Matéria"
 						interface="popover"
 					>
@@ -39,20 +34,19 @@
 
 				<ion-item>
 					<ion-icon name="md-people"></ion-icon>
-					<ion-select 
-						type="text" 
-						formControlName="professor" 
+					<ion-input
+						type="text"
+						formControlName="professor"
 						placeholder="Nome do Professor"
-						interface="popover"
-					>	
-					</ion-select>
+					>
+					</ion-input>
 				</ion-item>
 
 				<ion-item>
 					<ion-icon name="pin"></ion-icon>
-					<ion-select 
-						type="text" 
-						formControlName="local" 
+					<ion-select
+						type="text"
+						formControlName="local"
 						placeholder="Selecione o Local"
 						interface="popover"
 						multiple="true"
@@ -74,11 +68,21 @@
 					<ion-input type="time" formControlName="horario" placeholder="Horario"></ion-input>
 				</ion-item>
 
-			</ion-list>
+			<ion-item class="botao_agendar" lines="none">
+				<ion-button
+					type="submit"
+					fill="solid"
+					[disabled]="registerForm.invalid"
+					color="secondary"
+				>
+					<p>AGENDAR</p>
+				</ion-button>
+			</ion-item>
+		</ion-list>
 		</form>
 		</ion-row>
 
-		<ion-row>
+		<ion-row class="imagem_fundo">
 			<img src="../assets/agendamento_man_with_laptop.png">
 		</ion-row>
 	</ion-grid>
