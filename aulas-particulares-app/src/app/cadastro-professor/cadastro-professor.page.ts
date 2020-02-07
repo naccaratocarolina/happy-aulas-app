@@ -30,4 +30,8 @@ submitForm(form) {
   this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
 }
 
+redirecionaPerfil() {
+  this.router.navigateByUrl('/tabs/tab3'); //redireciona pro perfil
+}
+
 }
