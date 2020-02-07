@@ -1,21 +1,24 @@
 <ion-content scroll-y="false" class="fundo">
+
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 
-  <ion-row>
-  	
-		<img src="../assets/images/vector.png">
-	
-	</ion-row>
-
+  <div class="foto1">
+  	<img src="../assets/images/vector.png">
+	</div>
+<div class="foto2">
+<img src="../assets/LOGO.png">
+</div>
+  
+ <ion-grid>
   <ion-list class="perfil" lines="none">
-  <ion-item class="foto">
+  <div class="editar">
     <ion-button class="button1" type="submit" fill="solid" size="small">
 	<ion-icon name="create"></ion-icon>Editar
     </ion-button>
-	</ion-item>
-	<ion-item class="foto">
+	</div>
+	<div class="foto">
     <ion-button class="button2" shape="round" size="large"><ion-icon name="camera"></ion-icon ></ion-button>
-	</ion-item>
+	</div>
 </ion-list>
 
 <div>
@@ -24,14 +27,14 @@
 <p class="info">Meus agendamentos</p>
 </div>
 
-<ion-button class="button3">Sair da conta</ion-button>
+<ion-button class="button3" size="large">Sair da conta</ion-button>
 
-<ion-button class="button4"><ion-icon name="refresh-circle"></ion-icon>QUERO ME TORNAR UM PROFESSOR</ion-button>
+<ion-button class="button4"><div><ion-icon class="textcolor" size="large" name="refresh-circle"></ion-icon></div><div class="text"><span class="textcolor">  QUERO ME TORNAR</span><span class="textcolor"> UM PROFESSOR </span></div></ion-button>
 
 <ion-row class="imagemrow">
 
   <img id="imagem" src="../assets/images/imagem1.png">
   
 </ion-row>
-
+</ion-grid>
 </ion-content>
