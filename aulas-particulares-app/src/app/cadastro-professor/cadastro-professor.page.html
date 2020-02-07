@@ -1,0 +1,75 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="logo">
+			<img src="../assets/LOGO.png">
+		</ion-row>
+
+    <ion-row class="container_form_cadastro_prof">
+      <form
+        [formGroup]="registerForm"
+        (ngSubmit)="submitForm(registerForm)"
+      >
+
+      <ion-list>
+        <ion-item>
+  				<ion-icon name="contact"></ion-icon>
+  				<ion-input
+  					type="text"
+  					formControlName="nome"
+  					placeholder="Nome de Exibição"
+            autocomplete="on"
+  				>
+  				</ion-input>
+  			</ion-item>
+
+        <ion-item>
+					<ion-icon name="ios-book"></ion-icon>
+					<ion-select
+						type="text"
+						formControlName="materia"
+						placeholder="Selecione a Matéria"
+						interface="popover"
+					>
+						<ion-select-option>Cálculo</ion-select-option>
+						<ion-select-option>Física</ion-select-option>
+						<ion-select-option>Programação</ion-select-option>
+						<ion-select-option>Robótica</ion-select-option>
+						<ion-select-option>Mecânica</ion-select-option>
+						<ion-select-option>Elétrica</ion-select-option>
+						<ion-select-option>Termodinâmica</ion-select-option>
+						<ion-select-option>Eletromagnetismo</ion-select-option>
+						<ion-select-option>Botânica</ion-select-option>
+						<ion-select-option>Química</ion-select-option>
+						<ion-select-option>Biologia</ion-select-option>
+						<ion-select-option>Genética</ion-select-option>
+					</ion-select>
+				</ion-item>
+
+        <ion-item class="text_area">
+          <ion-icon name="md-text"></ion-icon>
+          <ion-textarea
+            type="text"
+            formControlName="bio"
+            placeholder="Bio"
+            position="stacked"
+          >
+          </ion-textarea>
+        </ion-item>
+
+        <ion-item  class="botao_concluir_cadastro" lines="none">
+          <ion-button
+            type="submit"
+            fill="solid"
+            [disabled]="registerForm.invalid"
+            color="secondary"
+          >
+            <p>CONCLUIR CADASTRO</p>
+          </ion-button>
+        </ion-item>
+
+      </ion-list>
+      </form>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
