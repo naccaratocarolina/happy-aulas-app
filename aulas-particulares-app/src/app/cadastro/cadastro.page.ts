@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ToastController } from "@ionic/angular";
 
@@ -13,7 +14,7 @@ export class CadastroPage implements OnInit {
   /** Formulario */
   registerForm: FormGroup;
 
-  constructor(public formbuilder: FormBuilder, private toastController: ToastController) {
+  constructor(private router: Router, public formbuilder: FormBuilder, private toastController: ToastController) {
     this.registerForm = this.formbuilder.group({
       nome: [null, [Validators.required]],
       email: [null, [Validators.required, Validators.email]],
@@ -28,6 +29,13 @@ export class CadastroPage implements OnInit {
       }
 
   ngOnInit() {
+  }
+
+  submitForm(form) {
+    console.log(form);
+    console.log(form.value);
+
+    this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
   }
 
   checkPassword(form) {

@@ -20,7 +20,7 @@ export class LoginPage implements OnInit {
 		});
 	}
 
-	
+
   	redirecionaCadastro() {
     	this.router.navigateByUrl('/cadastro');
  	}
@@ -39,12 +39,6 @@ export class LoginPage implements OnInit {
  			return this.cor=false
  		}
  	}
-
- 	/** Storage
- 	storageForm() {
- 		this.storage.set('name', 'Max');
- 	}
- 	**/
 
 	ngOnInit() { }
 
