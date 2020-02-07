@@ -1,9 +1,85 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+	<ion-grid>
+		<ion-row class="logo"><img src="../assets/LOGO.png"></ion-row>
+		<ion-row class="titulo"><p>AGENDAMENTOS</p></ion-row>
 
-<ion-content></ion-content>
+		<ion-row class="container_form_agendamento">
+		<form 
+			[formGroup]="registerForm" 
+			(ngSubmit)="submitForm(registerForm)"
+		>
+			<ion-list>
+				<ion-item>
+					<ion-icon name="md-person"></ion-icon>
+					<ion-input type="text" formControlName="email" placeholder="E-mail"></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-icon name="ios-book"></ion-icon>
+					<ion-select 
+						type="text" 
+						formControlName="materia" 
+						placeholder="Selecione a Matéria"
+						interface="popover"
+					>
+						<ion-select-option>Cálculo</ion-select-option>
+						<ion-select-option>Física</ion-select-option>
+						<ion-select-option>Programação</ion-select-option>
+						<ion-select-option>Robótica</ion-select-option>
+						<ion-select-option>Mecânica</ion-select-option>
+						<ion-select-option>Elétrica</ion-select-option>
+						<ion-select-option>Termodinâmica</ion-select-option>
+						<ion-select-option>Eletromagnetismo</ion-select-option>
+						<ion-select-option>Botânica</ion-select-option>
+						<ion-select-option>Química</ion-select-option>
+						<ion-select-option>Biologia</ion-select-option>
+						<ion-select-option>Genética</ion-select-option>
+					</ion-select>
+				</ion-item>
+
+				<ion-item>
+					<ion-icon name="md-people"></ion-icon>
+					<ion-select 
+						type="text" 
+						formControlName="professor" 
+						placeholder="Nome do Professor"
+						interface="popover"
+					>	
+					</ion-select>
+				</ion-item>
+
+				<ion-item>
+					<ion-icon name="pin"></ion-icon>
+					<ion-select 
+						type="text" 
+						formControlName="local" 
+						placeholder="Selecione o Local"
+						interface="popover"
+						multiple="true"
+					>
+						<ion-select-option>Zona Central</ion-select-option>
+						<ion-select-option>Zona Norte</ion-select-option>
+						<ion-select-option>Zona Sul</ion-select-option>
+						<ion-select-option>Zona Oeste</ion-select-option>
+					</ion-select>
+				</ion-item>
+
+				<ion-item>
+					<ion-icon name="md-calendar"></ion-icon>
+					<ion-input type="date" formControlName="data"></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-icon name="ios-stopwatch"></ion-icon>
+					<ion-input type="time" formControlName="horario" placeholder="Horario"></ion-input>
+				</ion-item>
+
+			</ion-list>
+		</form>
+		</ion-row>
+
+		<ion-row>
+			<img src="../assets/agendamento_man_with_laptop.png">
+		</ion-row>
+	</ion-grid>
+</ion-content>

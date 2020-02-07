@@ -1,1 +1,97 @@
+ion-content {
+	--background: #FCFAFB;
+}
 
+ion-toolbar {
+	--background: #FCFAFB;
+	height: 4vh;
+	margin: 0;
+	padding: 0;
+}
+
+.logo img {
+	position: fixed;
+	top: 1vh;
+	left: 1vh;
+}
+
+.titulo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0;
+	padding: 0;
+}
+
+.titulo p {
+	font-family: Roboto Condensed;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2em;
+	line-height: 2em;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: #393393;
+}
+
+ion-row {
+	margin: 0;
+	padding: 0;
+}
+
+.container_form_agendamento {
+	position: absolute;
+	top: 15vh;
+	left: 12%;
+}
+
+ion-icon {
+	color: #393393;
+	margin-right: 0.3em;
+	height: 1em;
+	width: 1em;
+}
+
+ion-input {
+	width: 61vw;
+	height: 5vh;
+	border: none;
+
+	background: #8EAAFE;
+	border-radius: 0.3em;
+	padding: 0.5em;
+
+	font-size: 1em;
+}
+
+ion-select {
+	min-width: 61vw;
+	height: 5vh;
+	border: none;
+
+	background: #8EAAFE;
+	border-radius: 0.3em;
+	padding: 0.5em;
+
+	font-size: 1em;
+}
+
+::placeholder {
+	color: #393393;
+}
+
+ion-input, select, textarea{
+    color: #393393;
+}
+
+ion-select, select, textarea{
+    color: #393393;
+}
+
+.imagem_fundo img {
+	position: absolute;
+	bottom: 0;
+}
