@@ -12,26 +12,6 @@ ion-col {
 	justify-content: center;
 }
 
-/** Logo **/
-
-.logo_style {
-	position: absolute;
-	width: 100%;
-	height: 14%;
-	top: 13%;
-
-	font-family: Roboto Condensed;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 11vw;
-	line-height: 13vw;
-	text-align: center;
-
-	color: #FCFAFB;
-}
-
-/** Botões **/
-
 ion-button {
 	--background: #8EAAFE;
 	border-radius: 0.9vw;
@@ -40,9 +20,15 @@ ion-button {
 	box-shadow: 0.3vw 0.3vw 0vw #393393;
 }
 
+.logo_style {
+	position: fixed;
+	left: 24%;
+	top: 3vh;
+}
+
 .botoes {
 	position: fixed;
-	top: 25%;
+	top: 30%;
 }
 
 .botoes_entrar {
@@ -75,7 +61,7 @@ ion-button {
 
 /** Imagem de Fundo **/
 
-ion-content img {
+.imagem_background img {
 	position: fixed;
 	width: 100%;
 	height: auto;
@@ -84,7 +70,7 @@ ion-content img {
 }
 
 @media screen and (min-width: 400px) {
-	ion-content img {
+	.imagem_background img {
 	position: fixed;
 	width: 100%;
 	height: 62%;

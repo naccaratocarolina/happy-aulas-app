@@ -7,14 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./inicial.page.scss'],
 })
 export class InicialPage implements OnInit {
-	/** Classes **/
-	public useBotoes:boolean = true;
-	public useBotoes_Entrar:boolean = true;
-	public useBotoes_Cadastrar:boolean = true;
-
-	public useLogo_Style:boolean = true;
-
-  public useBotoes_Tab1: boolean = true;
 
   constructor(private router: Router) { }
 
