@@ -2,7 +2,32 @@ ion-content {
 	--background: #FCFAFB;
 }
 
-/** Imagen **/
+.logo img {
+	position: fixed;
+	top: 1vh;
+	left: 1vh;
+	z-index: 1000000;
+}
+
+.botao_redireciona_cadastro {
+	position: fixed;
+	top: 1vh;
+	right: 0;
+	z-index: 1000000;
+}
+
+.botao_redireciona_cadastro ion-button {
+	width: 23vw;
+	height: 4vh;
+	padding: 0.3vh;
+	font-family: Roboto Condensed;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 0.8em;
+	line-height: 0.7em;
+
+	color: #393393;
+}
 
 .login_img {
 	background: #8EAAFE;
@@ -27,7 +52,7 @@ ion-content {
 	position: absolute;
 	width: 100%;
 	left: 0;
-	top: 46%;
+	top: 42%;
 
 	display: flex;
 	justify-content: center;
@@ -36,8 +61,8 @@ ion-content {
 	font-family: Roboto Condensed;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 9vw;
-	line-height: 11vw;
+	font-size: 2em;
+	line-height: 2.5em;
 
 	color: #393393;
 }
@@ -46,7 +71,7 @@ ion-content {
 	position: absolute;
 	width: 100%;
 	left: 0;
-	top: 52%;
+	top: 51%;
 
 	display: flex;
 	justify-content: center;
@@ -55,8 +80,8 @@ ion-content {
 	font-family: Roboto Slab;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 4vw;
-	line-height: 6vw;
+	font-size: 0.9em;
+	line-height: 1.33em;
 
 	color: #393393;
 }
@@ -138,8 +163,8 @@ ion-radio {
 	font-family: Roboto Condensed;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 5vw;
-	line-height: 6vw;
+	font-size: 1.1em;
+	line-height: 1.3em;
 
 	color: #393393;
 
@@ -149,8 +174,8 @@ p {
 	font-family: Roboto Slab;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 4vw;
-	line-height: 6vw;
+	font-size: 0.9em;
+	line-height: 1.3em;
 
 	color: #393393;
 }
@@ -161,4 +186,17 @@ ion-item {
 
 ion-list {
   --background: rgba(0, 0, 0, 0);
+}
+
+
+.mensagem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0;
+	padding: 0;
+
+	position: absolute;
+	height: 5vh;
 }

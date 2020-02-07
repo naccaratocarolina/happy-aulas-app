@@ -8,9 +8,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
-	/** Formulario **/
-	registerForm: FormGroup;
+	private registerForm: FormGroup;
+	private cor:boolean;
+	public useCorMensagem:boolean = true;
 
 	constructor(private router: Router, public formbuilder: FormBuilder) {
 
@@ -20,17 +20,24 @@ export class LoginPage implements OnInit {
 		});
 	}
 
-	/**
-  	redirecionaTab1() {
-    	this.router.navigateByUrl('/tabs/tab1');
+	
+  	redirecionaCadastro() {
+    	this.router.navigateByUrl('/cadastro');
  	}
-	**/
 
  	submitForm(form) {
  		console.log(form);
  		console.log(form.value);
 
  		this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
+ 	}
+
+ 	corMensagem() {
+ 		if (this.registerForm.controls.email.invalid && this.registerForm.controls.email.touched && this.registerForm.controls.password.invalid && this.registerForm.controls.password.touched) {
+ 			return this.cor=true;
+ 		} else {
+ 			return this.cor=false
+ 		}
  	}
 
  	/** Storage
