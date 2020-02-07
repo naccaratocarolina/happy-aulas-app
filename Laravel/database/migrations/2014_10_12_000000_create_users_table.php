@@ -20,11 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('profile_picture')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->boolean('is_admin')->default(true);
             $table->string('password');
-            $table->string('phone_number');
-            $table->string('cpf');
-            $table->string('address');
+            $table->string('c_password');
             $table->rememberToken();
             $table->timestamps();
         });

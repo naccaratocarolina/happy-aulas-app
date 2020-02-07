@@ -9,7 +9,7 @@ class Session extends Model
     public function teacher(){
       return $this->belongsTo('App/Teacher');
     }
-    public function student(){
-      return $this->belongsTo('App/Student');
+    public function user(){
+      return $this->belongsTo('App/User');
     }
 }

@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Session;
+use App\User;
+use App\Teacher;
 
 class CreateSessionsTable extends Migration
 {
@@ -18,6 +20,7 @@ class CreateSessionsTable extends Migration
             $table->bigIncrements('id');
             $table->string('session_date_time');
             $table->float('price');
+            $table->string('address');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('teacher_id');
             $table->timestamps();

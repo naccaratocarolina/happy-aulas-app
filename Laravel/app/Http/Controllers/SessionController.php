@@ -17,6 +17,7 @@ class SessionController extends Controller
 
       $session->session_date_time = $request->session_date_time;
       $session->price = $request->price;
+      $session->address = $request->address;
       $session->user_id = $request->user_id;
       $session->teacher_id = $request->teacher_id;
       $seesion->save();
@@ -42,6 +43,9 @@ class SessionController extends Controller
       }
       if($request->price){
         $session->price = $request->price;
+      }
+      if($request->address){
+        $seesion->address = $request->address;
       }
       if($request->session_date_time){
         $session->session_date_time = $request->session_date_time;

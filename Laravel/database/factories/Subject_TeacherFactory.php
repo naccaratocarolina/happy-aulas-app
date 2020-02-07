@@ -10,7 +10,7 @@
 
  $factory->define(Subject_Teacher::class, function (Faker $faker) {
      return [
-         'subject_id' => $faker->numberBetween($min = 1, $max = 18),
-         'teacher_id' => $faker->unique()->numberBetween($min = 1, $max = 100),
+         //'subject_id' => $faker->numberBetween($min = 1, $max = 18),
+         //'teacher_id' => $faker->unumberBetween($min = 1, $max = 100),
      ];
  });

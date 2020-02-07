@@ -28,11 +28,9 @@ class UserRequest extends FormRequest
     {
         return [
             'nome' => 'required|alpha',
-            'password' =>'required|string',
             'email' => 'required|email|unique',
-            'phone_number' => 'required|celular',
-            'cpf' => 'required|cpf',
-            'adress' => 'required|string',
+            'password' =>'required|string',
+            'c_password' =>'required|same:password',
             'profile_picture'=>'file|image|mimes:jpeg,png,gif,webp|max:2048',
           ];
     }
