@@ -9,6 +9,29 @@ ion-content {
 	z-index: 1000000;
 }
 
+.redireciona_perfil {
+	position: absolute;
+	left: 90.4%;
+	top: 1vh;
+}
+
+.cadastro_professor {
+	position: absolute;
+	top: 4vh;
+	left: 12%;
+}
+
+.cadastro_professor p {
+	font-family: Roboto Condensed;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.8em;
+	line-height: 2em;
+	text-align: center;
+
+	color: #393393;
+}
+
 ion-icon {
 	color: #393393;
 	margin-right: 0.3em;
