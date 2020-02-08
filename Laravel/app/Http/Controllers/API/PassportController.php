@@ -41,10 +41,10 @@ class PassportController extends Controller
       $user = Auth::user();
       return response()->json(['success' => $user], 200);
   }
-  public function logout(){//revoga o token do usuario
+  public function logout(){//revoga o token do usuario(100%)
     $accessToken = Auth::user()->token();
     DB::table('oauth_refresh_tokens')->where('access_token_id', $accessToken->id)->update(['revoked' => true]);
     $accessToken->revoke();
-    return response()->json('success', 200);
+    return response()->json('Usuario deslogado!', 200);
   }
 }
