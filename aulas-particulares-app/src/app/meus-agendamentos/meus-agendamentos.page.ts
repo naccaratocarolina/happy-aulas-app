@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AgendamentoService } from '../services/agendamento.service';
 
 @Component({
   selector: 'app-meus-agendamentos',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./meus-agendamentos.page.scss'],
 })
 export class MeusAgendamentosPage implements OnInit {
-  arrayAgendamentos = [
+  agendamentos = [
     {
     id: 1,
     nome_professor: "Nome do Professor",
@@ -16,30 +17,40 @@ export class MeusAgendamentosPage implements OnInit {
     data: "XX/XX/XXXX",
     hora: "XX:XX"
     },
-    {
-    id: 2,
-    nome_professor: "Jorge",
-    materia: "Calculo",
-    local: "Zona Norte",
-    data: "7/02/2020",
-    hora: "22:52"
-    },
-    {
-    id: 3,
-    nome_professor: "Maria",
-    materia: "Física",
-    local: "Zona Sul",
-    data: "7/02/2020",
-    hora: "23:01"
-    },
-  ]
+  ];
+  cardSelecionado = -1;
+  podeDeletar:boolean = true;
 
-  constructor(private router: Router) { }
+
+  constructor(private router: Router, public agendamentoService: AgendamentoService) { }
 
   ngOnInit() {
+    //lista os agendamentos
+    this.agendamentoService.listSessions().subscribe(
+      (res) => {
+        console.log(res['message']);
+      }
+    );
   }
 
+  //redireciona pro perfil
   redirecionaPerfil() {
-  this.router.navigateByUrl('/tabs/tab3'); //redireciona pro perfil
+  this.router.navigateByUrl('/tabs/tab3');
   }
+
+  //seleciona o agendamento i
+  agendamentoSelecionado(i) {
+    this.cardSelecionado = i;
+  }
+
+  //deleta o agendamento i (DEL)
+  deletaAgendamento(i) {
+    this.agendamentoService.deleteSession(this.agendamentos[i].id).subscribe(
+      (res) => {
+        console.log(res['message']);
+        this.agendamentos.splice(i, 1);
+      }
+    );
+  }
+
 }

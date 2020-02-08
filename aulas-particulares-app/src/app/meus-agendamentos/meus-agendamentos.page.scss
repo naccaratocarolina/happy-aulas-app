@@ -39,6 +39,7 @@ ion-icon {
 .container_agendamentos {
   position: absolute;
   top: 18vh;
+	left: 5vw;
   width: 100%;
   height: auto;
 }
@@ -69,12 +70,22 @@ ion-icon {
   margin: 0;
 }
 
+.card_titulo ion-button {
+	position: absolute;
+	right: 3px;
+	height: 2.3em;
+	width: 2em;
+	--background: rgba(0,0,0,0);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .card_titulo ion-icon {
   position: absolute;
   height: 2.3em;
 	width: 2em;
-  right: 0;
-  margin-right: 3px;
 }
 
 .card_titulo p {
