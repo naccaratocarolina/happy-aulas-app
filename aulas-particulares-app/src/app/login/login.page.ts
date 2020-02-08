@@ -21,23 +21,8 @@ export class LoginPage implements OnInit {
 	}
 
 
-  	redirecionaCadastro() {
+  redirecionaCadastro() {
     	this.router.navigateByUrl('/cadastro');
- 	}
-
- 	submitForm(form) {
- 		console.log(form);
- 		console.log(form.value);
-
- 		this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
- 	}
-
- 	corMensagem() {
- 		if (this.registerForm.controls.email.invalid && this.registerForm.controls.email.touched && this.registerForm.controls.password.invalid && this.registerForm.controls.password.touched) {
- 			return this.cor=true;
- 		} else {
- 			return this.cor=false
- 		}
  	}
 
 	ngOnInit() { }
