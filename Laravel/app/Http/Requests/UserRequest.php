@@ -27,8 +27,8 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome' => 'required|alpha',
-            'email' => 'required|email|unique',
+            'name' => 'required|string',
+            'email' => 'required|email|unique:users',
             'password' =>'required|string',
             'c_password' =>'required|same:password',
             'profile_picture'=>'file|image|mimes:jpeg,png,gif,webp|max:2048',
@@ -36,14 +36,14 @@ class UserRequest extends FormRequest
     }
     public function messages(){
         return [
-          'nome.alpha' => 'O nome deve consistir apenas em caracteres alfabéticos',
+          //'name.alpha' => 'O nome deve consistir apenas em caracteres alfabéticos',
           'email.email' =>'Insira um email válido',
           'email.unique' =>'Este email já existe',
+          'c_password.same' =>'Campos não equivalentes',
         ];
     }
     protected function failedValidation(Validator $validator)
     {
       throw new HttpResponseException(response()->json($validator->errors(),422));
     }
-}
 }

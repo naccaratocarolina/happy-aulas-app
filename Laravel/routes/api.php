@@ -22,12 +22,12 @@ Route::post('createteacher','TeacherController@createTeacher');
 Route::put('updateteacher/{id}','TeacherController@updateTeacher');
 Route::delete('deleteteacher/{id}','TeacherController@deleteTeacher');
 
-//student
-Route::get('liststudents','StudentController@listStudents');
-Route::get('findstudent/{id}','StudentController@findStudent');
-Route::post('createstudent','StudentController@createStudent');
-Route::put('updatestudent/{id}','StudentController@updateStudent');
-Route::delete('deletestudent/{id}','StudentController@deleteStudent');
+// //student //nao faz mais sentido no bd
+// Route::get('liststudents','StudentController@listStudents');
+// Route::get('findstudent/{id}','StudentController@findStudent');
+// Route::post('createstudent','StudentController@createStudent');
+// Route::put('updatestudent/{id}','StudentController@updateStudent');
+// Route::delete('deletestudent/{id}','StudentController@deleteStudent');
 
 //subject_teacher
 Route::get('listsubject_teacher','Subject_TeacherController@listSubject_Teacher');
@@ -44,16 +44,16 @@ Route::put('updatesubject/{id}','SubjectController@updateSubject');
 Route::delete('deletesubject/{id}','SubjectController@deleteSubject');
 
 //session
-Route::get('listsessions','SessionController@listSessions');
-Route::get('findsession/{id}','SessionController@findSession');
-Route::post('createsession','SessionController@createSession');
-Route::put('updatesession/{id}','SessionController@updateSession');
-Route::delete('deletesession/{id}','SessionController@deleteSession');
+Route::get('listsessions','SessionController@listSessions');//only when logged
+Route::get('findsession/{id}','SessionController@findSession');//only when logged
+Route::post('createsession','SessionController@createSession');//only when logged
+Route::put('updatesession/{id}','SessionController@updateSession');//only when logged
+Route::delete('deletesession/{id}','SessionController@deleteSession');//only when logged
 
 //Passport
 Route::post('register','API\PassportController@register');
 Route::post('login','API\PassportController@login');
-Route::group(['middleware'=> 'auth:api'], function(){
+Route::group(['middleware'=> 'auth:api'], function(){//so deixa se user for usuario autenticado
   Route::post('logout', 'API\PassportController@logout');
   Route::post('getDetails', 'API\PassportController@getDetails');
 });

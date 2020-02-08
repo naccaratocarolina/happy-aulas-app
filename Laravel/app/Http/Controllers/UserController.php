@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Resources\Users as UserResource;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\UserRequest;
+use App\Http\Requests\UserRequest as UserRequest;
 use App\User;
 
 class UserController extends Controller
@@ -18,9 +18,6 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->password = $request->password;
         $user->email = $request->email;
-        $user->phone_number = $request->phone_number;
-        $user->cpf = $request->cpf;
-        $user->address = $request->address;
 
         $user->save();
 
