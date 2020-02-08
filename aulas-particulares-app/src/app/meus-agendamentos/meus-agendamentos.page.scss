@@ -1,0 +1,191 @@
+ion-content {
+	--background: #FCFAFB;
+}
+
+.logo img {
+	position: fixed;
+	top: 1vh;
+	left: 1vh;
+	z-index: 1000000;
+}
+
+.redireciona_perfil {
+	position: absolute;
+	left: 90.4%;
+	top: 1vh;
+}
+
+ion-icon {
+	color: #393393;
+}
+
+.meus_agendamentos_titulo {
+	position: absolute;
+	top: 4vh;
+	left: 12%;
+}
+
+.meus_agendamentos_titulo p {
+	font-family: Roboto Condensed;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.8em;
+	line-height: 2em;
+	text-align: center;
+
+	color: #393393;
+}
+
+.container_agendamentos {
+  position: absolute;
+  top: 18vh;
+  width: 100%;
+  height: auto;
+}
+
+.card_agendamentos {
+  position: relative;
+  background: #8EAAFE;
+  border-radius: 3px;
+  height: 38vh;
+  width: 88vw;
+}
+
+.card_agendamentos p {
+  color: #393393;
+}
+
+.card_agendamentos ion-icon {
+	color: #393393;
+	margin-right: 0.3em;
+	height: 1.8em;
+	width: 1.8em;
+}
+
+.card_titulo {
+  position: relative;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.card_titulo ion-icon {
+  position: absolute;
+  height: 2.3em;
+	width: 2em;
+  right: 0;
+  margin-right: 3px;
+}
+
+.card_titulo p {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+
+  color: #393393;
+}
+
+.nome_professor {
+  position: relative;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.nome_professor ion-icon {
+  position: absolute;
+  top: 2vh;
+}
+
+.nome_professor ion-card {
+  position: absolute;
+  padding-left: 5px;
+  top: 0;
+  left: 6vw;;
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  height: 5vh;
+  background: #FCFAFB;
+  border-radius: 3px;
+}
+
+.materia {
+  position: relative;
+  top: 7vh;
+  padding: 0;
+  margin: 0;
+}
+
+.materia ion-icon {
+  position: absolute;
+  top: 2vh;
+}
+
+.materia ion-card {
+  position: absolute;
+  padding-left: 5px;
+  top: 0;
+  left: 6vw;
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  height: 5vh;
+  background: #FCFAFB;
+  border-radius: 3px;
+}
+
+.local {
+  position: relative;
+  top: 14vh;
+  padding: 0;
+  margin: 0;
+}
+
+.local ion-icon {
+  position: absolute;
+  top: 2vh;
+}
+
+.local ion-card {
+  position: absolute;
+  padding-left: 5px;
+  top: 0;
+  left: 6vw;
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  height: 5vh;
+  background: #FCFAFB;
+  border-radius: 3px;
+}
+
+.data_e_hora {
+  position: relative;
+  top: 21vh;
+  padding: 0;
+  margin: 0;
+}
+
+.data_e_hora ion-icon {
+  position: absolute;
+  top: 2vh;
+}
+
+.data_e_hora ion-card {
+  position: absolute;
+  padding-left: 5px;
+  top: 0;
+  left: 6vw;
+  display: flex;
+  align-items: center;
+  width: 28vw;
+  height: 5vh;
+  background: #FCFAFB;
+  border-radius: 3px;
+}

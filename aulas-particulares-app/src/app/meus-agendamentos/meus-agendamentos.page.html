@@ -1,9 +1,61 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>meusAgendamentos</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="logo">
+        <img src="../assets/LOGO.png">
+      </ion-col>
 
+      <ion-col class="redireciona_perfil">
+        <a (click)="redirecionaPerfil()">
+          <ion-icon name="close-circle"></ion-icon>
+        </a>
+      </ion-col>
+		</ion-row>
+
+    <ion-row class="meus_agendamentos_titulo">
+      <p>MEUS AGENDAMENTOS</p>
+    </ion-row>
+
+    <div class="container_agendamentos">
+      <ion-row  *ngFor="let Agendamento of arrayAgendamentos">
+        <ion-card class="card_agendamentos">
+          <ion-grid>
+            <ion-row class="card_titulo">
+              <ion-col><p>Agendamento {{ Agendamento.id }}</p></ion-col>
+              <ion-col><ion-icon name="ios-trash" color="danger"></ion-icon></ion-col>
+            </ion-row>
+
+            <ion-row class="nome_professor">
+              <ion-icon name="md-people"></ion-icon>
+              <ion-card><p>{{ Agendamento.nome_professor }}</p></ion-card>
+            </ion-row>
+
+            <ion-row class="materia">
+              <ion-icon name="ios-book"></ion-icon>
+              <ion-card><p>{{ Agendamento.materia }}</p></ion-card>
+            </ion-row>
+
+            <ion-row class="local">
+              <ion-icon name="pin"></ion-icon>
+              <ion-card><p>{{ Agendamento.local }}</p></ion-card>
+            </ion-row>
+
+            <ion-row class="data_e_hora">
+              <ion-col>
+                <ion-icon name="md-calendar"></ion-icon>
+                <ion-card><p>{{ Agendamento.data }}</p></ion-card>
+              </ion-col>
+
+              <ion-col>
+                <ion-icon name="ios-stopwatch"></ion-icon>
+                <ion-card><p>{{ Agendamento.hora }}</p></ion-card>
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+        </ion-card>
+      </ion-row>
+    </div>
+
+  </ion-grid>
 </ion-content>
