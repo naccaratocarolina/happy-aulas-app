@@ -11,13 +11,15 @@ use App\User;
 
 class SessionController extends Controller
 {
-  public function createsession(Request $request)
+  public function createsession(SessionRequest $request)
   {
       $session = new Session;
 
-      $session->session_date_time = $request->session_date_time;
+      $session->session_date = $request->session_date;
+      $session->session_time = $request->session_time;
       $session->price = $request->price;
       $session->address = $request->address;
+      $session->subject_id = $request->subject;
       $session->user_id = $request->user_id;
       $session->teacher_id = $request->teacher_id;
       $seesion->save();
@@ -32,7 +34,7 @@ class SessionController extends Controller
     $session = Session::findOrFail($id);
     return response()->json([$session]);
   }
-  public function updatesession(Request $request, $id){
+  public function updatesession(SessionRequest $request, $id){
     $session = Session::find($id);
     if($session){
       if($request->teacher_id){
@@ -47,8 +49,14 @@ class SessionController extends Controller
       if($request->address){
         $seesion->address = $request->address;
       }
-      if($request->session_date_time){
-        $session->session_date_time = $request->session_date_time;
+      if($request->session_date){
+        $session->session_date = $request->session_date;
+      }
+      if($request->session_time){
+        $session->session_time = $request->session_time;
+      }
+      if($request->Subject){
+        $session->subject = $request->subject;
       }
       $session->save();
       return response()->json([$session]);
