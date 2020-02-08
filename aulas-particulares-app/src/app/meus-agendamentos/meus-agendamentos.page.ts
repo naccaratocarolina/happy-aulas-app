@@ -24,13 +24,18 @@ export class MeusAgendamentosPage implements OnInit {
 
   constructor(private router: Router, public agendamentoService: AgendamentoService) { }
 
-  ngOnInit() {
+  ionViewDidEnter() {
     //lista os agendamentos
     this.agendamentoService.listSessions().subscribe(
       (res) => {
         console.log(res['message']);
+        this.agendamentos = res['data'];
       }
     );
+  }
+
+  ionViewWillLeave () {
+    this.agendamentos = [];
   }
 
   //redireciona pro perfil
