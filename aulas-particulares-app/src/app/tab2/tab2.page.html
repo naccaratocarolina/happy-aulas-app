@@ -65,7 +65,23 @@
 
 				<ion-item>
 					<ion-icon name="ios-stopwatch"></ion-icon>
-					<ion-input type="time" formControlName="horario" placeholder="Horario"></ion-input>
+					<ion-select
+						type="text"
+						formControlName="horario"
+						placeholder="Selecione o Horario"
+						interface="popover"
+					>
+						<ion-select-option>8:00</ion-select-option>
+						<ion-select-option>9:00</ion-select-option>
+						<ion-select-option>10:00</ion-select-option>
+						<ion-select-option>11:00</ion-select-option>
+						<ion-select-option>12:00</ion-select-option>
+						<ion-select-option>13:00</ion-select-option>
+						<ion-select-option>14:00</ion-select-option>
+						<ion-select-option>15:00</ion-select-option>
+						<ion-select-option>16:00</ion-select-option>
+						<ion-select-option>17:00</ion-select-option>
+					</ion-select>
 				</ion-item>
 
 			<ion-item class="botao_agendar" lines="none">
