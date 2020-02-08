@@ -7,7 +7,7 @@ import { AgendamentoService } from '../services/agendamento.service';
   templateUrl: './meus-agendamentos.page.html',
   styleUrls: ['./meus-agendamentos.page.scss'],
 })
-export class MeusAgendamentosPage implements OnInit {
+export class MeusAgendamentosPage {
   agendamentos = [
     {
     id: 1,
