@@ -70,3 +70,26 @@
     width: 1.5em;
     margin-bottom: -2%;
 }
+
+.titulo{
+    display:flex;
+    justify-content: center;
+    margin-top: 0em;
+    margin-bottom: 1em;
+
+}
+
+.col{
+    display:flex;
+    align-items: center;
+}
+
+.bio{
+    width: 17em;
+    color: #737373;
+    background: #FCFAFB;
+    border:0;
+}
+.bioitem{
+    --background: #FCFAFB;
+}
