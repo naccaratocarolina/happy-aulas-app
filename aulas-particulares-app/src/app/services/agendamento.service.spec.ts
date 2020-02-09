@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AgendaService } from './agenda.service';
+import { AgendamentoService } from './agendamento.service';
 
-describe('AgendaService', () => {
+describe('AgendamentoService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: AgendaService = TestBed.get(AgendaService);
+    const service: AgendamentoService = TestBed.get(AgendamentoService);
     expect(service).toBeTruthy();
   });
 });
