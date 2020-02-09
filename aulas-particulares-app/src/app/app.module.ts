@@ -11,6 +11,10 @@ import { AppComponent } from './app.component';
 
 import { IonicStorageModule } from '@ionic/storage';
 
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './services/auth.service';
+import { AgendamentoService } from './services/agendamento.service';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -18,12 +22,15 @@ import { IonicStorageModule } from '@ionic/storage';
 	  		BrowserModule,
 	  		IonicModule.forRoot(),
 	  		AppRoutingModule,
-	  		IonicStorageModule.forRoot()
+	  		IonicStorageModule.forRoot(),
+        HttpClientModule,
   			],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    AuthService,
+    AgendamentoService,
   ],
   bootstrap: [AppComponent]
 })

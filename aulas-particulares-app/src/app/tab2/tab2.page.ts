@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AgendamentoService } from "../services/agendamento.service";
 
 @Component({
   selector: 'app-tab2',
@@ -9,23 +10,33 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class Tab2Page {
 	/** Formulario **/
-	registerForm: FormGroup;
+	agendaForm: FormGroup;
 
-  constructor(private router: Router, public formbuilder: FormBuilder) {
-  	this.registerForm = this.formbuilder.group({
-			materia: [null, [Validators.required]],
-			professor: [null, [Validators.required]],
-			local: [null, [Validators.required]],
-			data: [null, [Validators.required]],
-			horario: [null, [Validators.required]]
+  constructor(private router: Router, public formbuilder: FormBuilder, public agendamentoService: AgendamentoService) {
+  	this.agendaForm = this.formbuilder.group({
+			subject_name: ['', [Validators.required]],
+			teacher_name: ['', [Validators.required]],
+			location: ['', [Validators.required]],
+			class_date: ['', [Validators.required]],
+			class_time: ['', [Validators.required]]
 	});
   }
 
-  submitForm(form) {
- 		console.log(form);
- 		console.log(form.value);
-
- 		this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
+  // submitForm(form) {
+ 	// 	console.log(form);
+ 	//  	console.log(form.value);
+  //
+ 	// 	this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
+  // }
+  AgendaAula ( agendaForm ) {
+    if ( agendaForm.status == "VALID"){
+      this.agendamentoService.AgendaAula( agendaForm.value ).subscribe(
+        ( res ) => {
+          console.log(res);
+          this.router.navigate(['meus-agendamentos']);
+        }
+      );
+    }
   }
 
 }
