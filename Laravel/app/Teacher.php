@@ -7,8 +7,8 @@ use App\User;
 
 class Teacher extends User
 {
-  public function classes(){
-    return $this->hasMany('App\Class');
+  public function lessons(){
+    return $this->hasMany('App\Lesson');
   }
   public function subjects(){
     return $this->belongsToMany('App\Subject');

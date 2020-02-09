@@ -8,16 +8,7 @@ import { AgendamentoService } from '../services/agendamento.service';
   styleUrls: ['./meus-agendamentos.page.scss'],
 })
 export class MeusAgendamentosPage {
-  agendamentos = [
-    {
-    id: 1,
-    nome_professor: "Nome do Professor",
-    materia: "Matéria",
-    local: "Local",
-    data: "XX/XX/XXXX",
-    hora: "XX:XX"
-    },
-  ];
+  agendamentos = [ ];
   cardSelecionado = -1;
   podeDeletar:boolean = true;
 
@@ -26,10 +17,10 @@ export class MeusAgendamentosPage {
 
   ionViewDidEnter() {
     //lista os agendamentos
-    this.agendamentoService.listSessions().subscribe(
+    this.agendamentoService.listLesson().subscribe(
       (res) => {
-        console.log(res['message']);
-        this.agendamentos = res['data'];
+        //console.log(res['message']);
+        this.agendamentos = res;
       }
     );
   }
@@ -50,9 +41,9 @@ export class MeusAgendamentosPage {
 
   //deleta o agendamento i (DEL)
   deletaAgendamento(i) {
-    this.agendamentoService.deleteSession(this.agendamentos[i].id).subscribe(
+    this.agendamentoService.deleteLesson(this.agendamentos[i].id).subscribe(
       (res) => {
-        console.log(res['message']);
+        //console.log(res['message']);
         this.agendamentos.splice(i, 1);
       }
     );

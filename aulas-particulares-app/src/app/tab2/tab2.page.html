@@ -6,7 +6,7 @@
 		<ion-row class="container_form_agendamento">
 		<form
 			[formGroup]="agendaForm"
-			(ngSubmit)="AgendaAula(agendaForm)"
+			(ngSubmit)="CriaAula(agendaForm)"
 		>
 			<ion-list>
 				<ion-item>
@@ -60,14 +60,14 @@
 
 				<ion-item>
 					<ion-icon name="md-calendar"></ion-icon>
-					<ion-input type="date" formControlName="class_date"></ion-input>
+					<ion-input type="date" formControlName="lesson_date"></ion-input>
 				</ion-item>
 
 				<ion-item>
 					<ion-icon name="ios-stopwatch"></ion-icon>
 					<ion-select
 						type="text"
-						formControlName="class_time"
+						formControlName="lesson_time"
 						placeholder="Selecione o Horario"
 						interface="popover"
 					>

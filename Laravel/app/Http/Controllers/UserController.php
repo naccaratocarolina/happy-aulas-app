@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Http\Resources\Users as UserResource;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\UserRequest as UserRequest;
+use Auth;
 use App\User;
 
 class UserController extends Controller

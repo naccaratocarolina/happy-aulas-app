@@ -21,18 +21,24 @@ export class AgendamentoService {
 
   constructor( public http: HttpClient) { }
 
-  //pega todos os agendamentos (GET)
-  listSessions(): Observable<any> {
-    this.httpHeaders['headers']["Authorization"] = 'Bearer' + localStorage.getItem('userToken');
+  //cria novo agendamento (POST)
+  createLesson(): Observable<any>{
+    this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('userToken');
 
-    return this.http.get(this.apiUrl + 'listsessions', this.httpHeaders);
+    return this.http.post(this.apiUrl + 'createlesson', this.httpHeaders);
+  }
+  //pega todos os agendamentos (GET)
+  listLesson(): Observable<any> {
+    this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('userToken');
+
+    return this.http.get(this.apiUrl + 'listlesson', this.httpHeaders);
   }
 
   //deleta o agendamento i (DEL)
-  deleteSession(id:number): Observable<any> {
+  deleteLesson(id:number): Observable<any> {
     this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('userToken');
     console.log(this.httpHeaders['headers']);
 
-    return this.http.delete(this.apiUrl + 'deletesession/' + id, this.httpHeaders);
+    return this.http.delete(this.apiUrl + 'deletelesson/' + id, this.httpHeaders);
   }
 }

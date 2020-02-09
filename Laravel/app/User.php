@@ -12,8 +12,8 @@ class User extends Authenticatable
     use Notifiable;
     use HasApiTokens;
     //lista as aulas do User
-    public function classes(){
-      return $this->hasMany('App/Class');
+    public function lessons(){
+      return $this->hasMany('App/Lesson');
     }
 
     /**

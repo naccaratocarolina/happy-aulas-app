@@ -17,20 +17,23 @@ export class Tab2Page {
 			subject_name: ['', [Validators.required]],
 			teacher_name: ['', [Validators.required]],
 			location: ['', [Validators.required]],
-			class_date: ['', [Validators.required]],
-			class_time: ['', [Validators.required]]
+			lesson_date: ['', [Validators.required]],
+			lesson_time: ['', [Validators.required]]
 	});
   }
 
-  // submitForm(form) {
- 	// 	console.log(form);
- 	//  	console.log(form.value);
-  //
- 	// 	this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
-  // }
-  AgendaAula ( agendaForm ) {
+  // AgendaAula ( agendaForm ) {
+  //   if ( agendaForm.status == "VALID"){
+  //     this.agendamentoService.AgendaAula( agendaForm.value ).subscribe(
+  //       ( res ) => {
+  //         console.log(res);
+  //         this.router.navigate(['meus-agendamentos']);
+  //       }
+  //     );
+  //   }
+  CriaAula ( agendaForm ) {
     if ( agendaForm.status == "VALID"){
-      this.agendamentoService.AgendaAula( agendaForm.value ).subscribe(
+      this.agendamentoService.createLesson( agendaForm.value ).subscribe(
         ( res ) => {
           console.log(res);
           this.router.navigate(['meus-agendamentos']);

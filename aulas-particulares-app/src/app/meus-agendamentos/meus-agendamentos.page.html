@@ -34,28 +34,28 @@
 
             <ion-row class="nome_professor">
               <ion-icon name="md-people"></ion-icon>
-              <ion-card><p>{{ agendamento.nome_professor }}</p></ion-card>
+              <ion-card><p>{{ agendamento.teacher_name }}</p></ion-card>
             </ion-row>
 
             <ion-row class="materia">
               <ion-icon name="ios-book"></ion-icon>
-              <ion-card><p>{{ agendamento.materia }}</p></ion-card>
+              <ion-card><p>{{ agendamento.subject_name }}</p></ion-card>
             </ion-row>
 
             <ion-row class="local">
               <ion-icon name="pin"></ion-icon>
-              <ion-card><p>{{ agendamento.local }}</p></ion-card>
+              <ion-card><p>{{ agendamento.location }}</p></ion-card>
             </ion-row>
 
             <ion-row class="data_e_hora">
               <ion-col>
                 <ion-icon name="md-calendar"></ion-icon>
-                <ion-card><p>{{ agendamento.data }}</p></ion-card>
+                <ion-card><p>{{ agendamento.lesson_date }}</p></ion-card>
               </ion-col>
 
               <ion-col>
                 <ion-icon name="ios-stopwatch"></ion-icon>
-                <ion-card><p>{{ agendamento.hora }}</p></ion-card>
+                <ion-card><p>{{ agendamento.lesson_time }}</p></ion-card>
               </ion-col>
             </ion-row>
 

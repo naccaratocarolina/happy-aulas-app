@@ -9,6 +9,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 //user
 Route::get('listusers','UserController@listUsers');
+Route::get('mylessons','UserController@MyLesson');
 Route::get('finduser/{id}','UserController@findUser');
 Route::post('createuser','UserController@createUser');
 Route::put('updateuser/{id}','UserController@updateUser');
@@ -22,20 +23,12 @@ Route::post('createteacher','TeacherController@createTeacher');
 Route::put('updateteacher/{id}','TeacherController@updateTeacher');
 Route::delete('deleteteacher/{id}','TeacherController@deleteTeacher');
 
-//class
-Route::get('listclass','ClassController@listClass');
-Route::get('findclass/{id}','ClassController@findClass');
-Route::post('createclass','ClassController@createClass');
-Route::put('updateclass/{id}','ClassController@updateClass');
-Route::delete('deleteclass/{id}','ClassController@deleteClass');
-
-
-// //student //nao faz mais sentido no bd
-// Route::get('liststudents','StudentController@listStudents');
-// Route::get('findstudent/{id}','StudentController@findStudent');
-// Route::post('createstudent','StudentController@createStudent');
-// Route::put('updatestudent/{id}','StudentController@updateStudent');
-// Route::delete('deletestudent/{id}','StudentController@deleteStudent');
+//lesson
+Route::get('listlesson','LessonController@listLesson');
+Route::get('findlesson/{id}','LessonController@findLesson');
+Route::post('createlesson','LessonController@createLesson');
+Route::put('updatelesson/{id}','LessonController@updateLesson');
+Route::delete('deletelesson/{id}','LessonController@deleteLesson');
 
 //subject_teacher
 Route::get('listsubject_teacher','Subject_TeacherController@listSubject_Teacher');
@@ -57,3 +50,4 @@ Route::post('login','API\PassportController@login');
 Route::group(['middleware'=> 'auth:api'], function(){//so deixa se user for usuario autenticado
   Route::post('logout', 'API\PassportController@logout');
   Route::post('getDetails', 'API\PassportController@getDetails');
+});
