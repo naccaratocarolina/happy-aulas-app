@@ -57,9 +57,3 @@ Route::post('login','API\PassportController@login');
 Route::group(['middleware'=> 'auth:api'], function(){//so deixa se user for usuario autenticado
   Route::post('logout', 'API\PassportController@logout');
   Route::post('getDetails', 'API\PassportController@getDetails');
-  // Route::get('listsessions','SessionController@listSessions');//only when logged
-  // Route::get('findsession/{id}','SessionController@findSession');//only when logged
-  // Route::post('createsession','SessionController@store');//only when logged
-  // Route::put('updatesession/{id}','SessionController@updateSession');//only when logged
-  // Route::delete('deletesession/{id}','SessionController@deleteSession');//only when logged
-});
