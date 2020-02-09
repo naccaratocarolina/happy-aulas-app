@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="container_slides">
+    <ion-slides>
+      <ion-slide *ngFor="let slide of slides">
+        <ion-grid>
+          <ion-row class="slide_imagem"><img src={{slide.imagem}}></ion-row>
+          <ion-row class="slide_texto"><p>{{slide.texto}}</p></ion-row>
+          <ion-row class="slide_continue" *ngIf="slide.continue">
+            <ion-button
+              fill="clear"
+              (click)="redirecionaInicio()"
+            >
+              <p>Continue</p> <ion-icon slot="end" name="arrow-forward"></ion-icon>
+            </ion-button>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

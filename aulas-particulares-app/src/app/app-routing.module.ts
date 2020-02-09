@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: 'meus-agendamentos',
     loadChildren: () => import('./meus-agendamentos/meus-agendamentos.module').then( m => m.MeusAgendamentosPageModule)
+  },
+  {
+    path: 'slides',
+    loadChildren: () => import('./slides/slides.module').then( m => m.SlidesPageModule)
   }
 
 ];

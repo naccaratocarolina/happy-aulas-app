@@ -1,0 +1,45 @@
+.container_slides {
+  position: relative;
+  top: 10vh;
+}
+
+p {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  text-align: center;
+
+  color: #393393;
+}
+
+ion-icon {
+  color: #393393;
+}
+
+.slide_imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide_imagem img {
+  width: 91vw;
+  height: 50vh;
+}
+
+.slide_texto {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.slide_continue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
