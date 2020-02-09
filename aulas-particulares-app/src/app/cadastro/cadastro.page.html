@@ -7,17 +7,17 @@
 	</div>
 
 	<ion-row class="input_config">
-		<form 
+		<form
 			[formGroup]="registerForm"
-			(ngSubmit)="submitForm(registerForm)" 
+			(ngSubmit)="registrarUsuario(registerForm)"
 		>
 
 		<ion-list>
 			<ion-item>
 				<ion-icon name="contact"></ion-icon>
-				<ion-input 
-					type="text" 
-					formControlName="nome" 
+				<ion-input
+					type="text"
+					formControlName="name"
 					placeholder="Nome Completo"
 				>
 					</ion-input>
@@ -26,33 +26,33 @@
 			<ion-item>
 				<ion-icon name="mail"></ion-icon>
 				<ion-input type="text" formControlName="email" placeholder="E-mail"></ion-input>
-			
+
 			</ion-item>
 
 			<ion-item>
 				<ion-icon name="lock"></ion-icon>
 				<ion-input type="password" formControlName="password" placeholder="Senha"></ion-input>
-			
+
 			</ion-item>
 
 			<ion-item>
 				<ion-icon name="lock"></ion-icon>
-				<ion-input 
-					type="password" 
-					formControlName="password_check" 
+				<ion-input
+					type="password"
+					formControlName="c_password"
 					placeholder="Confirme sua Senha"
 					(keyup)="checkPassword(registerForm)"
 					(click)="alertaSenha()"
 				>
 				</ion-input>
-			
+
 			</ion-item>
 
 			<ion-item class="style_button" lines="none">
 				<ion-button
 					type="submit"
 					fill="solid"
-					[disabled]="registerForm.invalid" 
+					[disabled]="registerForm.invalid"
 				>
 					CRIAR CONTA
 				</ion-button>

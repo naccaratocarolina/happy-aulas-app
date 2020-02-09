@@ -5,15 +5,15 @@
 
 		<ion-row class="container_form_agendamento">
 		<form
-			[formGroup]="registerForm"
-			(ngSubmit)="submitForm(registerForm)"
+			[formGroup]="agendaForm"
+			(ngSubmit)="AgendaAula(agendaForm)"
 		>
 			<ion-list>
 				<ion-item>
 					<ion-icon name="ios-book"></ion-icon>
 					<ion-select
 						type="text"
-						formControlName="materia"
+						formControlName="subject_name"
 						placeholder="Selecione a Matéria"
 						interface="popover"
 					>
@@ -36,7 +36,7 @@
 					<ion-icon name="md-people"></ion-icon>
 					<ion-input
 						type="text"
-						formControlName="professor"
+						formControlName="teacher_name"
 						placeholder="Nome do Professor"
 					>
 					</ion-input>
@@ -46,7 +46,7 @@
 					<ion-icon name="pin"></ion-icon>
 					<ion-select
 						type="text"
-						formControlName="local"
+						formControlName="location"
 						placeholder="Selecione o Local"
 						interface="popover"
 						multiple="true"
@@ -60,19 +60,36 @@
 
 				<ion-item>
 					<ion-icon name="md-calendar"></ion-icon>
-					<ion-input type="date" formControlName="data"></ion-input>
+					<ion-input type="date" formControlName="class_date"></ion-input>
 				</ion-item>
 
 				<ion-item>
 					<ion-icon name="ios-stopwatch"></ion-icon>
-					<ion-input type="time" formControlName="horario" placeholder="Horario"></ion-input>
+					<ion-select
+						type="text"
+						formControlName="class_time"
+						placeholder="Selecione o Horario"
+						interface="popover"
+					>
+						<ion-select-option>8:00</ion-select-option>
+						<ion-select-option>9:00</ion-select-option>
+						<ion-select-option>10:00</ion-select-option>
+						<ion-select-option>11:00</ion-select-option>
+						<ion-select-option>12:00</ion-select-option>
+						<ion-select-option>13:00</ion-select-option>
+						<ion-select-option>14:00</ion-select-option>
+						<ion-select-option>15:00</ion-select-option>
+						<ion-select-option>16:00</ion-select-option>
+						<ion-select-option>17:00</ion-select-option>
+
+					</ion-select>
 				</ion-item>
 
 			<ion-item class="botao_agendar" lines="none">
 				<ion-button
 					type="submit"
 					fill="solid"
-					[disabled]="registerForm.invalid"
+					[disabled]="agendaForm.invalid"
 					color="secondary"
 				>
 					<p>AGENDAR</p>

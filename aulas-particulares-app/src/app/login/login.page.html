@@ -18,13 +18,13 @@
 
 		<ion-row class="container_form_user">
 		<form
-			[formGroup]="registerForm"
-			(ngSubmit)="submitForm(registerForm)"
+			[formGroup]="loginForm"
+			(ngSubmit)="loginUsuario(loginForm)"
 		>
 			<ion-list>
 				<ion-item>
 					<ion-icon name="mail"></ion-icon>
-					<ion-input type="text" formControlName="email" placeholder="E-mail"></ion-input><ion-text color="danger">*</ion-text>
+					<ion-input type="text" formControlName="email" placeholder="E-mail"></ion-input>
 				</ion-item>
 
 				<ion-item>
@@ -36,7 +36,7 @@
 					<ion-button
 						type="submit"
 						fill="solid"
-						[disabled]="registerForm.invalid"
+						[disabled]="loginForm.invalid"
 					>
 						ENTRAR
 					</ion-button>

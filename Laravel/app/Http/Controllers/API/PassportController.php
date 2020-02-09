@@ -20,7 +20,7 @@ class PassportController extends Controller
       $user->name = $request->name;
       $user->email = $request->email;
       $user->password = bcrypt($request->password);//senha encriptada
-      $user->c_password = bcrypt($request->c_password);
+      $user->c_password = bcrypt($request->c_password);//confirmação da senha encriptada
       $user->save();
       $success['token'] = $user->createToken('MyApp')->accessToken;
       $success['name'] = $user->name;

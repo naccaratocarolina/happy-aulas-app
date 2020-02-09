@@ -22,6 +22,14 @@ Route::post('createteacher','TeacherController@createTeacher');
 Route::put('updateteacher/{id}','TeacherController@updateTeacher');
 Route::delete('deleteteacher/{id}','TeacherController@deleteTeacher');
 
+//class
+Route::get('listclass','ClassController@listClass');
+Route::get('findclass/{id}','ClassController@findClass');
+Route::post('createclass','ClassController@createClass');
+Route::put('updateclass/{id}','ClassController@updateClass');
+Route::delete('deleteclass/{id}','ClassController@deleteClass');
+
+
 // //student //nao faz mais sentido no bd
 // Route::get('liststudents','StudentController@listStudents');
 // Route::get('findstudent/{id}','StudentController@findStudent');
@@ -43,17 +51,15 @@ Route::post('createsubject','SubjectController@createSubject');
 Route::put('updatesubject/{id}','SubjectController@updateSubject');
 Route::delete('deletesubject/{id}','SubjectController@deleteSubject');
 
-//session
-Route::get('listsessions','SessionController@listSessions');//only when logged
-Route::get('findsession/{id}','SessionController@findSession');//only when logged
-Route::post('createsession','SessionController@createSession');//only when logged
-Route::put('updatesession/{id}','SessionController@updateSession');//only when logged
-Route::delete('deletesession/{id}','SessionController@deleteSession');//only when logged
-
 //Passport
 Route::post('register','API\PassportController@register');
 Route::post('login','API\PassportController@login');
 Route::group(['middleware'=> 'auth:api'], function(){//so deixa se user for usuario autenticado
   Route::post('logout', 'API\PassportController@logout');
   Route::post('getDetails', 'API\PassportController@getDetails');
+  // Route::get('listsessions','SessionController@listSessions');//only when logged
+  // Route::get('findsession/{id}','SessionController@findSession');//only when logged
+  // Route::post('createsession','SessionController@store');//only when logged
+  // Route::put('updatesession/{id}','SessionController@updateSession');//only when logged
+  // Route::delete('deletesession/{id}','SessionController@deleteSession');//only when logged
 });
