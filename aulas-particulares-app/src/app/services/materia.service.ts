@@ -22,7 +22,7 @@ export class MateriaService {
 
   //lista todas as materias
   listSubjects(): Observable<any> {
-  	this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('userToken');
+  	this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
 
   	return this.http.get( this.apiUrl + 'listsubjects', this.httpHeaders );
   }

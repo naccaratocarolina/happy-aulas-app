@@ -36,6 +36,4 @@ export class Tab1Page {
     return this.cardSelecionado = i;
   }
 
-
-
 }
