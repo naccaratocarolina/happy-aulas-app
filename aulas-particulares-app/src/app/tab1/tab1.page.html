@@ -12,9 +12,6 @@
             </ion-row>
     </ion-card>
     </ion-row>
-    <ion-row>
-      oi
-    </ion-row>
 
     </ion-grid>
 </ion-toolbar>
@@ -24,11 +21,11 @@
     <div class="container_materias">
         <ion-grid>
             <ion-row>
-                <ion-col *ngFor="let materia of materias; let i = index" size=6>
+                <ion-col *ngFor="let materia of materias" size=6>
                   <ion-card
                     class="materias_config"
                     color="primary"
-                    (click)="materiaSelecionada(i)"
+                    (click)="materiaSelecionada(materia.id)"
                   >
                     <ion-grid>
 

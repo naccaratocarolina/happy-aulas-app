@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Tab1 } from '../tab1/tab1.page';
+import { ActivatedRoute } from '@angular/router';
+import { MateriaService } from '../services/materia.service';
 
 @Component({
   selector: 'app-materia',
@@ -8,18 +10,19 @@ import { Tab1 } from '../tab1/tab1.page';
   styleUrls: ['./materia.page.scss'],
 })
 export class MateriaPage implements OnInit {
-  public professores = [
-    {
-      nome: 'Nome do Professor',
-      materia: 'Matéria'
-    },
-  ];
+  public materia = {};
 
-  constructor(private router: Router) {
-    //this.profId = this.router.snapshot.params["profId"];
+  constructor(private router: ActivatedRoute, public materiaService: MateriaService) {
+    this.materiaId = this.router.snapshot.params["materiaId"];
   }
 
-  ngOnInit() {
+  ngOnInit(materiaId) {
+    this.materiaService.findSubject(this.materiaId).subscribe(
+      (res) => {
+        console.log(res[0]);
+        this.materia = res[0];
+      }
+    );
   }
 
 }

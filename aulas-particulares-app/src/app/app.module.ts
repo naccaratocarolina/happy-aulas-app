@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
+
 import { AuthService } from './services/auth.service';
 import { AgendamentoService } from './services/agendamento.service';
 import { MateriaService } from './services/materia.service';
