@@ -22,15 +22,6 @@ export class Tab2Page {
 	});
   }
 
-  // AgendaAula ( agendaForm ) {
-  //   if ( agendaForm.status == "VALID"){
-  //     this.agendamentoService.AgendaAula( agendaForm.value ).subscribe(
-  //       ( res ) => {
-  //         console.log(res);
-  //         this.router.navigate(['meus-agendamentos']);
-  //       }
-  //     );
-  //   }
   CriaAula ( agendaForm ) {
     if ( agendaForm.status == "VALID"){
       this.agendamentoService.createLesson( agendaForm.value ).subscribe(

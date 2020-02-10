@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from "../services/auth.service";
+import { Storage } from "@ionic/storage";
 
 @Component({
   selector: 'app-login',
@@ -45,7 +46,8 @@ export class LoginPage implements OnInit {
       this.authService.loginUsuario( loginForm.value ).subscribe(
         (res) => {
           console.log (res);
-          localStorage.setItem( 'userToken', res.token );
+          localStorage.setItem('token', res.data.token);
+          localStorage.set('user_name', res.user.name);
           this.router.navigate(['/tabs/tab1']);
         }
       );

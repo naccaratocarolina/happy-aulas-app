@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ToastController } from "@ionic/angular";
 import { AuthService } from "../services/auth.service";
+import { IonicStorageModule } from "@ionic/storage";
+
 
 
 @Component({
@@ -52,6 +54,8 @@ export class CadastroPage implements OnInit {
       this.authService.registrarUsuario( registerForm.value ).subscribe(
         ( res ) => {
             console.log( res );
+            localStorage.setItem('token', res.data.token);
+            localStorage.set('user_name', res.name);
             this.router.navigate(['/tabs/tab1']);
         }
       );

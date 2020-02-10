@@ -25,11 +25,10 @@ class LessonController extends Controller
       $lesson->save();
   }
 
-  public function listLesson(Request $request){
+  public function listLesson(){
     $user = Auth::user();
     $lesson = Lesson::where('user_id', $user->id)->get();
     return response()->json($lesson);
-    dd($user);
   }
 
   public function findLesson(Request $request, $id){

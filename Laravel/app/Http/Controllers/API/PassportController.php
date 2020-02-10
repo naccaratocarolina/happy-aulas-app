@@ -24,18 +24,36 @@ class PassportController extends Controller
       $user->save();
       $success['token'] = $user->createToken('MyApp')->accessToken;
       $success['name'] = $user->name;
-      return response()->json(['success' => $success],200);
-
+      return response()->json([
+        "message" => "cadastro realizado com sucesso!",
+        "data" => [
+          'user' => $user,
+          'token' =>$token
+          ]
+        ], 200);
   }
   public function login(){//loga o usuario ja cadastrado no bd(100%)
       if (Auth::attempt(['email' => request('email'), 'password' => request('password')])){
         $user = Auth::user();
-        $success['token'] = $user->createToken('MyApp')->accessToken;
-        return response()->json(['success' => $success], 200);
+        $token = $user->createToken('MyApp')->accessToken;
+        $name = $user->name;
+        return response()->json([
+          "message" => "login realizado com sucesso!",
+          "data" => [
+            'user' => $user,
+            'token' => $token
+            ]
+          ], 200);
       }
       else{
-        return response()->json(['error'=>'Unauthorized'],401);
-      }
+        return response()->json([
+          "message" => "email e senha invalidos!",
+          "data" => [
+            null
+            ]
+          ], 500);
+        }
+
   }
   public function getDetails(){//recupera informação do user(100%)
       $user = Auth::user();
