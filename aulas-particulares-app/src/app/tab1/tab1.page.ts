@@ -62,6 +62,6 @@ export class Tab1Page {
   constructor(private router: Router) {}
 
   redirecionaMateria(i){
-    this.router.navigate(['/materia']);
+    this.router.navigate(['/materia', {profId: this.data[i]}]);
   }
 }

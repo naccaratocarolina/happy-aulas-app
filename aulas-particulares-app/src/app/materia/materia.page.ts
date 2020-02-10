@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Tab1 } from '../tab1/tab1.page';
 
 @Component({
   selector: 'app-materia',
@@ -11,13 +13,11 @@ export class MateriaPage implements OnInit {
       nome: 'Nome do Professor',
       materia: 'Matéria'
     },
-    {
-      nome:'Clayton',
-      materia: 'Calculo'
-    }
   ];
 
-  constructor() { }
+  constructor(private router: Router) {
+    //this.profId = this.router.snapshot.params["profId"];
+  }
 
   ngOnInit() {
   }
