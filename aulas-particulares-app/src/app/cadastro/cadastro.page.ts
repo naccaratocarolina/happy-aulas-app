@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ToastController } from "@ionic/angular";
 import { AuthService } from "../services/auth.service";
 import { IonicStorageModule } from "@ionic/storage";
 
@@ -18,7 +17,7 @@ export class CadastroPage implements OnInit {
   /** Formulario */
   registerForm: FormGroup;
 
-  constructor(public router: Router, public formbuilder: FormBuilder, private toastController: ToastController, public authService: AuthService) {
+  constructor(public router: Router, public formbuilder: FormBuilder, public authService: AuthService) {
 
     this.registerForm = this.formbuilder.group({
       name: ['', [Validators.required]],
@@ -38,14 +37,6 @@ export class CadastroPage implements OnInit {
       return this.passwordError = false;
     }
   }
-
-  async alertaSenha(passwordError) {
-        const toast = await this.toastController.create({
-          message: "Senhas não compatíveis!",
-          duration: 5000
-        });
-        toast.present();
-      }
 
   //integração Cadastro
   registrarUsuario ( registerForm ) {

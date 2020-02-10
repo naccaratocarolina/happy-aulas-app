@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'meus-agendamentos',
     loadChildren: () => import('./meus-agendamentos/meus-agendamentos.module').then( m => m.MeusAgendamentosPageModule)
+  },
+  {
+    path: 'perfil-prof',
+    loadChildren: () => import('./perfil-prof/perfil-prof.module').then( m => m.PerfilProfPageModule)
   },
   {
     path: 'slides',
