@@ -4,7 +4,7 @@
     <ion-card class="card_info">
             <ion-row>
                 <ion-col class="card_mensagem">
-                    <p>Seja bem-vindo, {{ NomeUsuario }} Comece a navegar! O app é uma forma prática e eficiente de encontrar professores qualificados próximos à você.</p>
+                    <p>Seja bem-vindo, Fulano. Começe a navegar! O app é uma forma prática e eficiente de encontrar professores qualificados próximos à você.</p>
                 </ion-col>
                 <ion-col class="container_img_card">
                     <ion-img src="../assets/home_man_with_laptop.png"></ion-img>
@@ -31,24 +31,24 @@
     <div class="container_materias">
         <ion-grid>
             <ion-row>
-                <ion-col *ngFor="let Materia of arrayMaterias" size=6>
-                    <a href={{Materia.url}}>
-                        <ion-card
-                            class="materias_config"
-                            color="primary"
-                        >
-                            <ion-grid>
-                                <ion-row>
-                                    <img src={{Materia.imagem}}>
-                                </ion-row>
+                <ion-col *ngFor="let materia of materias; let i = index" size=6>
+                  <ion-card
+                    class="materias_config"
+                    color="primary"
+                    (click)="redirecionaMateria()"
+                  >
+                    <ion-grid>
 
-                                <ion-row>
-                                    <p>{{ Materia.nome }}</p>
-                                </ion-row>
-                            </ion-grid>
+                      <ion-row>
+                        <img src={{materia.imagem}}>
+                      </ion-row>
 
-                        </ion-card>
-                    </a>
+                      <ion-row>
+                        <p>{{ materia.nome }}</p>
+                      </ion-row>
+
+                    </ion-grid>
+                  </ion-card>
                 </ion-col>
             </ion-row>
         </ion-grid>

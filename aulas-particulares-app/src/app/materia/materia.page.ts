@@ -6,6 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./materia.page.scss'],
 })
 export class MateriaPage implements OnInit {
+  public professores = [
+    {
+      nome: 'Nome do Professor',
+      materia: 'Matéria'
+    },
+    {
+      nome:'Clayton',
+      materia: 'Calculo'
+    }
+  ];
 
   constructor() { }
 
