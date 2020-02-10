@@ -22,8 +22,8 @@ class PassportController extends Controller
       $user->password = bcrypt($request->password);//senha encriptada
       $user->c_password = bcrypt($request->c_password);//confirmação da senha encriptada
       $user->save();
-      $success['token'] = $user->createToken('MyApp')->accessToken;
-      $success['name'] = $user->name;
+      $token = $user->createToken('MyApp')->accessToken;
+      $name = $user->name;
       return response()->json([
         "message" => "cadastro realizado com sucesso!",
         "data" => [
