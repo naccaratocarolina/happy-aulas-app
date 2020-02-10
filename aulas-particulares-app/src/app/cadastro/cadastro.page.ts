@@ -46,7 +46,8 @@ export class CadastroPage implements OnInit {
         ( res ) => {
             console.log( res );
             localStorage.setItem('token', res.data.token);
-            localStorage.set('user_name', res.name);
+            localStorage.set('user_name', res.data.user.name);
+            localStorage.set('user_email', res.data.user.email);
             this.router.navigate(['/tabs/tab1']);
         }
       );

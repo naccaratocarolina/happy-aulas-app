@@ -16,9 +16,10 @@ export class Tab2Page {
   	this.agendaForm = this.formbuilder.group({
 			subject_name: ['', [Validators.required]],
 			teacher_name: ['', [Validators.required]],
-			location: ['', [Validators.required]],
+			address: ['', [Validators.required]],
 			lesson_date: ['', [Validators.required]],
-			lesson_time: ['', [Validators.required]]
+			lesson_time: ['', [Validators.required]],
+      //user_id: []
 	});
   }
 

@@ -7,7 +7,10 @@ import { AuthService } from '../services/auth.service';
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
-export class Tab3Page {  
+export class Tab3Page {
+  public NomeUsuario = localStorage.getItem('user_name')
+  public EmailUsuario = localStorage.getItem('user_email')
+
 
   //variaveis criadas
   id;
