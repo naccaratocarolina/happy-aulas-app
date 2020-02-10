@@ -36,4 +36,7 @@ export class Tab1Page {
     return this.cardSelecionado = i;
   }
 
+  redirecionaMateria(i){
+    this.router.navigate(['/materia', {profId: this.data[i]}]);
+  }
 }
