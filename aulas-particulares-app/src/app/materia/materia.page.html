@@ -1,0 +1,27 @@
+<ion-toolbar>
+  <ion-grid>
+    <ion-row class="logo"><img src="../assets/LOGO.png"></ion-row>
+    <ion-row class="nome_materia"><p>MATÉRIA</p></ion-row>
+  </ion-grid>
+</ion-toolbar>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor="let professor of professores" class="container_professores">
+
+      <ion-card>
+        <ion-row>
+          <ion-col class="imagem">
+            <img src="../assets/materia/avatar.png">
+          </ion-col>
+
+          <ion-col class="texto">
+            <ion-row>{{professor.nome}}</ion-row>
+            <ion-row>{{professor.materia}}</ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

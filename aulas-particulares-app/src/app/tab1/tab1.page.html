@@ -16,9 +16,9 @@
     <ion-row>
         <ion-card class="card_pesquisa">
             <ion-icon name="search"></ion-icon>
-            <input 
-                type="" 
-                name="pesquisa" 
+            <input
+                type=""
+                name="pesquisa"
                 placeholder="Pesquisar..."
             >
         </ion-card>
@@ -31,24 +31,24 @@
     <div class="container_materias">
         <ion-grid>
             <ion-row>
-                <ion-col *ngFor="let Materia of arrayMaterias" size=6>
-                    <a href={{Materia.url}}>
-                        <ion-card
-                            class="materias_config" 
-                            color="primary"
-                        >
-                            <ion-grid>
-                                <ion-row>
-                                    <img src={{Materia.imagem}}>
-                                </ion-row>
+                <ion-col *ngFor="let materia of materias; let i = index" size=6>
+                  <ion-card
+                    class="materias_config"
+                    color="primary"
+                    (click)="redirecionaMateria(i)"
+                  >
+                    <ion-grid>
 
-                                <ion-row>
-                                    <p>{{ Materia.nome }}</p>
-                                </ion-row>
-                            </ion-grid>
-                    
-                        </ion-card>
-                    </a>
+                      <ion-row>
+                        <img src={{materia.imagem}}>
+                      </ion-row>
+
+                      <ion-row>
+                        <p>{{ materia.nome }}</p>
+                      </ion-row>
+
+                    </ion-grid>
+                  </ion-card>
                 </ion-col>
             </ion-row>
         </ion-grid>

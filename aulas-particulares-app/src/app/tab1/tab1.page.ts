@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -7,69 +8,60 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
   /** Objeto materias **/
-  arrayMaterias = [
+  public materias = [
     {
       nome: 'CALCULO',
-      imagem: '../assets/tab1/img_calc.png',
-      url: '/calculo'
+      imagem: '../assets/tab1/img_calc.png'
     },
     {
       nome: 'FISICA',
-      imagem: '../assets/tab1/img_fisica.png',
-      url: '/fisica'
+      imagem: '../assets/tab1/img_fisica.png'
     },
     {
       nome: 'PROGRAMAÇÃO',
-      imagem: '../assets/tab1/img_prog.png',
-      url: '/programacao'
+      imagem: '../assets/tab1/img_prog.png'
     },
     {
       nome: 'ROBÓTICA',
-      imagem: '../assets/tab1/img_rob.png',
-      url: '/programacao'
+      imagem: '../assets/tab1/img_rob.png'
     },
     {
       nome: 'MECÂNICA',
-      imagem: '../assets/tab1/img_mec.png',
-      url: '/mecanica'
+      imagem: '../assets/tab1/img_mec.png'
     },
     {
       nome: 'ELÉTRICA',
-      imagem: '../assets/tab1/img_eletrica.png',
-      url: '/eletrica'
+      imagem: '../assets/tab1/img_eletrica.png'
     },
     {
       nome: 'TERMODIÂNICA',
-      imagem: '../assets/tab1/img_termo.png',
-      url: '/termodinamica'
+      imagem: '../assets/tab1/img_termo.png'
     },
     {
       nome: 'ELETROMAGNETISMO',
-      imagem: '../assets/tab1/img_eletromag.png',
-      url: '/eletromag'
+      imagem: '../assets/tab1/img_eletromag.png'
     },
     {
       nome: 'BOTÂNICA',
-      imagem: '../assets/tab1/img_botanica.png',
-      url: '/botanica'
+      imagem: '../assets/tab1/img_botanica.png'
     },
     {
       nome: 'QUIMICA',
-      imagem: '../assets/tab1/img_quimica.png',
-      url: '/quimica'
+      imagem: '../assets/tab1/img_quimica.png'
     },
     {
       nome: 'BIOLOGIA',
-      imagem: '../assets/tab1/img_bio.png',
-      url: '/biologia'
+      imagem: '../assets/tab1/img_bio.png'
     },
     {
       nome: 'GENÉTICA',
-      imagem: '../assets/tab1/img_genetica.png',
-      url: '/genetica'
+      imagem: '../assets/tab1/img_genetica.png'
     },
   ]
 
-  constructor() {}
+  constructor(private router: Router) {}
 
+  redirecionaMateria(i){
+    this.router.navigate(['/materia'], {materiaId: this.data[i]});
+  }
 }

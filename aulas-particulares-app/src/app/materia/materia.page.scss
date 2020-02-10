@@ -1,0 +1,44 @@
+ion-toolbar {
+  --background: #8EAAFE;
+}
+
+.logo img {
+	position: fixed;
+	top: 1vh;
+	left: 1vh;
+	z-index: 1000000;
+}
+
+.nome_materia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nome_materia p {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 2.2em;
+
+  margin-top: 1.3vh;
+  margin-bottom: 0.3vh;
+
+  color: #393393;
+}
+
+.container_professores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_professores ion-card {
+  width: 88vw;
+  height: 10vh;
+}
+
+.altura {
+  height: 10vh;
+}
