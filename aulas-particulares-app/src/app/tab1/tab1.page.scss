@@ -52,10 +52,10 @@ ion-toolbar {
 	align-items: center;
 	padding: 0.4em;
 
-	/**font-family: Roboto;
+	font-family: Roboto;
 	font-style: normal;
-	line-height: 15px;**/
-	font-size: 0.8em;
+	line-height: 1em;
+	font-size: 1em;
 	font-weight: bold;
 
 	color: #FFFFFF;
@@ -64,7 +64,7 @@ ion-toolbar {
 .container_img_card ion-img {
 	position: fixed;
 	right: 0;
-	top: 13%;
+	top: 11%;
 	width: 60vw;
 	height: auto;
 }

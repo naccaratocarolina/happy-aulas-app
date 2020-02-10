@@ -18,7 +18,7 @@ export class Tab1Page {
   constructor(private router: Router, public materiaService: MateriaService) {}
 
   //lista as materias
-  ionViewDidEnter() {
+  public ionViewWillEnter() {
     this.materiaService.listSubjects().subscribe(
       (res) => {
         this.materias = res;
@@ -26,14 +26,14 @@ export class Tab1Page {
     );
   }
 
-  ionViewWillLeave () {
+  public ionViewWillLeave () {
     this.materias = [];
   }
 
   //redireciona pra pag da materia e passa o id do card selecionado
-  materiaSelecionada(i) {
-    this.cardSelecionado = i;
+  public materiaSelecionada(i) {
     this.router.navigate(['/materia']);
+    return this.cardSelecionado = i;
   }
 
 

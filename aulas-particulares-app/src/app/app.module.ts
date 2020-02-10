@@ -11,6 +11,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { AgendamentoService } from './services/agendamento.service';
+import { MateriaService } from './services/materia.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { AgendamentoService } from './services/agendamento.service';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthService,
     AgendamentoService,
+    MateriaService,
   ],
   bootstrap: [AppComponent]
 })

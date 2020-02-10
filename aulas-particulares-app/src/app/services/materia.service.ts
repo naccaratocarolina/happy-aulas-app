@@ -20,9 +20,11 @@ export class MateriaService {
 
   constructor(public http: HttpClient) { }
 
-  public listSubjects(): Observable<any> {
-    this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('userToken');
+  //lista todas as materias
+  listSubjects(): Observable<any> {
+  	this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('userToken');
 
-    return this.http.get(this.apiUrl + 'listsubjects', this.httpHeaders);
+  	return this.http.get( this.apiUrl + 'listsubjects', this.httpHeaders );
   }
+
 }
