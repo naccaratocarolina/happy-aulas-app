@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
   /** Objeto materias **/
+   public NomeUsuario = localStorage.getItem('user_name')
+
   arrayMaterias = [
     {
       nome: 'CALCULO',
