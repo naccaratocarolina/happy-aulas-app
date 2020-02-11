@@ -15,7 +15,7 @@ export class PerfilProfPage implements OnInit {
     this.profId = this.router.snapshot.params["profId"];
   }
 
-  ngOnInit(profId) {
+  ngOnInit(profId:number) {
     //pega a materia i
     this.professorService.findTeacher(this.profId).subscribe(
       (res) => {

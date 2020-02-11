@@ -18,7 +18,7 @@ export class MateriaPage implements OnInit {
     this.materiaId = this.router.snapshot.params["materiaId"];
   }
 
-  ngOnInit(materiaId) {
+  ngOnInit(materiaId:number) {
     //pega a materia i
     this.materiaService.findSubject(this.materiaId).subscribe(
       (res) => {

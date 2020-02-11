@@ -10,7 +10,7 @@ import { PerfilProfPage } from './perfil-prof.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PerfilProfPageRoutingModule
+    PerfilProfPageRoutingModule,
   ],
   declarations: [PerfilProfPage]
 })
