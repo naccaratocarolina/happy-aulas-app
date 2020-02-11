@@ -13,12 +13,13 @@ import { ProfessorService } from '../services/professor.service';
 export class MateriaPage implements OnInit {
   public materia = {};
   public professores = [];
+  public materiaId:number;
 
   constructor(private route: Router, private router: ActivatedRoute, public materiaService: MateriaService, public professorService: ProfessorService) {
     this.materiaId = this.router.snapshot.params["materiaId"];
   }
 
-  ngOnInit(materiaId:number) {
+  ngOnInit() {
     //pega a materia i
     this.materiaService.findSubject(this.materiaId).subscribe(
       (res) => {

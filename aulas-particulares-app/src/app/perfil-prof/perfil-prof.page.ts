@@ -10,12 +10,13 @@ import { ProfessorService } from '../services/professor.service';
 })
 export class PerfilProfPage implements OnInit {
   public professor = {};
+  public profId:number;
 
   constructor(private router: ActivatedRoute, public professorService: ProfessorService) {
     this.profId = this.router.snapshot.params["profId"];
   }
 
-  ngOnInit(profId:number) {
+  ngOnInit() {
     //pega a materia i
     this.professorService.findTeacher(this.profId).subscribe(
       (res) => {
