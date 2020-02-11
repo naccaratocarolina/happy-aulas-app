@@ -9,11 +9,6 @@
 
 <ion-grid>
   <ion-list class="perfilprof" lines="none">
-    <div class="editarprof">
-      <ion-button class="button1" type="submit" fill="solid" size="small">
-        <p><ion-icon name="add-circle-outline"></ion-icon>Agendar Aulas</p>
-        </ion-button>
-    </div>
     <div class="fotoprof">
       <ion-button class="button2" shape="round" size="large"><ion-icon name="camera"></ion-icon ></ion-button>
     </div>
@@ -21,13 +16,32 @@
 
   <h1 class="titulo">Id do Prof: {{professor.id}} e id do user: {{professor.user_id}}</h1>
 
+  <ion-row class="botao_agendar_aula">
+    <ion-button
+      (click)="redirecionaCriarAgendamentos()"
+    >
+    <ion-icon name="add-circle"></ion-icon> <p>AGENDAR AULA</p></ion-button>
+  </ion-row>
+
   <ion-card class="info">
-    <div class="col"><h5>Matéria</h5> <p>Lorem ipsum blablalalallaalalalaalla</p></div>
-    <div class="col"><h5>E-mail</h5> <p>Lorem ipsum blablalalallaalalalaalla</p></div>
-    <div class="col"><h5>Bio</h5>
-      <ion-item class="bioitem">
-      <textarea rows="5" class="bio" lines="none">
-      </textarea>{{professor.bio}}</ion-item></div>
+
+    <ion-row class="materia">
+      <ion-icon name="ios-book"></ion-icon>
+      <ion-card><p>Matéria</p></ion-card>
+    </ion-row>
+
+    <ion-row class="email">
+      <ion-icon name="mail"></ion-icon>
+      <ion-card><p>E-mail</p></ion-card>
+    </ion-row>
+
+    <!--
+    <ion-row class="bio">
+      <ion-icon name="md-text"></ion-icon>
+      <ion-card>{{professor.bio}}</ion-card>
+    </ion-row>
+    -->
+
   </ion-card>
 
 

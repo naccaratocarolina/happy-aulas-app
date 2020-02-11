@@ -13,6 +13,13 @@ ion-toolbar {
 	position: fixed;
 	top: 1vh;
 	left: 1vh;
+	z-index: 1000000;
+}
+
+.redireciona_perfil {
+	position: absolute;
+	left: 90.4%;
+	top: 1vh;
 }
 
 .titulo {

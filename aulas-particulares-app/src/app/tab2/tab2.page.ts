@@ -34,4 +34,8 @@ export class Tab2Page {
     }
   }
 
+  redirecionaPagProf() {
+    this.router.navigateByUrl('/tabs/perfil-prof');
+  }
+
 }

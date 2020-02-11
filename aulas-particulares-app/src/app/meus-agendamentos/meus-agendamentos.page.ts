@@ -31,7 +31,7 @@ export class MeusAgendamentosPage {
 
   //redireciona pro perfil
   redirecionaPerfil() {
-  this.router.navigateByUrl('/tabs/tab3');
+    this.router.navigateByUrl('/tabs/tab3');
   }
 
   //seleciona o agendamento i

@@ -1,6 +1,17 @@
 <ion-content>
 	<ion-grid>
-		<ion-row class="logo"><img src="../assets/LOGO.png"></ion-row>
+		<ion-row>
+      <ion-col class="logo">
+        <img src="../assets/LOGO.png">
+      </ion-col>
+
+      <ion-col class="redireciona_perfil">
+        <a (click)="redirecionaPagProf()">
+          <ion-icon name="close-circle"></ion-icon>
+        </a>
+      </ion-col>
+		</ion-row>
+
 		<ion-row class="titulo"><p>AGENDAMENTOS</p></ion-row>
 
 		<ion-row class="container_form_agendamento">

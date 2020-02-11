@@ -12,7 +12,7 @@ export class PerfilProfPage implements OnInit {
   public professor = {};
   public profId:number;
 
-  constructor(private router: ActivatedRoute, public professorService: ProfessorService) {
+  constructor(private route: Router, private router: ActivatedRoute, public professorService: ProfessorService) {
     this.profId = this.router.snapshot.params["profId"];
   }
 
@@ -24,6 +24,10 @@ export class PerfilProfPage implements OnInit {
         this.professor = res[0];
       }
     );
+  }
+
+  redirecionaCriarAgendamentos() {
+    this.route.navigateByUrl('/tabs/tab2'); //redireciona pra pag de criar um agendamento
   }
 
 }

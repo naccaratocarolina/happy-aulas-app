@@ -61,9 +61,8 @@
 }
 
 .info{
-    box-shadow: 2px 4px 10px 2px #b9abab;
-    --background: #FCFAFB;
-
+    --background: #8EAAFE;
+    padding-left: 5vw;
 }
 
 .editarprof ion-icon{
@@ -92,6 +91,99 @@
     background: #FCFAFB;
     border:0;
 }
+
 .bioitem{
     --background: #FCFAFB;
+}
+
+.botao_agendar_aula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao_agendar_aula ion-button {
+  --background: #393393;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao_agendar_aula ion-icon {
+  margin-right: 6px;
+  color: #FCFAFB;
+}
+
+.botao_agendar_aula p {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #FCFAFB;
+
+}
+
+.materia ion-icon {
+  position: absolute;
+  top: 2vh;
+}
+
+.materia ion-card {
+  position: relative;
+  left: 7vw;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  height: 5vh;
+  background: #FCFAFB;
+  border-radius: 3px;
+  border: 0;
+}
+
+.info ion-icon {
+  position: absolute;
+  height: 2.3em;
+	width: 2em;
+  color: #393393;
+}
+
+.email ion-icon {
+  position: absolute;
+  top: 10vh;
+}
+
+.email ion-card {
+  position: relative;
+  left: 7vw;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  height: 5vh;
+  background: #FCFAFB;
+  border-radius: 3px;
+  border: 0;
+}
+
+.bio ion-icon {
+  position: absolute;
+  top: 15vh;
+}
+
+.bio ion-card {
+  position: relative;
+  left: 7vw;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  height: 15vh;
+  background: #FCFAFB;
+  border-radius: 3px;
+  border: 0;
 }
