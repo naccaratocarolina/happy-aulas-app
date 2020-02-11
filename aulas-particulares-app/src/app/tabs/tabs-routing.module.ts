@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
-import { AuthGuard } from '../guards/Auth/auth.guard';
+import { PerfilGuard } from '../guards/Perfil/perfil.guard';
 
 const routes: Routes = [
   {
@@ -35,7 +35,8 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../tab3/tab3.module').then(m => m.Tab3PageModule),
+              canActivate: [PerfilGuard]
           }
         ]
       },

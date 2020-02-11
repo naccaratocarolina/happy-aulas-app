@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -36,7 +35,8 @@ export class AuthService {
   loginUsuario( form ): Observable<any> {
     return this.http.post( this.apiUrl + 'login', form, this.httpHeaders );
   }
+  //
   estaLogado(){
-    return true;
+    return localStorage.getItem('token');
   }
 }

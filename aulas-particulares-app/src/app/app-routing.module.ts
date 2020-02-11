@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { PerfilGuard } from './guards/Perfil/perfil.guard';
 const routes: Routes = [
   {
     path: '',
@@ -40,8 +40,8 @@ const routes: Routes = [
   },
   //{ path: ‘home’, component: ‘HomePage’ , canActivate: [ClasseDaGuard] }
   {
-    path:'tab3', canActivate: ['PerfilGuard'],
-    loadChildren: ()=> import('./tab3/tab3.module').then( m => m.Tab3PageModule)
+    path:'tab3', 
+    loadChildren: ()=> import('./tab3/tab3.module').then( m => m.Tab3PageModule), canActivate: [PerfilGuard]
 
   }
 

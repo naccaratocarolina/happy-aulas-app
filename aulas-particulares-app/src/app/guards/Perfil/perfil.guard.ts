@@ -15,13 +15,9 @@ export class PerfilGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot):Observable<boolean> | Promise<boolean> | boolean{
-      if(this.authService.estaLogado()){
-        return true;
-      }
-      else{
-        return this.router.navigate(['../login'])
-      }
+      if(this.authService.estaLogado() == null){
+        return this.router.navigate(['login'])
     }
   }
   
-
+}
