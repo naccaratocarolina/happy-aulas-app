@@ -1,21 +1,23 @@
 .pic2{
     position: absolute;
     margin: 2%;
-    
+
 }
 
 .pic{
     position: absolute;
     width: 100%;
     height: 13vh;
-    
-    
+
+
 }
 
 .picEnd{
     display:flex;
     justify-content: center;
-
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 
@@ -32,7 +34,7 @@
     color: #333993;
     margin: 0;
     padding: 0;
-    
+
 }
 
 .button1 p{
@@ -50,18 +52,18 @@
     height: 6em;
     width: 6em;
     --background: #FCFAFB;
-}    
+}
 
 .fotoprof{
     display:flex;
     justify-content: center;
-    
+
 }
 
 .info{
     box-shadow: 2px 4px 10px 2px #b9abab;
     --background: #FCFAFB;
-    
+
 }
 
 .editarprof ion-icon{

@@ -40,6 +40,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'materia',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../materia/materia.module').then(m => m.MateriaPageModule)
+          }
+        ]
+      },
+      {
+        path: 'perfil-prof',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../perfil-prof/perfil-prof.module').then(m => m.PerfilProfPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
