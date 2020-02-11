@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { ProfessorService } from '../services/professor.service';
 
 @Component({
   selector: 'app-perfil-prof',
@@ -7,13 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./perfil-prof.page.scss'],
 })
 export class PerfilProfPage implements OnInit {
+  public professor = {};
 
-  
+  constructor(private router: ActivatedRoute, public professorService: ProfessorService) {
+    this.profId = this.router.snapshot.params["profId"];
+  }
 
-  constructor(private router: Router) {}
-
-
-  ngOnInit() {
+  ngOnInit(profId) {
+    //pega a materia i
+    this.professorService.findTeacher(this.profId).subscribe(
+      (res) => {
+        console.log(res[0]);
+        this.professor = res[0];
+      }
+    );
   }
 
 }

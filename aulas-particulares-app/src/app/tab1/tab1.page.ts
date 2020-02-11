@@ -32,7 +32,7 @@ export class Tab1Page {
   }
 
   //redireciona pra pag da materia e passa o id do card selecionado
-  public materiaSelecionada(i) {
+  public redirecionaPagMateria(i) {
     this.router.navigate(['/materia', {materiaId: i}]);
   }
 }

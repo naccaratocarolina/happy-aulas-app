@@ -9,15 +9,15 @@
   <ion-grid>
     <ion-row *ngFor="let professor of professores" class="container_professores">
 
-      <ion-card>
+      <ion-card (click)="redirecionaPagProf(professor.id)">
         <ion-row>
           <ion-col class="imagem">
             <!--<img src="../assets/materia/avatar.png">-->
           </ion-col>
 
           <ion-col class="texto_container">
-            <ion-row class="texto">{{professor.nome}}</ion-row>
-            <ion-row class="texto">{{professor.materia}}</ion-row>
+            <ion-row class="texto">{{professor.bio}}</ion-row>
+            <ion-row class="texto">{{materia.subject_name}}</ion-row>
           </ion-col>
         </ion-row>
       </ion-card>

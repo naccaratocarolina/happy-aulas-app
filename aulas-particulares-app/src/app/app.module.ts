@@ -10,9 +10,11 @@ import { AppComponent } from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
 
+//Services
 import { AuthService } from './services/auth.service';
 import { AgendamentoService } from './services/agendamento.service';
 import { MateriaService } from './services/materia.service';
+import { ProfessorService } from './services/professor.service'
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +33,7 @@ import { MateriaService } from './services/materia.service';
     AuthService,
     AgendamentoService,
     MateriaService,
+    ProfessorService
   ],
   bootstrap: [AppComponent]
 })
