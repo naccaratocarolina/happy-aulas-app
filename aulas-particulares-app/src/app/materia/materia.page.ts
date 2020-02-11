@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Tab1 } from '../tab1/tab1.page';
+// import { Tab1 } from '../tab1/tab1.page';
 
 @Component({
   selector: 'app-materia',
