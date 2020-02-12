@@ -7,6 +7,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 
+  token = localStorage.getItem('token');
+
   // A URL da API
   apiUrl: string = "http://localhost:8000/api/";
 
@@ -24,7 +26,7 @@ export class AuthService {
   constructor( public http: HttpClient ) {}
 
   // Registro de usuário
-  registrarUsuario( form ): Observable<any> {
+  registrarUsuario(form): Observable<any> {
     return this.http.post( this.apiUrl + 'register', form, this.httpHeaders );
   }
   //Get nome do usuario
@@ -32,11 +34,11 @@ export class AuthService {
     return this.http.get( this.apiUrl + 'finduser/1');
   }
   // Login de Usuario
-  loginUsuario( form ): Observable<any> {
+  loginUsuario(form): Observable<any> {
     return this.http.post( this.apiUrl + 'login', form, this.httpHeaders );
   }
   //
-  estaLogado(){
-    return localStorage.getItem('token');
+  estaLogado() {
+    return this.token;
   }
 }

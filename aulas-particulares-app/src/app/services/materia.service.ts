@@ -29,7 +29,7 @@ export class MateriaService {
 
   //encontra o nome da materia referente ao id
   findSubject(i:number): Observable<any> {
-    this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('userToken');
+    this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
 
     return this.http.get(this.apiUrl + 'findsubject/' + i, this.httpHeaders)
   }
