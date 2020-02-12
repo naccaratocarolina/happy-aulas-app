@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ProfessorService } from '../services/professor.service';
 
+
 @Component({
   selector: 'app-perfil-prof',
   templateUrl: './perfil-prof.page.html',

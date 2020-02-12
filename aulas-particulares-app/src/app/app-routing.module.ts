@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { PerfilGuard } from './guards/Perfil/perfil.guard';
 const routes: Routes = [
   {
     path: '',
@@ -33,10 +33,19 @@ const routes: Routes = [
   {
     path: 'slides',
     loadChildren: () => import('./slides/slides.module').then( m => m.SlidesPageModule)
-  },  {
+  },
+  {
     path: 'materia',
     loadChildren: () => import('./materia/materia.module').then( m => m.MateriaPageModule)
+  },
+  //{ path: ‘home’, component: ‘HomePage’ , canActivate: [ClasseDaGuard] }
+  {
+    path:'tab3', 
+    loadChildren: ()=> import('./tab3/tab3.module').then( m => m.Tab3PageModule), canActivate: [PerfilGuard]
+
   }
+
+
 
 
 ];

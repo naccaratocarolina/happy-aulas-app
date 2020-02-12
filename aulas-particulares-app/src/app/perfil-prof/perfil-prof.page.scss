@@ -85,17 +85,6 @@
     align-items: center;
 }
 
-.bio{
-    width: 17em;
-    color: #737373;
-    background: #FCFAFB;
-    border:0;
-}
-
-.bioitem{
-    --background: #FCFAFB;
-}
-
 .botao_agendar_aula {
   display: flex;
   align-items: center;
@@ -154,7 +143,7 @@
 
 .email ion-icon {
   position: absolute;
-  top: 10vh;
+  top: 9vh;
 }
 
 .email ion-card {
@@ -172,18 +161,44 @@
 
 .bio ion-icon {
   position: absolute;
-  top: 15vh;
+  top: 17vh;
 }
 
 .bio ion-card {
   position: relative;
   left: 7vw;
   padding-left: 5px;
-  display: flex;
-  align-items: center;
   width: 70vw;
-  height: 15vh;
+  height: 10vh;
   background: #FCFAFB;
   border-radius: 3px;
   border: 0;
+}
+
+.bio textarea {
+  display: flex;
+  width: 70vw;
+  height: 10vh;
+  background: rgba(0,0,0,0);
+  border: 0;
+}
+
+.info p {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.2em;
+
+  color: #393393;
+}
+
+.info textarea {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.2em;
+
+  color: #393393;
 }

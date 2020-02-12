@@ -19,19 +19,7 @@ export class Tab3Page {
   constructor(private router: Router, public authService: AuthService) {}
 
   ngOnInit(){
-    this.pegaUsuario();
-  }
-
-  // função que pega o nome do usuario cadastrado e faz aparecer na pag de perfil
-  pegaUsuario(): void{
-    this.authService.pegaUsuario(this.id).subscribe(
-      (res) => {
-        console.log(res);
-        this.usuario = res;
-      }, (error) => {
-        console.log(error);
-      }
-    )
+    
   }
 
   redirecionaCadastroProf() {
