@@ -49,6 +49,7 @@ Route::post('register','API\PassportController@register');
 Route::post('login','API\PassportController@login');
 Route::group(['middleware'=> 'auth:api'], function(){//so deixa se user for usuario autenticado
   Route::get('listlesson','LessonController@listLesson');
+  Route::get('addlesson','LessonController@addLesson');
   Route::post('logout', 'API\PassportController@logout');
   Route::post('getDetails', 'API\PassportController@getDetails');
 });

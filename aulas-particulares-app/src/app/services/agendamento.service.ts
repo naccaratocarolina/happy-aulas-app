@@ -27,7 +27,7 @@ export class AgendamentoService {
   public createLesson( form ): Observable<any>{
     this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
 
-    return this.http.post(this.apiUrl + 'createlesson', this.httpHeaders);
+    return this.http.post(this.apiUrl + 'addlesson/' + localStorage.getItem('idProfessor') + '/' + localStorage.getItem('idMateria'), this.httpHeaders);
   }
   //pega todos os agendamentos (GET)
   public listLesson(): Observable<any> {

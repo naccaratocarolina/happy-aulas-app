@@ -41,4 +41,9 @@ export class AuthService {
   estaLogado() {
     return this.token;
   }
+
+  //deslogaUsuario
+  deslogaUsuario(): Observable<any> {
+    return this.http.post( this.apiUrl + 'logout', this.httpHeaders);
+  }
 }
