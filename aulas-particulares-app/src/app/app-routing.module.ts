@@ -38,7 +38,7 @@ const routes: Routes = [
     path: 'materia',
     loadChildren: () => import('./materia/materia.module').then( m => m.MateriaPageModule)
   },
-  //{ path: ‘home’, component: ‘HomePage’ , canActivate: [ClasseDaGuard] }
+  
   {
     path:'tab3', 
     loadChildren: ()=> import('./tab3/tab3.module').then( m => m.Tab3PageModule), canActivate: [PerfilGuard]

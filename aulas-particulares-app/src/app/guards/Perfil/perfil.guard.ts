@@ -18,6 +18,9 @@ export class PerfilGuard implements CanActivate {
       if(this.authService.estaLogado() == null){
         return this.router.navigate(['login'])
     }
+    else{
+      return true
+    }
   }
   
 }
