@@ -29,9 +29,9 @@ export class Tab2Page {
 	});
   }
 
-  CriaAula ( agendaForm, idProfessor, idMateria ) {
+  CriaAula ( agendaForm) {
     if ( agendaForm.status == "VALID"){
-      this.agendamentoService.createLesson( agendaForm.value, idProfessor, idMateria ).subscribe(
+      this.agendamentoService.createLesson( agendaForm.value).subscribe(
         ( res ) => {
           console.log(res);
           this.router.navigate(['meus-agendamentos']);

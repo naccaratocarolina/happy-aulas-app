@@ -25,4 +25,8 @@ export class Tab3Page {
   redirecionaCadastroProf() {
     this.router.navigateByUrl('/cadastro-professor');
   }
+
+  redirecionaMeusAgendamentos(){
+    this.router.navigateByUrl('/meus-agendamentos');
+  }
 }
