@@ -19,10 +19,20 @@ export class Tab3Page {
   constructor(private router: Router, public authService: AuthService) {}
 
   ngOnInit(){
-    
+
   }
 
   redirecionaCadastroProf() {
     this.router.navigateByUrl('/cadastro-professor');
+  }
+
+  deslogaUsuario() {
+    this.authService.deslogaUsuario().subscribe(
+      (res)=>{
+        console.log('Usuario Deslogado.')
+        this.router.navigateByUrl('/login');
+
+      }
+    )
   }
 }

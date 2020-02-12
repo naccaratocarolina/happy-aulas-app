@@ -9,8 +9,12 @@ import { AgendamentoService } from "../services/agendamento.service";
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+
 	/** Formulario **/
 	agendaForm: FormGroup;
+  public idProfessor = localStorage.getItem('Teacher_id');
+  public idMateria = localStorage.getItem('Subject_id');
+
 
   constructor(private router: Router, public formbuilder: FormBuilder, public agendamentoService: AgendamentoService) {
   	this.agendaForm = this.formbuilder.group({
@@ -19,13 +23,15 @@ export class Tab2Page {
 			address: ['', [Validators.required]],
 			lesson_date: ['', [Validators.required]],
 			lesson_time: ['', [Validators.required]],
-      //user_id: []
+      user_id: ['',[Validators.required]],
+      subject_id: ['',[Validators.required]],
+      teacher_id: ['',[Validators.required]],
 	});
   }
 
-  CriaAula ( agendaForm ) {
+  CriaAula ( agendaForm, idProfessor, idMateria ) {
     if ( agendaForm.status == "VALID"){
-      this.agendamentoService.createLesson( agendaForm.value ).subscribe(
+      this.agendamentoService.createLesson( agendaForm.value, idProfessor, idMateria ).subscribe(
         ( res ) => {
           console.log(res);
           this.router.navigate(['meus-agendamentos']);

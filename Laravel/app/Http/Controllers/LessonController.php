@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Lesson;
 use App\User;
+use App\Teacher;
 use Auth;
+use App\Notifications\confirmaAula;
 use App\Http\Requests\LessonRequest as LessonRequest;
 
 class LessonController extends Controller
@@ -17,7 +19,7 @@ class LessonController extends Controller
       $lesson->lesson_date = $request->lesson_date ;
       $lesson->teacher_name = $request->teacher_name ;
       $lesson->subject_name = $request->subject_name ;
-      $lesson->location = $request->location ;
+      $lesson->address = $request->address ;
       $lesson->user_id = $request->user_id ;
       $lesson->subject_id = $request->subject_id ;
       $lesson->teacher_id = $request->teacher_id ;
@@ -72,5 +74,23 @@ class LessonController extends Controller
   public function deleteLesson(Request $request, $id){
     Lesson::destroy($id);
     return response()->json(['Aula deletada']);
+  }
+  public function addLesson(LessonRequest $request, $idTeacher, $idSubject){
+    $user = Auth::user();
+    $teacher = Teacher::find($idTeacher);
+    $subject = Subject::find($idSubject);
+    $user_teacher = User::find($teacher->user_id);
+    $lesson = new Lesson;
+    $lesson->user_id = $user->id;
+    $lesson->lesson_time = $request->lesson_time ;
+    $lesson->lesson_date = $request->lesson_date ;
+    $lesson->teacher_name = $user_teacher->name ;
+    $lesson->subject_name = $subject->subject_name ;
+    $lesson->subject_id = $subject->id;
+    $lesson->teacher_id = $teacher->id;
+    $lesson->address = $request->address ;
+    $user->notify(new confirmaAula($user, $lesson));
+
+    $lesson->save();
   }
 }

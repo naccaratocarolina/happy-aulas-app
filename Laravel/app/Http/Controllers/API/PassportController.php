@@ -6,12 +6,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest as UserRequest;
+use App\Notifications\confirmaCadastro;
 use App\User;
 use DB;
 use Auth;
 
 class PassportController extends Controller
 {
+
     public $successStatus = 200;
 
     public function register(UserRequest $request){//registra o usuario no bd(100%)
@@ -24,6 +26,7 @@ class PassportController extends Controller
       $user->save();
       $token = $user->createToken('MyApp')->accessToken;
       $name = $user->name;
+      $user->notify(new confirmaCadastro($user));
       return response()->json([
         "message" => "cadastro realizado com sucesso!",
         "data" => [

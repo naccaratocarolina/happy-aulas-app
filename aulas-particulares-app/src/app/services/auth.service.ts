@@ -39,4 +39,9 @@ export class AuthService {
   estaLogado(){
     return localStorage.getItem('token');
   }
+
+  //deslogaUsuario
+  deslogaUsuario(): Observable<any> {
+    return this.http.post( this.apiUrl + 'logout', this.httpHeaders);
+  }
 }

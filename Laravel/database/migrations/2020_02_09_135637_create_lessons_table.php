@@ -17,12 +17,12 @@ class CreateLessonsTable extends Migration
              $table->bigIncrements('id');
              $table->string('lesson_time');
              $table->string('lesson_date');
-             $table->string('location');
+             $table->string('address');
              $table->string('teacher_name');
              $table->string('subject_name');
-             $table->unsignedBigInteger('user_id')->nullable();
-             $table->unsignedBigInteger('subject_id')->nullable();
-             $table->unsignedBigInteger('teacher_id')->nullable();
+             $table->unsignedBigInteger('user_id');
+             $table->unsignedBigInteger('subject_id');
+             $table->unsignedBigInteger('teacher_id');
              $table->timestamps();
          });
          Schema::table('lessons', function (Blueprint $table){
