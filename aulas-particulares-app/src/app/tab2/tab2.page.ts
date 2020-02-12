@@ -18,20 +18,18 @@ export class Tab2Page {
 
   constructor(private router: Router, public formbuilder: FormBuilder, public agendamentoService: AgendamentoService) {
   	this.agendaForm = this.formbuilder.group({
-			subject_name: ['', [Validators.required]],
-			teacher_name: ['', [Validators.required]],
+			//subject_name: ['', [Validators.required]],
+			//teacher_name: ['', [Validators.required]],
 			address: ['', [Validators.required]],
 			lesson_date: ['', [Validators.required]],
 			lesson_time: ['', [Validators.required]],
-      user_id: ['',[Validators.required]],
-      subject_id: ['',[Validators.required]],
-      teacher_id: ['',[Validators.required]],
+      //user_id: ['',[Validators.required]],
 	});
   }
 
-  CriaAula ( agendaForm, idProfessor, idMateria ) {
+  CriaAula ( agendaForm ) {
     if ( agendaForm.status == "VALID"){
-      this.agendamentoService.createLesson( agendaForm.value, idProfessor, idMateria ).subscribe(
+      this.agendamentoService.createLesson( agendaForm.value ).subscribe(
         ( res ) => {
           console.log(res);
           this.router.navigate(['meus-agendamentos']);
