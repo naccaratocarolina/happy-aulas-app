@@ -29,6 +29,7 @@ export class Tab2Page {
 	});
   }
 
+  /**
   CriaAula ( agendaForm, idProfessor, idMateria ) {
     if ( agendaForm.status == "VALID"){
       this.agendamentoService.createLesson( agendaForm.value, idProfessor, idMateria ).subscribe(
@@ -39,6 +40,7 @@ export class Tab2Page {
       );
     }
   }
+  **/
 
   redirecionaPagProf() {
     this.router.navigateByUrl('/tabs/perfil-prof');
