@@ -24,14 +24,6 @@ export class CadastroProfessorPage implements OnInit {
   ngOnInit() {
   }
 
-
-submitForm(form) {
-  console.log(form);
-  console.log(form.value);
-
-  this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
-}
-
 criaProfessor(formbuilder) {
   this.professorService.createTeacher(formbuilder).subscribe(
     (res) => {
