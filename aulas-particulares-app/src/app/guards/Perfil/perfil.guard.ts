@@ -9,19 +9,16 @@ import { Router } from '@angular/router';
 })
 export class PerfilGuard implements CanActivate {
 
-  token = localStorage.getItem('token');
-
   constructor(public authService: AuthService, public router: Router){
 
   }
-
   canActivate(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot):Observable<boolean> | Promise<boolean> | boolean {
-      if(this.authService.estaLogado() == this.token){
-        return console.log('Funcionouuuuuuuuu');
+    state: RouterStateSnapshot):Observable<boolean> | Promise<boolean> | boolean{
+      if(this.authService.estaLogado() == null){
+        return this.router.navigate(['login'])
     } else {
-      this.router.navigate(['/login']);
+      return true;
     }
   }
 
