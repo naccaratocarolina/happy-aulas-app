@@ -32,7 +32,15 @@ export class ProfessorService {
   findTeacher(i:number): Observable<any> {
     this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
 
-    return this.http.get(this.apiUrl + 'findteacher/' + i, this.httpHeaders)
+    return this.http.get(this.apiUrl + 'findteacher/' + i, this.httpHeaders);
   }
+
+  //cria um professor novo (POST)
+  createTeacher(form):Observable<any> {
+    this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
+
+    return this.http.post(this.apiUrl + 'createteacher', form.value, this.httpHeaders);
+  }
+
 
 }

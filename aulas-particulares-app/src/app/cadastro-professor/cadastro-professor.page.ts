@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ProfessorService } from '../services/professor.service';
 
 @Component({
   selector: 'app-cadastro-professor',
@@ -10,8 +11,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class CadastroProfessorPage implements OnInit {
 
   registerForm: FormGroup;
+  professores=[];
 
-  constructor(private router: Router, public formbuilder: FormBuilder) {
+  constructor(private router: Router, public formbuilder: FormBuilder, public professorService: ProfessorService) {
     this.registerForm = this.formbuilder.group({
       nome: [null, [Validators.required]],
       materia: [null, [Validators.required]],
@@ -28,6 +30,16 @@ submitForm(form) {
   console.log(form.value);
 
   this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
+}
+
+criaProfessor(formbuilder) {
+  this.professorService.createTeacher(formbuilder).subscribe(
+    (res) => {
+      console.log(res);
+      this.professores.push(res);
+    }
+  );
+  this.router.navigateByUrl('/tabs/tab3'); //volta pra pag de perfil
 }
 
 redirecionaPerfil() {
