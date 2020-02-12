@@ -19,7 +19,7 @@ Route::get('showpicture/{id}','UserController@showPicture');
 //teacher
 Route::get('listteacher','TeacherController@listTeacher');
 Route::get('findteacher/{id}','TeacherController@findTeacher');
-Route::post('createteacher','TeacherController@createTeacher');
+/**Route::post('createteacher','TeacherController@createTeacher');**/
 Route::put('updateteacher/{id}','TeacherController@updateTeacher');
 Route::delete('deleteteacher/{id}','TeacherController@deleteTeacher');
 
@@ -52,4 +52,5 @@ Route::group(['middleware'=> 'auth:api'], function(){//so deixa se user for usua
   Route::get('addlesson','LessonController@addLesson');
   Route::post('logout', 'API\PassportController@logout');
   Route::post('getDetails', 'API\PassportController@getDetails');
+  Route::post('createteacher', 'API\PassportController@createTeacher');
 });

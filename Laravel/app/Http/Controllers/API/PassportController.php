@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest as UserRequest;
 use App\Notifications\confirmaCadastro;
 use App\User;
+use App\Teacher;
 use DB;
 use Auth;
 
@@ -67,5 +68,16 @@ class PassportController extends Controller
     DB::table('oauth_refresh_tokens')->where('access_token_id', $accessToken->id)->update(['revoked' => true]);
     $accessToken->revoke();
     return response()->json('Usuario deslogado!', 200);
+  }
+
+  public function createTeacher(Request $request)
+  {
+      $teacher = new Teacher;
+      $user = Auth::user();
+
+      $teacher->bio = $request->bio;
+      $teacher->user_id = $user->user_id;
+      $teacher->save();
+
   }
 }

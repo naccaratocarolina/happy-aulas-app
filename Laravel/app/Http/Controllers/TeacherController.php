@@ -10,6 +10,7 @@ use App\User;
 
 class TeacherController extends Controller
 {
+  /*
   public function createTeacher(Request $request)
   {
       $teacher = new Teacher;
@@ -19,6 +20,7 @@ class TeacherController extends Controller
       $teacher->save();
 
   }
+  */
 
   public function listTeacher(Request $request){
     $teacher = Teacher::all();
