@@ -4,7 +4,7 @@ import { AuthService } from '../services/auth.service';
 import { ModalController } from '@ionic/angular';
 import { File, FileEntry } from '@ionic-native/File/ngx';
 import { HttpClient } from '@angular/common/http';
-import { WebView } from '@ionic-native/ionic-webview/ngx';
+//import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { CadastroProfComponent } from '../componentes/cadastro-prof/cadastro-prof.component';
 
 

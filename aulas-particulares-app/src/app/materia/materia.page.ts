@@ -14,7 +14,7 @@ export class MateriaPage implements OnInit {
   public materia = {};
   public subject_id = localStorage.getItem('idMateria');
   public professores = [];
-  public materiaId:number;
+  public materiaId;
 
   constructor(private route: Router, private router: ActivatedRoute, public materiaService: MateriaService, public professorService: ProfessorService) {
     this.materiaId = this.router.snapshot.params["materiaId"];
