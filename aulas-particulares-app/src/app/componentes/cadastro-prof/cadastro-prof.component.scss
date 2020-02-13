@@ -1,6 +1,19 @@
-.slide-container {
-  height: 100%;
+.slide1 {
+  height: 100vh;
   width: 100%;
+  background: url('http://localhost:8100/assets/perfil/fundo_1.png');
+}
+
+.slide2 {
+  height: 100vh;
+  width: 100%;
+  background: url('http://localhost:8100/assets/perfil/fundo_2.png');
+}
+
+.slide3 {
+  height: 100vh;
+  width: 100%;
+  background: url('http://localhost:8100/assets/perfil/fundo_3.png');
 }
 
 .botao_fecha {
@@ -23,4 +36,24 @@
   left: 10vw;
   top: 20vh;
   z-index: 10000;
+}
+
+.card_msg {
+  position: absolute;
+  top: 20vh;
+  left: 11vw;
+  z-index: 1000000;
+  height: 40vh;
+  width: 70vw;
+  --background: white;
+  opacity: 0.4;
+}
+
+.card_msg img {
+  position: relative;
+  display: center;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
 }
