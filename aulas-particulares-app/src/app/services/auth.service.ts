@@ -29,9 +29,11 @@ export class AuthService {
   registrarUsuario(form): Observable<any> {
     return this.http.post( this.apiUrl + 'register', form, this.httpHeaders );
   }
-  //Get nome do usuario
-  pegaUsuario(id): Observable<any> {
-    return this.http.get( this.apiUrl + 'finduser/1');
+  //Get usuario
+  pegaUsuario(): Observable<any> {
+    this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
+
+    return this.http.get( this.apiUrl + 'getuser', this.httpHeaders);
   }
   // Login de Usuario
   loginUsuario(form): Observable<any> {

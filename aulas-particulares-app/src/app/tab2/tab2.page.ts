@@ -30,7 +30,7 @@ export class Tab2Page {
       agendaForm.value.teacher_id = this.idTeacher;
       agendaForm.value.subject_id = this.idSubject;
       console.log(agendaForm.value);
-      this.agendamentoService.createLesson( agendaForm.value).subscribe(
+      this.agendamentoService.addLesson( agendaForm.value).subscribe(
         ( res ) => {
           console.log(res);
           this.router.navigate(['meus-agendamentos']);

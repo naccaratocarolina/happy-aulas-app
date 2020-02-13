@@ -10,11 +10,11 @@
 <ion-grid>
   <ion-list class="perfilprof" lines="none">
     <div class="fotoprof">
-      <ion-button class="button2" shape="round" size="large"><ion-icon name="camera"></ion-icon ></ion-button>
+      <img src="http://localhost:8000/{{user.profile_picture}}">
     </div>
   </ion-list>
 
-  <h1 class="titulo">{{professor.name}}</h1>
+  <h1 class="titulo">{{user.name}}</h1>
 
   <ion-row class="botao_agendar_aula">
     <ion-button
@@ -27,12 +27,12 @@
 
     <ion-row class="materia">
       <ion-icon name="ios-book"></ion-icon>
-      <ion-card><p>Matéria</p></ion-card>
+      <ion-card><p>{{user.name}}</p></ion-card>
     </ion-row>
 
     <ion-row class="email">
       <ion-icon name="mail"></ion-icon>
-      <ion-card><p>E-mail</p></ion-card>
+      <ion-card><p>{{user.email}}</p></ion-card>
     </ion-row>
 
     <ion-row class="bio">

@@ -9,7 +9,7 @@
   <ion-grid>
     <ion-row *ngFor="let professor of professores" class="container_professores">
 
-      <ion-card (click)="redirecionaPagProf(professor.id)">
+      <ion-card (click)="redirecionaPagProf(professor.id, professor.user_id)">
         <ion-row>
           <ion-col class="imagem">
             <!--<img src="../assets/materia/avatar.png">-->

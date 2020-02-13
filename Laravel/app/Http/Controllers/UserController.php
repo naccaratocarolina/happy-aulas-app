@@ -41,10 +41,14 @@ class UserController extends Controller
         $last = $paginator -> lastPage();
         return response()->json([$user,$last]);
     }
+    public function getUser(){//<-essa aqui
+        $user = Auth::user();
+        return response()->json($user);
+    }
 
     public function findUser(Request $request, $id){
         $user = User::findOrFail($id);
-        return response()->json(new UserResource($user));
+        return response()->json([$user]);
     }
     public function updateUser(UserRequest $request, $id){
         $user = User::find($id);
