@@ -40,9 +40,11 @@ class confirmaAula extends Notification
      */
     public function toMail($notifiable)
     {
+        $user = $notifiable;
+        $lesson = $notifiable;
         return (new MailMessage)
                     ->greeting('Sua aula foi confirmada!')
-                    ->line('Olá '.$user->name.' este é um email de confirmação pra sua aula do dia '.$lesson->date'.')
+                    ->line('Olá '.$user->name.' este é um email de confirmação pra sua aula do dia '.$lesson->date.'.')
                     ->action('Voltar ao app', url('localhost:8100/login'))
                     ->line('Boa Aula!');
     }

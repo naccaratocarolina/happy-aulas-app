@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Lesson;
 use App\User;
 use App\Teacher;
+use App\Subject;
 use Auth;
 use App\Notifications\confirmaAula;
 use App\Http\Requests\LessonRequest as LessonRequest;
@@ -15,15 +16,16 @@ class LessonController extends Controller
   public function createLesson(LessonRequest $request)
   {
       $lesson = new Lesson;
+      $user = Auth::user();
+      $lesson->teacher_id = $request->teacher_id ;
+      $lesson->subject_id = $request->subject_id ;
       $lesson->lesson_time = $request->lesson_time ;
       $lesson->lesson_date = $request->lesson_date ;
       $lesson->teacher_name = $request->teacher_name ;
       $lesson->subject_name = $request->subject_name ;
       $lesson->address = $request->address ;
-      $lesson->user_id = $request->user_id ;
-      $lesson->subject_id = $request->subject_id ;
-      $lesson->teacher_id = $request->teacher_id ;
-
+      $lesson->user_id = $user->id ;
+      $user->notify(new confirmaAula($user, $lesson));
       $lesson->save();
   }
 
@@ -75,22 +77,24 @@ class LessonController extends Controller
     Lesson::destroy($id);
     return response()->json(['Aula deletada']);
   }
-  public function addLesson(LessonRequest $request, $idTeacher, $idSubject){
-    $user = Auth::user();
-    $teacher = Teacher::find($idTeacher);
-    $subject = Subject::find($idSubject);
-    $user_teacher = User::find($teacher->user_id);
+  public function addLesson(LessonRequest $request){
     $lesson = new Lesson;
+    $user = Auth::user();
     $lesson->user_id = $user->id;
+    $lesson->subject_id = $request->subject_id;
+    $lesson->teacher_id = $request->teacher_id;
+    $teacher = Teacher::find($lesson->teacher_id);
+    $subject = Subject::find($lesson->subject_id);
+    $user_teacher = User::find($teacher->user_id);
     $lesson->lesson_time = $request->lesson_time ;
     $lesson->lesson_date = $request->lesson_date ;
+    $lesson->address = $request->address ;
     $lesson->teacher_name = $user_teacher->name ;
     $lesson->subject_name = $subject->subject_name ;
-    $lesson->subject_id = $subject->id;
-    $lesson->teacher_id = $teacher->id;
-    $lesson->address = $request->address ;
     $user->notify(new confirmaAula($user, $lesson));
 
     $lesson->save();
+
+    return response()->json(['Aula Criada!']);
   }
 }

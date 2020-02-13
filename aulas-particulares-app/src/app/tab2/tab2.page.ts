@@ -9,27 +9,28 @@ import { AgendamentoService } from "../services/agendamento.service";
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
+  idTeacher = parseInt(localStorage.getItem('idTeacher'));
+  idSubject = parseInt(localStorage.getItem('idMateria'));
 	/** Formulario **/
 	agendaForm: FormGroup;
-  public idProfessor = localStorage.getItem('Teacher_id');
-  public idMateria = localStorage.getItem('Subject_id');
 
 
   constructor(private router: Router, public formbuilder: FormBuilder, public agendamentoService: AgendamentoService) {
   	this.agendaForm = this.formbuilder.group({
-			//subject_name: ['', [Validators.required]],
-			//teacher_name: ['', [Validators.required]],
 			address: ['', [Validators.required]],
 			lesson_date: ['', [Validators.required]],
 			lesson_time: ['', [Validators.required]],
       //user_id: ['',[Validators.required]],
+      //teacher_id:['', [Validators.required]],
+      //subject_id:['', [Validators.required]]
 	});
   }
-
   CriaAula ( agendaForm ) {
     if ( agendaForm.status == "VALID"){
-      this.agendamentoService.createLesson( agendaForm.value ).subscribe(
+      agendaForm.value.teacher_id = this.idTeacher;
+      agendaForm.value.subject_id = this.idSubject;
+      console.log(agendaForm.value);
+      this.agendamentoService.createLesson( agendaForm.value).subscribe(
         ( res ) => {
           console.log(res);
           this.router.navigate(['meus-agendamentos']);

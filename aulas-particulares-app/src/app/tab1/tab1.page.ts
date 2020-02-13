@@ -33,7 +33,7 @@ export class Tab1Page {
 
   //redireciona pra pag da materia e passa o id do card selecionado
   public redirecionaPagMateria(i) {
-    localStorage.setItem( 'materiaId', i)
+    localStorage.setItem( 'idMateria', i)
     this.router.navigate(['/tabs/materia', {materiaId: i}]);
   }
 }
