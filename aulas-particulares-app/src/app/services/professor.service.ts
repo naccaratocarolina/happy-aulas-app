@@ -29,12 +29,12 @@ export class ProfessorService {
   }
 
   //encontra o nome do professor referente ao id
-  findTeacher(i:number): Observable<any> {
+  findTeacher(i:string): Observable<any> {
     this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
 
     return this.http.get(this.apiUrl + 'findteacher/' + i, this.httpHeaders);
   }
-  findUserTeacher(j:number): Observable<any> {
+  findUserTeacher(j:string): Observable<any> {
     this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
 
     return this.http.get(this.apiUrl + 'finduser/' + j, this.httpHeaders);
