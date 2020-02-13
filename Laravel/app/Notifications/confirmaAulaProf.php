@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class confirmaAula extends Notification
+class confirmaAulaProf extends Notification
 {
     use Queueable;
 
@@ -40,10 +40,11 @@ class confirmaAula extends Notification
      */
     public function toMail($notifiable)
     {
-        $user = $notifiable;
+        $user_teacher = $notifiable;
         return (new MailMessage)
-                    ->greeting('Sua aula foi confirmada!')
-                    ->line('Olá '.$user->name.' este é um email de confirmação pra sua aula!')
+                    ->greeting('Nova aula! :)')
+                    ->line('Olá '.$user_teacher->name.' um Aluno marcou uma aula!')
+                    //->line('Horario: '.$lesson->lesson_time.' Dia:'.$lesson->lesson_date.'.')
                     ->action('Voltar ao app', url('localhost:8100/login'))
                     ->line('Boa Aula!');
     }

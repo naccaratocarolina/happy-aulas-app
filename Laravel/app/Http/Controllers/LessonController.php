@@ -9,6 +9,7 @@ use App\Teacher;
 use App\Subject;
 use Auth;
 use App\Notifications\confirmaAula;
+use App\Notifications\confirmaAulaProf;
 use App\Http\Requests\LessonRequest as LessonRequest;
 
 class LessonController extends Controller
@@ -92,6 +93,7 @@ class LessonController extends Controller
     $lesson->teacher_name = $user_teacher->name ;
     $lesson->subject_name = $subject->subject_name ;
     $user->notify(new confirmaAula($user, $lesson));
+    $user_teacher->notify(new confirmaAulaProf($user_teacher, $lesson));
 
     $lesson->save();
 

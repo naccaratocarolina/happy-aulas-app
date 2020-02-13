@@ -52,6 +52,7 @@ Route::group(['middleware'=> 'auth:api'], function(){//so deixa se user for usua
   Route::post('createlesson','LessonController@createLesson');
   Route::post('addlesson','LessonController@addLesson');
   Route::post('logout', 'API\PassportController@logout');
+  Route::get('getuser','UserController@getUser');//<-essa aqui
   Route::post('getDetails', 'API\PassportController@getDetails');
   Route::post('createteacher', 'API\PassportController@createTeacher');
 });

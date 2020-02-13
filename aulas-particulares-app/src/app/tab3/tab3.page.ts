@@ -11,18 +11,19 @@ import { CadastroProfComponent } from '../componentes/cadastro-prof/cadastro-pro
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  public NomeUsuario = localStorage.getItem('user_name')
-  public EmailUsuario = localStorage.getItem('user_email')
-
 
   //variaveis criadas
-  id;
-  usuario;
+  public user = {};
 
   constructor(private router: Router, public authService: AuthService, private modalController:ModalController) {}
 
   ngOnInit(){
-
+    this.authService.pegaUsuario().subscribe(
+      (res) => {
+        console.log(res);
+        this.user = res;
+      }
+    );
   }
 
   redirecionaCadastroProf() {
