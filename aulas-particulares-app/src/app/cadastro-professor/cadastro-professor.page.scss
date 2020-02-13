@@ -18,7 +18,7 @@ ion-content {
 .cadastro_professor {
 	position: absolute;
 	top: 4vh;
-	left: 12%;
+	left: 18%;
 }
 
 .cadastro_professor p {
@@ -85,8 +85,12 @@ ion-textarea {
 
 .container_form_cadastro_prof {
 	position: absolute;
-	top: 40%;
-	left: 12%;
+	top: 18%;
+	left: 10%;
+}
+
+ion-list {
+	width: 80vw;
 }
 
 .botao_concluir_cadastro ion-button {
@@ -108,4 +112,26 @@ ion-textarea {
 	text-align: center;
 
 	color: #FCFAFB;
+}
+
+.upload_img {
+	position: relative;
+	left: 25%;
+	margin-bottom: 5vh;
+}
+
+.upload_img ion-button {
+	height: 32vw;
+	width: 32vw;
+
+	--background: #8EAAFE;
+}
+
+.upload_img ion-icon {
+	height: 2em;
+	width: 2em;
+}
+
+ion-list {
+	--background: rgba(0,0,0,0);
 }

@@ -15,7 +15,7 @@ export class CadastroProfessorPage implements OnInit {
 
   constructor(private router: Router, public formbuilder: FormBuilder, public professorService: ProfessorService) {
     this.registerForm = this.formbuilder.group({
-      
+
       bio: [null, [Validators.required]]
     });
   }
@@ -23,18 +23,18 @@ export class CadastroProfessorPage implements OnInit {
   ngOnInit() {
   }
 
-criaProfessor(formbuilder) {
-  this.professorService.createTeacher(formbuilder).subscribe(
-    (res) => {
-      console.log(res);
-      this.professores.push(res);
-    }
-  );
-  this.router.navigateByUrl('/tabs/tab3'); //volta pra pag de perfil
-}
+  criaProfessor(formbuilder) {
+    this.professorService.createTeacher(formbuilder).subscribe(
+      (res) => {
+        console.log(res);
+        this.professores.push(res);
+      }
+    );
+    this.router.navigateByUrl('/tabs/tab3'); //volta pra pag de perfil
+  }
 
-redirecionaPerfil() {
-  this.router.navigateByUrl('/tabs/tab3'); //redireciona pro perfil
-}
+  redirecionaPerfil() {
+    this.router.navigateByUrl('/tabs/tab3'); //redireciona pro perfil
+  }
 
 }

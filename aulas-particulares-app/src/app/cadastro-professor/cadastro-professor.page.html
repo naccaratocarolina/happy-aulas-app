@@ -22,11 +22,12 @@
         (ngSubmit)="criaProfessor(registerForm)"
       >
 
-      <ion-list>
-        <ion-item>
+      <ion-list lines="none">
+        <ion-item class="upload_img">
           <!-- Descobrir como fazer upload de imagens! -->
+          <ion-button shape="round"><ion-icon name="camera"></ion-icon></ion-button>
         </ion-item>
-
+<!--
         <ion-item>
   				<ion-icon name="contact"></ion-icon>
   				<ion-input
@@ -38,7 +39,6 @@
   				</ion-input>
   			</ion-item>
 
-        <!--
         <ion-item>
 					<ion-icon name="ios-book"></ion-icon>
 					<ion-select
