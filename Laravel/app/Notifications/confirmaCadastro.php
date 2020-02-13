@@ -44,7 +44,7 @@ class confirmaCadastro extends Notification
         return (new MailMessage)
                     ->greeting('Bem vindo '.$user->name.' a nossa plataforma!')
                     ->line('Olá, seja bem vindo ao HappyAulas.')
-                    ->action('Voltar ao App', url(''))
+                    ->action('Voltar ao App', url('localhost:8100/login'))
                     ->line('Boas Aulas!');
     }
 
