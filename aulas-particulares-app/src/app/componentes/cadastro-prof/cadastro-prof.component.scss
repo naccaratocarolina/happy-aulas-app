@@ -12,3 +12,15 @@
   font-size: 1em;
   font-weight: bold;
 }
+
+.slide-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.info-card ion-card {
+  position: absolute;
+  left: 10vw;
+  top: 20vh;
+  z-index: 10000;
+}

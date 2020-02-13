@@ -29,6 +29,10 @@ export class Tab3Page {
     );
   }
 
+  ionViewWillLeave () {
+    this.user = {};
+  }
+
   redirecionaCadastroProf() {
     this.router.navigateByUrl('/cadastro-professor');
   }
@@ -42,5 +46,15 @@ export class Tab3Page {
       component: CadastroProfComponent
     });
     return await modal.present();
+  }
+
+  logout() {
+    this.authService.deslogaUsuario().subscribe(
+      (res) => {
+        console.log(res);
+        localStorage.removeItem('token');
+        this.router.navigate(['/tabs/tab1']);
+      }
+    );
   }
 }

@@ -27,13 +27,6 @@ export class LoginPage implements OnInit {
     	this.router.navigateByUrl('/cadastro');
  	}
 
- 	// submitForm(form) {
- 	// 	console.log(form);
- 	// 	console.log(form.value);
-  //
- 	// 	this.router.navigateByUrl('/tabs/tab1'); //redireciona pra home
- 	// }
-
  	corMensagem() {
  		if (this.loginForm.controls.email.invalid && this.loginForm.controls.email.touched && this.loginForm.controls.password.invalid && this.loginForm.controls.password.touched) {
  			return this.cor=true;

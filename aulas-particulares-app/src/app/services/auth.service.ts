@@ -46,6 +46,8 @@ export class AuthService {
 
   //deslogaUsuario
   deslogaUsuario(): Observable<any> {
-    return this.http.post( this.apiUrl + 'logout', this.httpHeaders);
+    this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
+
+    return this.http.get(this.apiUrl + 'logout', this.httpHeaders);
   }
 }
