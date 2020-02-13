@@ -41,6 +41,7 @@ class confirmaAulaProf extends Notification
     public function toMail($notifiable)
     {
         $user_teacher = $notifiable;
+        $lesson = $
         return (new MailMessage)
                     ->greeting('Nova aula! :)')
                     ->line('Olá '.$user_teacher->name.' um Aluno marcou uma aula!')

@@ -22,10 +22,10 @@ export class ProfessorService {
   constructor(public http: HttpClient) { }
 
   //lista todos os professores
-  listTeacher(): Observable<any> {
+  listTeacher(id:number): Observable<any> {
     this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
 
-    return this.http.get(this.apiUrl + 'listteacher', this.httpHeaders);
+    return this.http.get(this.apiUrl + 'findteacherofsubjects/' + id, this.httpHeaders);
   }
 
   //encontra o nome do professor referente ao id

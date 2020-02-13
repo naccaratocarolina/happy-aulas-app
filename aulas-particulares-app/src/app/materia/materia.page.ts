@@ -12,6 +12,7 @@ import { ProfessorService } from '../services/professor.service';
 })
 export class MateriaPage implements OnInit {
   public materia = {};
+  public subject_id = localStorage.getItem('idMateria');
   public professores = [];
   public materiaId:number;
 
@@ -23,15 +24,15 @@ export class MateriaPage implements OnInit {
     //pega a materia i
     this.materiaService.findSubject(this.materiaId).subscribe(
       (res) => {
-        console.log(res[0]);
-        this.materia = res[0];
+        console.log(res);
+        this.materia = res;
       }
     );
 
     //lista professores
-    this.professorService.listTeacher().subscribe(
+    this.professorService.listTeacher(this.subject_id).subscribe(
       (res) => {
-        console.log(res[0]);
+        console.log(res);
         this.professores = res;
       }
     );

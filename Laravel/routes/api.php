@@ -33,6 +33,7 @@ Route::delete('deletelesson/{id}','LessonController@deleteLesson');
 //subject_teacher
 Route::get('listsubject_teacher','Subject_TeacherController@listSubject_Teacher');
 Route::get('findsubject_teacher/{id}','Subject_TeacherController@findSubject_Teacher');
+Route::get('findteacherofsubjects/{id}','Subject_TeacherController@findTeacherOfSubjects');
 Route::post('createsubject_teacher','Subject_TeacherController@createSubject_Teacher');
 Route::put('updatesubject_teacher/{id}','Subject_TeacherController@updateSubject_Teacher');
 Route::delete('deletesubject_teacher/{id}','Subject_TeacherController@deleteSubject_Teacher');

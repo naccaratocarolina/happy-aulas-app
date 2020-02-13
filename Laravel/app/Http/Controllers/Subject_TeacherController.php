@@ -48,4 +48,8 @@ class Subject_TeacherController extends Controller
     Subject_Teacher::destroy($id);
     return response()->json(['relacionamento deletado']);
   }
+  public function findTeacherOfSubjects($id){
+    $teacher = Subject::find($id)->teachers;
+    return response()->json($teacher);
+  }
 }
