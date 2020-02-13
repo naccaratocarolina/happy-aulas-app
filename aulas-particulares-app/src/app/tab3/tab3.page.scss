@@ -2,10 +2,10 @@
     --background: #8EAAFE;
 }
 
-.foto1{
-	position: absolute;
-	width: 100%;
-    height: 14vh;
+.foto1 img{
+	position: fixed;
+	width: 100vw;
+  height: 14vh;
 
 }
 
@@ -88,13 +88,14 @@
 }
 .button4{
 	--background:#393393;
+    position: absolute;
+    left: 5vw;
     margin: 13%;
     height: 9%;
     position: absolute;
     margin-left: 22%;
     width: 44%;
 	  font-size:76%;
-
 
 }
 

@@ -5,9 +5,9 @@
   <div class="foto1"> <!-- foto da ondinha branca em cima -->
   	<img src="../assets/images/vector.png">
 	</div>
-<div class="foto2"> <!-- foto da logo -->
-<img src="../assets/LOGO.png">
-</div>
+  <div class="foto2"> <!-- foto da logo -->
+  <img src="../assets/LOGO.png">
+  </div>
 
  <ion-grid>
   <ion-list class="perfil" lines="none"> <!-- circulo da foto e botao de editar -->
@@ -22,8 +22,8 @@
 </ion-list>
 
 <div> <!-- informações do cadastro do usuario aparecerão aqui-->
-<p class="info">{{NomeUsuario}}</p>
-<p class="info">{{EmailUsuario}}</p>
+<p class="info">{{user.name}}</p>
+<p class="info">{{user.email}}</p>
 <ion-button class="button3" (click)="redirecionaMeusAgendamentos()" color="secondary">Meus agendamentos</ion-button>
 </div>
 
@@ -43,7 +43,7 @@
 
   <img id="imagem" src="../assets/images/imagem1.png">
 
-  
+
 </ion-row>
 </ion-grid>
 </ion-content>
