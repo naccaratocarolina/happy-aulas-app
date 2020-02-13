@@ -30,6 +30,10 @@ export class Tab3Page {
     this.router.navigateByUrl('/cadastro-professor');
   }
 
+  redirecionaMeusAgendamentos(){
+    this.router.navigateByUrl('/meus-agendamentos');
+  }
+
   async abreModal() {
     const modal = await this.modalController.create({
       component: CadastroProfComponent

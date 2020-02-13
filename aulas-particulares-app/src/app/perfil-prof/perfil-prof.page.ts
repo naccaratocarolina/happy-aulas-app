@@ -37,14 +37,7 @@ export class PerfilProfPage implements OnInit {
       });
 
     }
-  // ionViewWillEnter(){
-  //   this.professorService.findUserTeacher(this.teacher_user_id).subscribe(
-  //       (res) => {
-  //         console.log(res[0]);
-  //         this.user = res[0];
-  //     });
   
-
   redirecionaCriarAgendamentos() {
     this.route.navigateByUrl('/tabs/tab2'); //redireciona pra pag de criar um agendamento
   }
