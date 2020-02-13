@@ -15,8 +15,7 @@ export class CadastroProfessorPage implements OnInit {
 
   constructor(private router: Router, public formbuilder: FormBuilder, public professorService: ProfessorService) {
     this.registerForm = this.formbuilder.group({
-      nome: [null, [Validators.required]],
-      //materia: [null, [Validators.required]],
+      
       bio: [null, [Validators.required]]
     });
   }
