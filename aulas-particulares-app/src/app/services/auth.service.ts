@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-
-  token = localStorage.getItem('token');
+  token;
+  //token = localStorage.getItem('token');
 
   // A URL da API
   apiUrl: string = "http://localhost:8000/api/";
@@ -41,7 +41,7 @@ export class AuthService {
   }
   //
   estaLogado() {
-    return this.token;
+    return localStorage.getItem('token');
   }
 
   //deslogaUsuario
