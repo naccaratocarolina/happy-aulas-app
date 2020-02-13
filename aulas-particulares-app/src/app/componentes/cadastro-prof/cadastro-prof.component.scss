@@ -40,20 +40,25 @@
 
 .card_msg {
   position: absolute;
-  top: 20vh;
+  top: 15vh;
   left: 11vw;
   z-index: 1000000;
-  height: 40vh;
+  height: 50vh;
   width: 70vw;
   --background: white;
-  opacity: 0.4;
+  opacity: 0.7;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .card_msg img {
   position: relative;
-  display: center;
-  justify-content: center;
-  align-items: center;
+  left: 12vw;
+  margin-top: 10px;
   height: auto;
   width: auto;
+}
+
+.card_msg p {
+  text-align: justify;
 }
