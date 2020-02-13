@@ -37,9 +37,9 @@ import { ProfessorService } from './services/professor.service'
     AgendamentoService,
     MateriaService,
     ProfessorService,
-    File,
-    WebView,
-    FilePath
+    //File,
+    //WebView,
+    //FilePath
   ],
   bootstrap: [AppComponent]
 })
