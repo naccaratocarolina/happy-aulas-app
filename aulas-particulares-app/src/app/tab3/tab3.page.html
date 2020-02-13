@@ -24,20 +24,26 @@
 <div> <!-- informações do cadastro do usuario aparecerão aqui-->
 <p class="info">{{NomeUsuario}}</p>
 <p class="info">{{EmailUsuario}}</p>
-<p class="info">Meus agendamentos</p>
+<ion-button class="button3" (click)="redirecionaMeusAgendamentos()" color="secondary">Meus agendamentos</ion-button>
 </div>
+
+<ion-fab  vertical="bottom" horizontal="end">
+  <ion-fab-button color="secondary" (click)="abreModal()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
 
 <ion-button class="button3" size="large" (click)="deslogaUsuario()">Sair da conta</ion-button> <!-- botao de sair da conta -->
 
 <!-- botao que redireciona para a pagina de cadastro do professor -->
 <ion-button class="button4" (click)="redirecionaCadastroProf()"><div><ion-icon class="textcolor" size="large" name="refresh-circle"></ion-icon></div><div class="text"><span class="textcolor">  QUERO ME TORNAR</span><span class="textcolor"> UM PROFESSOR </span></div></ion-button>
 
-<ion-button (click)="abreModal()">Saiba mais!</ion-button>
-
 <ion-row class="imagemrow"> <!-- imagem de fundo de baixo -->
 
   <img id="imagem" src="../assets/images/imagem1.png">
 
+  
 </ion-row>
 </ion-grid>
 </ion-content>
