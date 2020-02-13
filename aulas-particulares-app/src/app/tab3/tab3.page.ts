@@ -4,6 +4,7 @@ import { AuthService } from '../services/auth.service';
 import { ModalController } from '@ionic/angular';
 import { CadastroProfComponent } from '../componentes/cadastro-prof/cadastro-prof.component';
 
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',

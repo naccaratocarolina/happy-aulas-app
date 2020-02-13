@@ -22,12 +22,10 @@ export class AgendamentoService {
 }
 
   constructor( public http: HttpClient ) { }
-
   //cria novo agendamento (POST)
   public createLesson( form ): Observable<any>{
     this.httpHeaders['headers']["Authorization"] = 'Bearer ' + localStorage.getItem('token');
-
-    return this.http.post(this.apiUrl + 'addlesson/' + localStorage.getItem('idProfessor') + '/' + localStorage.getItem('idMateria'), this.httpHeaders);
+    return this.http.post(this.apiUrl + 'addlesson', form, this.httpHeaders);
   }
   //pega todos os agendamentos (GET)
   public listLesson(): Observable<any> {

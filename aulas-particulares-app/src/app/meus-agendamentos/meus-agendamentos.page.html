@@ -21,7 +21,7 @@
         <ion-card class="card_agendamentos">
           <ion-grid>
             <ion-row class="card_titulo">
-              <ion-col><p>Agendamento {{ agendamento.id }}</p></ion-col>
+              <ion-col><p>Agendamento</p></ion-col>
               <ion-col>
                 <ion-button
                   [disabled]="!podeDeletar"
@@ -44,7 +44,7 @@
 
             <ion-row class="local">
               <ion-icon name="pin"></ion-icon>
-              <ion-card><p>{{ agendamento.location }}</p></ion-card>
+              <ion-card><p>{{ agendamento.address }}</p></ion-card>
             </ion-row>
 
             <ion-row class="data_e_hora">

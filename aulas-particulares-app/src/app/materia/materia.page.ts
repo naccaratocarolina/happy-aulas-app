@@ -39,6 +39,7 @@ export class MateriaPage implements OnInit {
 
   //redireciona pra pag do professor e passa o id do card selecionado
   public redirecionaPagProf(i) {
+    localStorage.setItem('idTeacher', i);
     this.route.navigate(['/tabs/perfil-prof', {profId: i}]);
   }
 

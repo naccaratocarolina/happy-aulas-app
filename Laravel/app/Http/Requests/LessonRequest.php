@@ -24,13 +24,13 @@ class LessonRequest extends FormRequest
     public function rules()
     {
         return [
-          'lesson_date' => 'required|date',
-          'lesson_time' => 'required|date_format:H:i',
+          'lesson_date' => 'required',
+          'lesson_time' => 'required',
           //'user_id' => 'required',
-          'location' => 'required',
-          'teacher_name' => 'required',
+          'address' => 'required'
+          //'teacher_name' => 'required',
           //'teacher_id' => 'required',
-          'subject_name' => 'required'
+          // 'subject_name' => 'required'
         ];
     }
 }

@@ -26,7 +26,7 @@ Route::delete('deleteteacher/{id}','TeacherController@deleteTeacher');
 //lesson
 //Route::get('listlesson','LessonController@listLesson');
 Route::get('findlesson/{id}','LessonController@findLesson');
-Route::post('createlesson','LessonController@createLesson');
+//Route::post('createlesson','LessonController@createLesson');
 Route::put('updatelesson/{id}','LessonController@updateLesson');
 Route::delete('deletelesson/{id}','LessonController@deleteLesson');
 
@@ -49,7 +49,8 @@ Route::post('register','API\PassportController@register');
 Route::post('login','API\PassportController@login');
 Route::group(['middleware'=> 'auth:api'], function(){//so deixa se user for usuario autenticado
   Route::get('listlesson','LessonController@listLesson');
-  Route::get('addlesson','LessonController@addLesson');
+  Route::post('createlesson','LessonController@createLesson');
+  Route::post('addlesson','LessonController@addLesson');
   Route::post('logout', 'API\PassportController@logout');
   Route::post('getDetails', 'API\PassportController@getDetails');
   Route::post('createteacher', 'API\PassportController@createTeacher');

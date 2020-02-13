@@ -27,6 +27,7 @@ class TeacherController extends Controller
     //return response()->json(TeacherResource::collection($teacher));
     return response()->json($teacher);
   }
+  
 
   public function findTeacher(Request $request, $id){
     $teacher = Teacher::findOrFail($id);
