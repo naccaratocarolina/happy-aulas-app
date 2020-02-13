@@ -16,6 +16,7 @@ import { AgendamentoService } from './services/agendamento.service';
 import { File } from '@ionic-native/File/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
+import { Camera } from '@ionic-native/Camera/ngx';
 import { MateriaService } from './services/materia.service';
 import { ProfessorService } from './services/professor.service'
 
@@ -39,7 +40,8 @@ import { ProfessorService } from './services/professor.service'
     ProfessorService,
     File,
     WebView,
-    FilePath
+    FilePath,
+    Camera,
   ],
   bootstrap: [AppComponent]
 })

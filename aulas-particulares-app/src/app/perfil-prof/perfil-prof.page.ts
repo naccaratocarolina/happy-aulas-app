@@ -13,8 +13,8 @@ export class PerfilProfPage implements OnInit {
   public professor = {};
   public user = {};
   public profId:number;
-  public teacher_id = localStorage.getItem('idTeacher');
-  public teacher_user_id = localStorage.getItem('UserIdTeacher');
+  public teacher_id = parseInt(localStorage.getItem('idTeacher'));
+  public teacher_user_id = parseInt(localStorage.getItem('UserIdTeacher'));
 
 
   constructor(private route: Router, private router: ActivatedRoute, public professorService: ProfessorService) {
@@ -43,7 +43,7 @@ export class PerfilProfPage implements OnInit {
   //         console.log(res[0]);
   //         this.user = res[0];
   //     });
-  
+
 
   redirecionaCriarAgendamentos() {
     this.route.navigateByUrl('/tabs/tab2'); //redireciona pra pag de criar um agendamento
