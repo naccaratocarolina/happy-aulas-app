@@ -14,20 +14,18 @@ export class MateriaPage implements OnInit {
   public materia = {};
   public subject_id = localStorage.getItem('idMateria');
   public professores = [];
-  public materiaId;
 
   constructor(private route: Router, private router: ActivatedRoute, public materiaService: MateriaService, public professorService: ProfessorService) {
-    this.materiaId = this.router.snapshot.params["materiaId"];
+    this.subject_id = this.router.snapshot.params["materiaId"];
   }
 
   ngOnInit() {
     //pega a materia i
-    this.materiaService.findSubject(this.materiaId).subscribe(
+    this.materiaService.findSubject(this.subject_id).subscribe(
       (res) => {
         console.log(res);
-        this.materia = res;
-      }
-    );
+        this.materia = res[0];
+      });
 
     //lista professores
     this.professorService.listTeacher(this.subject_id).subscribe(
