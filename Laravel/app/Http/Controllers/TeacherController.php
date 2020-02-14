@@ -11,19 +11,9 @@ use App\User;
 
 class TeacherController extends Controller
 {
-  /*
-  public function createTeacher(Request $request)
-  {
-      $teacher = new Teacher;
-
-      $teacher->bio = $request->bio;
-      $teacher->user_id = $request->user_id;
-      $teacher->save();
-
-  }
-  */
+  
+  //função que lista os professores que dao a materia
   public function findTeacherOfSubjects($id){//<-here!
-    //$teacher = $teacher->with('user');
     $teachers = Subject::find($id)->teachers;
     foreach ($teachers as $teacher) {
       $teacher = $teacher->with('user')->get();
@@ -31,16 +21,19 @@ class TeacherController extends Controller
     return response()->json($teachers);
   }
 
+  //lista todos os professores
   public function listTeacher(Request $request){
     $teacher = Teacher::all();
     return response()->json($teacher);
   }
 
-
+  //encontra o professor
   public function findTeacher(Request $request, $id){
     $teacher = Teacher::findOrFail($id);
     return response()->json([$teacher]);
   }
+
+  //atualiza o professor
   public function updateteacher(Request $request, $id){
     $teacher = Teacher::find($id);
     if($teacher){
@@ -57,6 +50,8 @@ class TeacherController extends Controller
       return response()->json(['Este professor nao existe']);
     }
   }
+
+  //deleta o professor
   public function deleteTeacher(Request $request, $id){
     Teacher::destroy($id);
     return response()->json(['professor deletado']);

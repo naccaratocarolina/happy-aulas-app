@@ -10,16 +10,18 @@
     <ion-row *ngFor="let professor of professores" class="container_professores">
 
       <ion-card (click)="redirecionaPagProf(professor.id, professor.user_id)">
-        <ion-row>
-          <ion-col class="imagem">
-            <img src="../assets/materia/avatar.png">
-          </ion-col>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="imagem" size=4>
+              <img src="../assets/materia/avatar.png">
+            </ion-col>
 
-          <ion-col class="texto_container">
-            <ion-row class="texto">{{professor.bio}}</ion-row>
-            <ion-row class="texto">{{materia.subject_name}}</ion-row>
-          </ion-col>
-        </ion-row>
+            <ion-col size=8>
+              <ion-row class="texto">{{professor.bio}}</ion-row>
+              <ion-row class="texto">{{materia.subject_name}}</ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-card>
 
     </ion-row>

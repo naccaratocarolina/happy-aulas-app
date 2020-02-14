@@ -28,39 +28,16 @@ ion-toolbar {
   color: #393393;
 }
 
-.container_professores {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .container_professores ion-card {
-  width: 88vw;
-  height: 10vh;
-
 	--background: #FFCC00;
 }
 
 .imagem {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
-	position: absolute;
 	width: 25vw;
 }
 
-.imagem img {
-	height: 9vh;
-	width: 20vw;
-}
 
-.texto_container {
-	position: absolute;
-	left: 25vw;
-
-	top: 2vh;
-}
 
 .texto {
 	font-family: Roboto Slab;
