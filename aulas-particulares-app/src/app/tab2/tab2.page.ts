@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AgendamentoService } from "../services/agendamento.service";
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -15,14 +16,11 @@ export class Tab2Page {
 	agendaForm: FormGroup;
 
 
-  constructor(private router: Router, public formbuilder: FormBuilder, public agendamentoService: AgendamentoService) {
+  constructor(private router: Router, public formbuilder: FormBuilder, public agendamentoService: AgendamentoService, public toastController: ToastController) {
   	this.agendaForm = this.formbuilder.group({
 			address: ['', [Validators.required]],
 			lesson_date: ['', [Validators.required]],
-			lesson_time: ['', [Validators.required]],
-      //user_id: ['',[Validators.required]],
-      //teacher_id:['', [Validators.required]],
-      //subject_id:['', [Validators.required]]
+			lesson_time: ['', [Validators.required]]
 	});
   }
   CriaAula ( agendaForm ) {
@@ -41,6 +39,14 @@ export class Tab2Page {
 
   redirecionaPagProf() {
     this.router.navigateByUrl('/tabs/perfil-prof');
+  }
+
+  async confirmaAgendamento() {
+    const toast = await this.toastController.create({
+      message: "Agendamento criado com sucesso. Email de confirmação enviado!",
+      duration: 5000
+    });
+    toast.present();
   }
 
 }
