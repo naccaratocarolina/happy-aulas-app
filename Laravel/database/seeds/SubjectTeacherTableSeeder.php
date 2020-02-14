@@ -36,7 +36,7 @@ class SubjectTeacherTableSeeder extends Seeder
         'subject_id'=>'6'
       ]);
       DB::table('subject_teacher')->insert([
-        'teacher_id'=>'4',
+        'teacher_id'=>'3',
         'subject_id'=>'12'
       ]);
       DB::table('subject_teacher')->insert([

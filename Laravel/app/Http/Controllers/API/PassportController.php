@@ -79,5 +79,7 @@ class PassportController extends Controller
       $teacher->user_id = $user->id;
       $teacher->save();
 
+      return response()->json($teacher);
+
   }
 }
