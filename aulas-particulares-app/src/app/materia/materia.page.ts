@@ -12,7 +12,7 @@ import { ProfessorService } from '../services/professor.service';
 })
 export class MateriaPage implements OnInit {
   public materia = {};
-  public subject_id = localStorage.getItem('idMateria');
+  public subject_id = parseInt(localStorage.getItem('idMateria'));
   public professores = [];
 
   constructor(private route: Router, private router: ActivatedRoute, public materiaService: MateriaService, public professorService: ProfessorService) {

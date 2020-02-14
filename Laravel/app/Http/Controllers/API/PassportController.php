@@ -76,7 +76,7 @@ class PassportController extends Controller
       $user = Auth::user();
 
       $teacher->bio = $request->bio;
-      $teacher->user_id = $user->user_id;
+      $teacher->user_id = $user->id;
       $teacher->save();
 
   }
