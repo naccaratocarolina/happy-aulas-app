@@ -18,6 +18,10 @@ export class InicialPage implements OnInit {
     this.router.navigateByUrl('/cadastro');
   }
 
+  redirecionaHome() {
+    this.router.navigateByUrl('/tabs/tab1');
+  }
+
   ngOnInit() {
   }
 
