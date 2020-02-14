@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Subject_Teacher;
 use App\Teacher;
 use App\Subject;
+use App\User;
 
 class Subject_TeacherController extends Controller
 {
@@ -48,7 +49,8 @@ class Subject_TeacherController extends Controller
     Subject_Teacher::destroy($id);
     return response()->json(['relacionamento deletado']);
   }
-  public function findTeacherOfSubjects($id){
+  public function findTeacherOfSubjects($id){//<-here!
+    //$teacher = $teacher->with('user');
     $teacher = Subject::find($id)->teachers;
     return response()->json($teacher);
   }

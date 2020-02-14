@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 //use App\Http\Resources\Teacher as TeacherResource;
 use App\Teacher;
+use App\Subject;
 use App\User;
 
 class TeacherController extends Controller
@@ -21,13 +22,20 @@ class TeacherController extends Controller
 
   }
   */
+  public function findTeacherOfSubjects($id){//<-here!
+    //$teacher = $teacher->with('user');
+    $teachers = Subject::find($id)->teachers;
+    foreach ($teachers as $teacher) {
+      $teacher = $teacher->with('user')->get();
+    }
+    return response()->json($teachers);
+  }
 
   public function listTeacher(Request $request){
     $teacher = Teacher::all();
-    //return response()->json(TeacherResource::collection($teacher));
     return response()->json($teacher);
   }
-  
+
 
   public function findTeacher(Request $request, $id){
     $teacher = Teacher::findOrFail($id);

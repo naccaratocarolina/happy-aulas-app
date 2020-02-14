@@ -13,4 +13,7 @@ class Teacher extends User
   public function subjects(){
     return $this->belongsToMany('App\Subject');
   }
+  public function user(){
+    return $this->belongsTo('App\User','user_id');
+  }
 }

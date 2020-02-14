@@ -10,6 +10,7 @@ use App\Subject;
 use Auth;
 use App\Notifications\confirmaAula;
 use App\Notifications\confirmaAulaProf;
+use Carbon\Carbon;
 use App\Http\Requests\LessonRequest as LessonRequest;
 
 class LessonController extends Controller
@@ -92,7 +93,13 @@ class LessonController extends Controller
     $lesson->address = $request->address ;
     $lesson->teacher_name = $user_teacher->name ;
     $lesson->subject_name = $subject->subject_name ;
-    $user->notify(new confirmaAula($user, $lesson));
+    $now = Carbon::now(); // 1 começa aqui
+    $date = Carbon::parse($lesson->lesson_date); // dps esses
+    $mensagem = $date->diffInDays($now); // mostra quantos dias faltam pra sua aula
+    $year = $date->year;
+    $month = $date->month;
+    $dayOfWeek = $date->dayOfWeek;
+    $user->notify(new confirmaAula($user, $lesson, $mensagem));
     $user_teacher->notify(new confirmaAulaProf($user_teacher, $lesson));
 
     $lesson->save();

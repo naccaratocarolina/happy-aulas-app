@@ -13,7 +13,10 @@ class User extends Authenticatable
     use HasApiTokens;
     //lista as aulas do User
     public function lessons(){
-      return $this->hasMany('App/Lesson');
+      return $this->hasMany('App\Lesson');
+    }
+    public function teacher(){
+      return $this->hasOne('App\Teacher','user_id');
     }
 
     /**

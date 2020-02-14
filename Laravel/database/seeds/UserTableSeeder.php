@@ -34,14 +34,14 @@ class UserTableSeeder extends Seeder
         'profile_picture' => 'profilePictures/6.jpg',
       ]);
       DB::table('users')->insert([
-        'name' => 'Gabriela Matos',
-        'email' => 'gabrielamatos@example.com',
+        'name' => 'Gabriela Mattos',
+        'email' => 'gabrielamattos@example.com',
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'c_password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
         'profile_picture' => 'profilePictures/9.jpg',
       ]);
       DB::table('users')->insert([
-        'name' => 'Gabriel',
+        'name' => 'Gabriel Batata',
         'email' => 'gabrielbatata@example.com',
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'c_password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
@@ -76,8 +76,8 @@ class UserTableSeeder extends Seeder
         'profile_picture' => 'profilePictures/4.jpg',
       ]);
       DB::table('users')->insert([
-        'name' => 'Milton Quintana',
-        'email' => 'miltonarturquintana@example.com',
+        'name' => 'Milton Quillinan',
+        'email' => 'miltonarthurquillinan@example.com',
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'c_password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
         'profile_picture' => 'profilePictures/10.jpg',

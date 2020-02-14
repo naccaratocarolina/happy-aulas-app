@@ -6,6 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use App\Lesson;
+use App\User;
 
 class confirmaAula extends Notification
 {
@@ -16,9 +18,11 @@ class confirmaAula extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(User $user, Lesson $lesson, String $mensagem)
     {
-        //
+        $this->user = $user;
+        $this->lesson = $lesson;
+        $this->mensagem = $mensagem;
     }
 
     /**
@@ -44,6 +48,7 @@ class confirmaAula extends Notification
         return (new MailMessage)
                     ->greeting('Sua aula foi confirmada!')
                     ->line('Olá '.$user->name.' este é um email de confirmação pra sua aula!')
+                    ->line('Não esqueça! A sua aula de '.$this->lesson->subject_name.' é daqui a '.$this->mensagem.' dias')
                     ->action('Voltar ao app', url('localhost:8100/login'))
                     ->line('Boa Aula!');
     }
