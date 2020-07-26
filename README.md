@@ -1,5 +1,5 @@
 # Happy Aulas® app
-Aplicativo Happy Aulas® desenvolvido por naccaratocarolina & Tefmath no front-end e IgorDelfino no back-end.
+Aplicativo Happy Aulas® desenvolvido por naccaratocarolina & Tefmath no front-end e IgorDelfino no back-end. O nosso aplicativo possui como objetivo fazer uma ponte entre pessoas que precisam de aulas particulares em assuntos diversos e universitarios que oferecem esse servico.
 
 Para servir o front-end, rode os seguintes comandos na pasta \aulas-particulares-app:
 
