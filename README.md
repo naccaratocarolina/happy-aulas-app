@@ -7,7 +7,7 @@ Para servir o front-end, rode os seguintes comandos na pasta \aulas-particulares
 
 > ionic serve
 
-Para servir o back-end, voce primeiro criar uma database local e configurar as suas credenciais no arquivo .env, preenchendo o campo:
+Para servir o back-end, voce primeiro deve criar uma database local atraves do phpmyadmin ou da shell do mysql (ou como preferir) e configurar as suas credenciais no arquivo .env, preenchendo os campos:
 
   DB_DATABASE = nome_da_sua_database
   
