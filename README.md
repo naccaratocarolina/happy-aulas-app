@@ -23,7 +23,7 @@ Não esqueca de migrar as migrations com o comando
 
 > php artisan migrate
 
-E, por fim, para servir o back-end:
+E, por fim:
 
 > php artisan key:generate
 > php artisan serve
